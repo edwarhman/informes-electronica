@@ -1,0 +1,332 @@
+\documentclass{article}
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage[spanish]{babel}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+
+
+\begin{document}
+\include{src/portada}
+
+
+En primer lugar identificamos la etapa del amplificador de diferencial en el diagrama del amplificador multietapas, la cual es la que contiene a los transistores $Q1$ y$Q2$.
+
+Ahora procedemos a calcular los puntos estáticos de operación, para ello tomamos los capacitores como circuitos abiertos, ya que estamos trabajando en DC y empezamos a calcular las corrientes en los transistores.
+
+Asumiremos que la corriente que pasa por $R5$ es 0.
+
+Para calcular la corriente de base se usará el teorema de thevenim para sustituir $R_1$ y $R_2$ por una fuente y una resistencia que pasa por la base de $Q_1$.
+
+Para calcular el valor de la resistencia equivalente de thevenim:
+$$R_{th} = R_1 // R_2$$
+
+cómo $R_1 = R_2$
+$$Rth = \frac{R_1}{2} = 50k \Omega$$
+
+Ahora, calculamos el valor de la fuente de thevenim aplicando un divisor de voltaje:
+
+$$V_{th} = \frac{R_2 ( V_{cc} - V_{EE}}{R_1 + R_2}$$
+
+$$V_{th} = 10 V$$
+
+Ahora aplicando LVK en la malla B-E ($Q_4$):
+\begin{equation*}
+V_{th} - R_{th}I_b - V_{be} - R_7(I_e) = 0
+\end{equation*}
+
+despejando $I_b$, tenemos
+
+\begin{equation*}
+    I_b = \frac{V_{th} - V_{be}}{R_{th} + (\beta + 1) R_7}
+\end{equation*}
+
+usando un $\beta = 230$ entonces
+
+$$I_{b} = 2,65\mu A$$
+
+Ahora, para calcular $I_c$:
+
+$$I_{c} = \beta I_b = 0,62mA$$
+
+Y por último, para calcular $V_{ce}$ aplicamos LVK:
+
+$$Vcc - I_cR_3 - I_eR_4 - V_{ce} - V_{ee} = 0$$
+
+Despejando $V_{ce}$ y aproximando $I_c \approx I_e$, tenemos 
+
+$$V_{ce} = V_{cc}  - V_{ee} - I_c (R_4 + R_3)$$
+
+$$V_{ce} = 7,79 V$$
+
+Como el circuito es simétrico, los voltajes y corrientes $I_b$, $I_e$, $I_c$, $V_{ce}$ y $V_{be}$ son iguales.
+
+
+Ahora, para la parte dinámica, calculamos los parámetros del transistor:
+
+$$V_t = 26 mV$$
+
+$$gm = \frac{I_c}{V_t} = \frac{0,62 mA}{26 mV}$$
+
+$$gm = 23,85 x 10 ^{-3}$$
+
+$$R_\pi = \frac{\beta}{gm} = \frac{230}{23,85x10^{-3}}$$
+
+$$ R_\pi = 9,6k \Omega$$
+
+Tomando el amplificador en su modo común, en primer lugar calculamos la impedancia de entrada, analizando el circuito obtenemos la expresión:
+
+$$ Z_c = R_1 || R_2 || (R_\pi + (1 + gmR_\pi)R_4$$
+
+sustituyendo los valores tenemos:
+
+$$ Z_c = 49K\Omega$$
+
+Ahora la impedancia de salida es:
+
+$$ Z_o = gmR_\pi R_3$$
+
+$$ Z_0 = 1 M\Omega$$
+
+Ahora la ganancia es:
+
+$$A_c = - \frac{ gmR_\pi R_3}{R_\pi + (1 + gmR_\pi)R_4}$$
+
+$$A_c = 0,31$$
+
+Ahora analizamos en modo diferencial:
+
+$$Z_d = R_1 || R_2 || (2R_\pi + (1+gmR_\pi )R_5)$$
+
+$$Z_d = 43,99 k\Omega$$
+
+$Z_o$ es la misma que en modo común:
+
+$$Z_0 = 4,9 K\Omega$$
+
+Por último calculamos la ganancia en modo diferencial:
+
+$$A_d = -\frac{gmR_\pi R_3}{2R_\pi + (1 + gmR_\pi) R_5}$$
+
+$$A_d = -2,96 $$
+
+Procedemos a analizar la etapa elevadora (Etapa con $Q_3$)
+
+aplicamos thevenim de manera que:
+
+$$R_{th}= R15 || R10$$
+
+$R_{th}=29 k\Omega$
+
+$$V_{th} = \frac{R15}{R15 + R10} (V_{cc} - V_{ee})$$
+
+$$V_{th} = 2.61 V $$
+
+Aplicando LVK en la malla del emisor:
+
+$$V_{th} - V_{be} = R11 \beta I_{b} + R_{th}I_b$$
+
+$$ Ib = \frac{V_{th} - V_{be}}{R11\beta + R_{th}}$$
+
+usando un $\beta = 230$
+
+$$ I_b = 10.03 \mu A$$
+
+$$Ic = \beta I_b$$
+
+$$I_c = 2.37 mA$$
+
+Aplicando LVK:
+
+$$V_{ce} = V_{cc} - V_{ee} - I_eR11 - I_cR16$$
+
+$$ V_{ce} = 2.27 V$$
+
+Haciendo el analisis AC, tenemos 
+$$gm = \frac{I_{c}}{V_t} = 0.09$$
+
+$$R_{\pi} = \frac{\beta}{gm} = 2523$$
+
+La impedancia de entrada es:
+
+$$Z_i = R15 || R10 || r_\pi $$
+$$z_i = 2.31 k \Omega $$
+
+$$Z_o = \frac{r_\pi + R15 || R10}{1 + gmr_\pi} $$
+
+$$Z_0 = 134$$
+
+Ganancia:
+
+$$A = \frac{gmr_\pi R16}{r_\pi} = 49.61$$
+
+Ahora la etapa del amplificador de potencia:
+
+Obtenemos los puntos estáticos de operación, para ello tomamos los capacitores como circuitos abiertos, ya que estamos trabajando en DC y empezamos a calcular las corrientes en el transistor $Q4$.
+
+Asumiremos que las corrientes de base $I_{bQ5}$ e $I_{bQ6}$ son muy pequeñas en comparación con la corriente $I_{R17}$ por tanto la tomaremos como despreciables.
+
+Ahora aplicando LCK en el multiplicador de voltaje ($Q_4$):
+\begin{equation}
+I_{RV1} + I_{cQ4} = I_{R17}    
+\end{equation}
+
+Si ahora asumimos $I_bQ4$ despreciable:
+
+\begin{equation}
+    I_{RV1} = \frac{V_{BEQ4}}{XR_{V1}}
+\end{equation}
+
+Aplicando LVK tenemos:
+
+\begin{equation}
+    V_{CEQ4} = I_{RV1} * R_v1
+\end{equation}
+
+Usando (2) y (3):
+
+$$ V_{CEQ4} = \frac{V_{BEQ4}}{X*R_{V1}} * R_{V!}$$
+
+\begin{equation}
+    V_{CEQ4} = \frac{V_{BEQ4}}{X}
+\end{equation}
+
+Debido a que el amplificador es de clase AB el voltaje $V_{CEQ4}$ tiene que ser dos veces el voltaje base emisor $V_{be}$ para los transistores $Q5$ y $Q6$ estén lo más cerca posible de la zona activa y se pueda reducir el efecto crossover de la salida.
+
+Aplicando LVK entre las dos referencias tenemos:
+
+$$10V - R_{17}*I_{17} - 2V_{beQ4} - R_{12}*I_{17} + 10V = 0$$
+
+despejando $I_{17}$:
+
+\begin{equation}
+    I_{17} = \frac{20 - 2V_{beQ4}}{R_{17} + R_{12}}
+\end{equation}
+
+Usando (1), (2) y (5) tenemos:
+
+\begin{equation}
+    I_{cQ4} = \frac{20 - 2V_{beQ4}}{R_{17} + R_{12}} - \frac{2V_{beQ4}}{R_{V1}}
+\end{equation}
+
+Usando los datos y la ecuacion (6):
+
+$V_{beQ4} = 0.62 V$ 
+
+$R_{17} = R_{12} = 22k\omega$ 
+
+$R_{V1} = 10k\omega$ 
+
+$$    I_{cQ4} = \frac{20 - 2 * 0.62 V}{22k\omega + 22k\omega} - \frac{2 * 0.62 V}{10 k\omega} $$
+
+$$ I_{cQ4} = 302.36 \upsilon A$$
+
+Tomando $hfe_{Q4} = 230$
+
+\begin{equation}
+    I_{bQ4} = I_{cQ4} / hfe
+\end{equation}
+
+$$ I_{bQ4} = 1.31 \upsilon A$$
+
+$$ V_{ceQ4} = 2 * 0.62 V = 1.24 V$$
+
+Ahora, volviendo a despreciar las corriente de base y aplicando LVK en la malla con los transistores
+
+$$V_{ceQ4} - V_{beQ5} - I_{eQ5}* (R_{13} + R_{14}) - V_{beQ6} = 0$$
+
+despejando $I_{eQ5}$ 
+
+\begin{equation}
+    I_{eQ5} =\frac{ V_{ceQ4} - V_{beQ5} - V_{beQ6} }{R_{13} + R_{14}}
+\end{equation}
+
+Tomando $V_{beQ5} = V_{beQ4} = 0.62 V$ y $V_{beQ6} = 0.55 V$, entonces: 
+
+$$I_{eQ5} = \frac{ 1.24 V - 0.62 V - 0.55 V }{10 \omega + 10 \omega }$$
+
+$$ I_{eQ5} = I_{eQ6} \approx I_{cQ5} \approx I_{cQ6} = 350\upsilon A$$
+
+Basado en las I de emisor ahora calulamos las corrientes de base, asumiendo que $hfe_{Q5} = 230 $ y $hfe_{Q6} = 150$
+
+$$I_{bQ5} = I_{cQ5} / hfe = 350\upsilon A / 230 = 1.52 \upsilon A $$
+
+$$I_{bQ6} = I_{cQ6} / hfe = 350\upsilon A / 150 = 2.33 \upsilon A $$
+
+Se asume que $V_{ceQ5} = V_{ceQ6} $, por tanto:
+
+$$ 10 - 2 V_{ceQ5} - (R_{14} + R_{13}) * I_{eQ5} + 10 = 0$$
+
+despejando $V_{ceQ5}$ tenemos:
+
+\begin{equation}
+    V_{ceQ5} = V_{ceQ6} = \frac{ 20 - (R_{14} + R_{13}) * I_{eQ5} }{2}
+\end{equation}
+
+por tanto 
+
+$$ V_{ceQ5} = V_{ceQ6} = \frac{ 20 V - (10 + 10) \omega * 350\upsilon A }{2} = 9.99 V$$
+
+Respuesta en frecuencia:
+
+Condensadores de baja frecuencia:
+    
+Los capacitores de baja serán C1, C2, C3, C5, C6 y C7. para obtener las frecuencias de corte usaremos:
+
+$$ \omega_{ci} = \frac{1}{C_i R_{eqCi}}$$
+
+Para $C_1$ tenemos:
+
+$$ \omega_{C1} = \frac{1}{C_1 * R_{eqC1}} =  \frac{1}{42K \times 10^{-6}} = 23.34 rad / s$$ 
+
+Para $C_2$ tenemos:
+
+$$ \omega_{C2} = \frac{1}{C_2 * R_{eqC2}} =  \frac{1}{10K \times 10^{-6}} = 140.34 rad / s$$ 
+
+Para $C_3$ tenemos:
+
+$$ \omega_{C3} = \frac{1}{C_3 * R_{eqC3}} =  \frac{1}{10K \times 10^{-6}} = 23.34 rad / s$$ 
+
+Para $C_5$ tenemos:
+
+$$ \omega_{C5} = \frac{1}{C_5 * R_{eqC5}} =  \frac{1}{10K \times 10^{-6}} = 0.84 rad / s$$ 
+
+Para $C_6$ tenemos:
+
+$$ \omega_{C6} = \frac{1}{C_6 * R_{eqC6}} =  \frac{1}{10K \times 10^{-6}} = 442.6 rad / s$$ 
+
+Para $C_7$ tenemos:
+
+$$ \omega_{C7} = \frac{1}{C_7 * R_{eqC7}} =  \frac{1}{10K \times 10^{-6}} = 65.34 rad / s$$
+
+sabiendo que: 
+
+$$ f = \frac{\omega}{2\pi} = \frac{1}{T} $$
+
+\begin{tabular}{|c|c|c|}
+\hline
+Capacitor & Velocidad angular & Frecuencia\\
+\hline
+C1 & 23.34 rad / s & 3.401 Hz\\
+\hline
+C2 & 140.34 rad / s & 21.002 Hz\\
+\hline
+C3 & 23.34 rad / s & 3.561 Hz\\
+\hline
+C5 & 0.84 rad / s & 0.14 Hz\\
+\hline
+C6 & 442.6 rad / s & 70.414 Hz\\
+\hline
+C7 & 65.34 rad / s & 9.013 Hz\\
+\hline
+\end{tabular}
+
+
+La frecuencia de corte inferior es la mayor frecuencia entre todos los valores obtenidos, por lo tanto
+
+$$ f_{L} = 70.414 Hz$$
+
+\end{document}
