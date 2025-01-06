@@ -1,6 +1,6 @@
 \subsection{Amplificador de potencia}
 
-En primer lugar identificamos la etapa del amplificador de potencias en el diagrama del amplificador multietapas, la cual es la que contiene a los transistores $Q4$, $Q5$ y $Q6$.
+En primer lugar identificamos la etapa del amplificador de potencias en el diagrama del amplificador multietapas, la cual es la que contiene a los transistores $Q4$, $Q5$ y $Q6$. Dicha etapa se muestra en la figura \ref{fig:met-etapa-amplificador-de-potencia}.
 
 \begin{figure}[ht]
     \centering
@@ -141,4 +141,16 @@ A continuación, en la figura \ref{fig:met-puntos-estaticos-amplificador-de-pote
     \label{fig:met-puntos-estaticos-amplificador-de-potencia}
 \end{figure}
 
-Ahora, para la parte dinámica
+Ahora, para la parte dinámica, calculamos los parámetros del transistor utilizando $V_t = 26 mV$ y $V_A = 100 V$
+
+$$gm = \frac{I_c}{V_t} = \frac{0,35 mA}{26 mV}$$
+
+$$gm = 13.46 mS$$
+
+$$R_\pi = \frac{\beta}{gm} = \frac{230}{13.46\times 10^{-3}}$$
+
+$$ R_\pi = 17.07k \Omega$$
+
+$$ R_o = \frac{V_A}{I_c} = \frac{100 V}{0,35 mA} = 285,71 k\Omega$$
+
+lorem ipsum paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
