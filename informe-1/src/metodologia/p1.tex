@@ -153,4 +153,57 @@ $$ R_\pi = 17.07k \Omega$$
 
 $$ R_o = \frac{V_A}{I_c} = \frac{100 V}{0,35 mA} = 285,71 k\Omega$$
 
-lorem ipsum paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Obtenidos los parámetros dinámicos podemos calcular la ganancia del amplificador hacinedo un análisis de las corrientes de entrada y salida del circuito, obteniendo la expresión:
+
+ $$ A = \frac{(1 + gmr_{\pi5})(r_{13} + r_l)r_L}{[r_{\pi 5} + (1 + gmr\pi5)(r_{13} + r_L)](r_{13} + r_L)}$$
+
+ $$A = 0.96 $$
+
+ Ahora, para calcular la impedancia de entrada:
+
+ $$ Z_i = r_{17} \parallel r{12} \parallel [r_{\pi5} + (1 + gmr_{\pi 5})(r_{13} + r_l)] $$
+ 
+ $$ Z_i = 10.77K\Omega $$
+
+ Mientras que la impedancia de salida viene dada por la expresión:
+
+$$ Z_o = r_{13} + \frac{r_{\pi5} + r_{17}/2}{1 + gmr_{\pi5}} $$
+
+ $$ Z_o = 132 \Omega$$
+
+ El modelo dinámico del amplificador de potencia se muestra en la tabla \ref{tab:met-amp-potencia-modelo-dinamico}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        parámetro & valor  \\
+        \hline
+        $Z_i$ & $10.77k\Omega$ \\
+        \hline
+        $Z_o$ & $132\Omega$ \\
+        \hline
+        $A$ & $0.96$ \\
+        \hline
+    \end{tabular}
+    \caption{Modelo dinámico del amplificador de potencia}
+    \label{tab:met-amp-potencia-modelo-dinamico}
+\end{table}
+
+en la figura \ref{fig:sim-amp-potencia-ganancia} se muestra la ganancia del amplificador de potencia. Se puede observar que el voltaje de entrada y de salida se superponen, ya que la ganancia es aproximadamente 1.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{src/images/p1/p1-sim-ganancia.png}
+    \caption{Ganancia del amplificador de potencia}
+    \label{fig:sim-amp-potencia-ganancia}
+\end{figure}
+
+En la figura \ref{fig:sim-amp-potencia-efecto-crossover} se muestra el efecto crossover del amplificador de potencia. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{src/images/p1/p1-sim-efecto-crossover.png}
+    \caption{Efecto crossover del amplificador de potencia}
+    \label{fig:sim-amp-potencia-efecto-crossover}
+\end{figure}
