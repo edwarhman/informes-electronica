@@ -1,0 +1,61 @@
+\subsection{Respuesta en frecuencia}
+
+En primer lugar se identifican los capacitores de baja frecuencia, los cuales son C1, C2, C3, C5, C6 y C7. para obtener las frecuencias de corte usaremos:
+
+$$ \omega_{ci} = \frac{1}{C_i R_{eqCi}}$$
+
+Para $C_1$ tenemos:
+
+$$ \omega_{C1} = \frac{1}{C_1 * R_{eqC1}} =  \frac{1}{42K \times 10^{-6}} = 23.34 rad / s$$ 
+
+Para $C_2$ tenemos:
+
+$$ \omega_{C2} = \frac{1}{C_2 * R_{eqC2}} =  \frac{1}{10K \times 10^{-6}} = 140.34 rad / s$$ 
+
+Para $C_3$ tenemos:
+
+$$ \omega_{C3} = \frac{1}{C_3 * R_{eqC3}} =  \frac{1}{10K \times 10^{-6}} = 23.34 rad / s$$ 
+
+Para $C_5$ tenemos:
+
+$$ \omega_{C5} = \frac{1}{C_5 * R_{eqC5}} =  \frac{1}{10K \times 10^{-6}} = 0.84 rad / s$$ 
+
+Para $C_6$ tenemos:
+
+$$ \omega_{C6} = \frac{1}{C_6 * R_{eqC6}} =  \frac{1}{10K \times 10^{-6}} = 442.6 rad / s$$ 
+
+Para $C_7$ tenemos:
+
+$$ \omega_{C7} = \frac{1}{C_7 * R_{eqC7}} =  \frac{1}{10K \times 10^{-6}} = 65.34 rad / s$$
+
+sabiendo que: 
+
+$$ f = \frac{\omega}{2\pi} = \frac{1}{T} $$
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Capacitor & Velocidad angular & Frecuencia\\
+    \hline
+    C1 & 23.34 rad / s & 3.401 Hz\\
+    \hline
+    C2 & 140.34 rad / s & 21.002 Hz\\
+    \hline
+    C3 & 23.34 rad / s & 3.561 Hz\\
+    \hline
+    C5 & 0.84 rad / s & 0.14 Hz\\
+    \hline
+    C6 & 442.6 rad / s & 70.414 Hz\\
+    \hline
+    C7 & 65.34 rad / s & 9.013 Hz\\
+    \hline
+    \end{tabular}
+    \caption{Frecuencia de corte de los capacitores de baja frecuencia}
+    \label{tab:frecuencia-de-corte-capacitores-baja-frecuencia}
+\end{table}
+
+
+La frecuencia de corte inferior es la mayor frecuencia entre todos los valores obtenidos, por lo tanto
+
+$$ f_{L} = 70.414 Hz$$
