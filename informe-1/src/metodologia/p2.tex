@@ -103,11 +103,15 @@ Resumimos los parámetros dinámicos de los transistores de la etapa diferencial
 
 Tomando el amplificador en su modo común, en primer lugar calculamos la impedancia de entrada, analizando el circuito obtenemos la expresión:
 
-$$ Z_c = R_1 || R_2 || (R_\pi + (1 + gmR_\pi)R_4)$$
+$$ Z_i = R_1 || R_2 || (R_\pi + (1 + gmR_\pi)R_4)$$
 
 sustituyendo los valores tenemos:
 
-$$ Z_c = 49K\Omega$$
+$$ Z_i = 49K\Omega$$
+
+Pero en modo cómun las impedancias de entrada están en paralelo y son las mismás, por lo tanto:
+
+$$ Z_c = 24.5K\Omega$$
 
 Ahora la impedancia de salida es:
 
@@ -153,7 +157,7 @@ Los datos del modelo dinámico de la etapa diferencial se muestran en la tabla \
         \hline
         parámetro & valor  \\
         \hline
-        $Z_i$ & $49k\Omega$ \\
+        $Z_i$ & $24.5k\Omega$ \\
         \hline
         $Z_o$ & $4.7k\Omega$ \\
         \hline
