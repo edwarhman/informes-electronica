@@ -1,4 +1,4 @@
-
+\subsection{Realimentación}
 La figura \ref{fig:amplificador-base} muestra el modelo dinámico del amplificador base. Cuyos parámetros son los mostrados en la tabla \ref{tab:amplificador-base-dinamico}.
 
 \begin{figure}[ht]
@@ -7,23 +7,6 @@ La figura \ref{fig:amplificador-base} muestra el modelo dinámico del amplificad
     \caption{Modelo dinámico del amplificador base}
     \label{fig:amplificador-base}
 \end{figure}
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-        \hline
-        \textbf{Parámetro} & \textbf{Valor} \\ \hline
-        $Z_d$ & $43.99$ [$k\Omega$] \\ \hline
-        $Z_o$ & $12.13 $ [$\Omega$] \\ \hline
-        $A_b$ & $300$ \\ \hline
-        $f_L$ & $69.61$ [$Hz$] \\ \hline
-        $f_H$ & $11.00$ [$kHz$] \\ \hline
-    \end{tabular}
-    \caption{Valores de los parámetros dinámicos del amplificador Realimentado}
-    \label{tab:amplificador-base-dinamico}
-
-\end{table}
-
 Ahora calculamos los parámetros del amplificador realimentado negativamente.
 
 para la impedancia de entrada $Z_i$ tenemos:
@@ -66,6 +49,22 @@ Por lo tanto:
 
 $$f_{Hf} = 11kHz\cdot (1 + 49.54) = 555.94KHz$$
 
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Parámetro} & \textbf{Valor} \\ \hline
+        $Z_i$ & $3.3$ [$k\Omega$] \\ \hline
+        $Z_o$ & $0.17 $ [$\Omega$] \\ \hline
+        $A_b$ & $-3.33$ \\ \hline
+        $f_L$ & $1.37$ [$Hz$] \\ \hline
+        $f_H$ & $555.94$ [$kHz$] \\ \hline
+    \end{tabular}
+    \caption{Valores de los parámetros dinámicos del amplificador Realimentado}
+    \label{tab:amplificador-base-dinamico}
+
+\end{table}
+
 Ahora, para el amplificador realimentado positivamente, procedemos a calcular la ganancia:
 
 $$A_{fb} = 1 + \frac{R_f}{R_s} = 1 + \frac{11k\Omega}{3.3k\Omega} = 4.33$$
@@ -77,8 +76,6 @@ $$ Z_i = \frac{Z_d \cdot A_b}{1 + \frac{R_f}{R_s}} = \frac{43.99k\Omega \cdot 30
 Y la impedancia de salida con realimentación positiva es igual a la impedancia de salida de realimentación negativa:
 
 $$Z_o = 0.137 \Omega$$
-
-\section{Simulaciones}
 
 La figura \ref{fig:amplificador-realimentado-negativo} muestra el circuito del amplificador realimentado negativamente construido en multisim.
 
