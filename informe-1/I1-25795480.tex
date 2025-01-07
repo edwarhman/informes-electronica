@@ -9,6 +9,8 @@
 \usepackage{pdfpages}
 \usepackage{hyperref}
 \usepackage{placeins}
+\usepackage{adjustbox}
+
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -28,15 +30,14 @@
 \tableofcontents
 \newpage
 
-\section{Introducción}
 
 % \input{src/introduccion.tex}
 
-\section{Resumen}
+% \input{src/resumen.tex}
 
 % \include{src/marco-teorico.tex}
 
-% \include{src/metodologia/metodología.tex}
+\include{src/metodologia/metodología.tex}
 
 \include{src/resultados/resultados.tex}
 
@@ -45,8 +46,6 @@
 
 \section{Conclusiones}
 
-\section{Anexos}
 % \input{src/anexos.tex}
-
 
 \end{document}
