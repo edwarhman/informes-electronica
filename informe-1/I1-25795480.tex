@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{xr}
 \usepackage{graphicx} % Para incluir imágenes
 \usepackage[spanish]{babel}
 \usepackage{makeidx}
@@ -39,11 +40,13 @@
 
 \include{src/metodologia/metodología.tex}
 
+\include{src/instrumentos.tex}
+
 \include{src/resultados/resultados.tex}
 
-\section{Análisis de resultados}
+\include{src/analisis/analisis.tex}
 
-\section{Conclusiones}
+\include{src/conclusion.tex}
 
 \input{src/anexos.tex}
 

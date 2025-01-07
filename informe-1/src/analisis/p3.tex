@@ -1,0 +1,19 @@
+\subsection{Análisis de la etapa impulsora}
+
+
+\begin{itemize}
+    \item Observando la ganancia registrada para la etapa impulsora encontramos un error en la medición de 96.64\% lo cual indica una fuerte discrepancia con el valor teórico. \ref{tab:med-modelo-dinamico-etapa-diferencial-modo-diferencial} podemos observar que la impedancia de entrada $Z_i$ tiene un error de solo $6.47\%$ siendo un valor aceptable, igualmente la medición de ganancia tiene un error de $8.11\%$ indicando que la predeterminación es correcta, por su parte la medición de impedancia de salida $Z_o$ tiene un error de $0.00\%$ el valor práctico es igual al valor teórico.
+    \item al observar la figura \ref{fig:max-excursion-etapa-impulsora} podemos observar que la señal de entrada para la máxima excursión en la etapa impulsora es de aproximadamente $2.6mV$.
+\end{itemize}
+
+
+\subsection{Análisis de la etapa impulsora}
+
+
+\begin{itemize}
+    \item Observando el punto estático de operación del multietapas desacoplado del cuadro \ref{tab:med-puntos-estaticos-operacion-transistor-multietapas-desacoplado} se observa que los mayores errores se encuentran en las mediciones de corriente de la etapa de potencia que superan el 100\%, y en la medición $V_{ceQ_3}$ mientras que los demás valores corresponden con los valores teóricos.
+    \item Ahora observando el punto estático de operación del multietapas acoplado del cuadro \ref{tab:med-puntos-estaticos-operacion-transistor-multietapas-acoplado} podemos observar que los errores de las corrientes $I_C$ de los transistores $Q_5$ y $Q_6$ siguen siendo altas mientras que la del transistor $Q_4$ bajo a 5.83\% lo cual es aceptable, por otro lado los valores de $V_{ce}$ tienen errores de 55\%, 25\% y 416\%, Estos errores pueden ser debidos a un falso contacto al momento de tomar las mediciones, ya que los elementos del circuito estaban amontonados.
+    \item en el cuadro \ref{tab:med-modelo-dinamico-amplificador-multietapas-modo-diferencial} podemos observar que las mediciones del modelo dinamico en el multietapas en modo diferencial tienen errores entre 52.65\% y 61.91\% distando bastante del valor esperado, esto puede ser debido a que al acoplar las etapas se tiene un efecto en las impedancias de entrada y salida. tambien puede ser debido a una mala selección de la resistencias resistencias patrón, sin embargo para el caso de la impedancia de salida era imposible medir utilizando la resistencia patrón calculada por lo cual se tuvo que utilizar otra resistencia.
+    \item para el modo común representado en la tabla \ref{tab:med-modelo-dinamico-amplificador-multietapas-modo-comun} podemos observar errores similares. sin embargo para la impedancia de entrada el error bajo a 16.03\%.
+\end{itemize}
+
