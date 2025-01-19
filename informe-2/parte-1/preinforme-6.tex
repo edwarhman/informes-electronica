@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{xr}
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage[spanish]{babel}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{adjustbox}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+\include{src/portada}
+\tableofcontents
+\newpage
+
+\section{Objetivos}
+
+\input{src/objetivos.tex}
+
+\section{Marco Teórico}
+
+\input{src/marco-teorico.tex}
+
+\end{document}
