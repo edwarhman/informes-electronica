@@ -28,20 +28,17 @@ en la figura \ref{fig:mt-amplificador-sin-realimentar}.
 
 Y este amplificador se realimenta con una red de ganancia $\beta$ como se muestra en la figura \ref{fig:mt-amplificador-realimentado}. Entonces podemos definir el siguiente sistema de ecuaciones:
 
-\begin{equation}
-    v_o = e_1 \cdot A \\
-\end{equation}
-\begin{equation}
-    e_1 = v_i + \beta v_o \\
-\end{equation}
-\begin{equation}
-    e_o = v_o
-\end{equation}
+\begin{align*}
+    v_o & = e_1 \cdot A \\
+    e_1 & = v_i + \beta v_o \\
+    e_o & = v_o
+\end{align*}
 
 Resolviendo este sistema de ecuaciones, encontramos la siguiente función de transferencia:
 
 \begin{equation}
-    \frac{v_o}{v_i} = \frac{A}{1 - \beta A}
+    \boxed{A_{fb} = \frac{v_o}{v_i} = \frac{A}{1 - \beta A}}
+    \label{eq:mt-func-transferencia-realimentacion}
 \end{equation}
 
 De esta ecuación podemos definir cinco zonas:
@@ -54,7 +51,7 @@ De esta ecuación podemos definir cinco zonas:
 \text{Inestabilidad:} & \quad \beta A > 1
 \end{align*}
 
-\subsection{Método de amplificador desvanecido}
+\subsection{Método del amplificador desvanecido (MAD)}
 
  El método aprovecha las características reales del
 amplificador operacional para desvanecer los elementos no lineales, de manera que el problema se reduce a resolver un sistema compuesto de elementos pasivos.
@@ -63,18 +60,12 @@ Supongamos que tenemos un sistema que está realimentado, entonces encontramos e
 y encontramos los siguientes parámetros, para resolver la ecuación de la ganancia.
 
 
-\begin{equation}
+\begin{align*}
     x_{io} = \left. \frac{v_o}{v_i} \right|_{A=0} \\
-\end{equation}
-\begin{equation}
-x_{i1} = \left. \frac{e_1}{v_i} \right|_{A=0} \\
-\end{equation}
-\begin{equation}
-x_{3o} = \left. \frac{v_o}{e_3} \right|_{v_i=0} \\
-\end{equation}
-\begin{equation}
+    x_{i1} = \left. \frac{e_1}{v_i} \right|_{A=0} \\
+    x_{3o} = \left. \frac{v_o}{e_3} \right|_{v_i=0} \\
     x_{31} = \left. \frac{e_1}{e_3} \right|_{v_i=0}
-\end{equation}
+\end{align*}
 
 donde
 
@@ -92,7 +83,8 @@ hasta $e_1$ con la entrada en cortocircuito.
 Una vez obtenidos estos parámetros, se resuelve la siguiente ecuación:
 
 \begin{equation}
-    \frac{v_o}{v_i} = x_{io} + \frac{x_{i1} \cdot A \cdot x_{3o}}{1 - A \cdot x_{31}}
+    \boxed{A_{fb} = \frac{v_o}{v_i} = x_{io} + \frac{x_{i1} \cdot A \cdot x_{3o}}{1 - A \cdot x_{31}}}
+    \label{eq:mt-MAD}
 \end{equation}
 
 Donde $A$ es la ganancia del amplificador desvanecido.
@@ -103,7 +95,8 @@ Esta fórmula fue desarrollada por Harold Blackman en 1943 con el objetivo de es
 un sistema. La fórmula es la siguiente:
 
 \begin{equation}
-Z_{aa'} = Z_a \cdot \frac{1 - x_{31cc}A}{1 - x_{31ca}A}
+    \boxed{Z_{aa'} = Z_a \cdot \frac{1 - x_{31cc}A}{1 - x_{31ca}A}}
+    \label{eq:mt-Blackman}
 \end{equation}
 
 Donde,
@@ -138,47 +131,48 @@ una impedancia de entrada $Z_d$, una impedancia de salida $Z_o$ y una ganancia $
 
 Aplicando el Método de Amplificador Desvanecido al amplificador inversor, tomando en cuenta los modelos de las figuras 2.2 y 2.3, se tiene
 
-\begin{align}
-    x_{i0} &= \left. \frac{v_o}{v_i} \right|_{A=0} = \frac{(R_f + z_o) \parallel z_d}{R_s + (R_f + z_o) \parallel z_d} \cdot \frac{z_o}{z_o + R_f} \label{eq:mt-amp-inversor-i0} \\
-    x_{i1} &= \left. \frac{e_1}{v_i} \right|_{A=0} = \frac{(R_f + z_o) \parallel z_d}{R_s + (R_f + z_o) \parallel z_d} \label{eq:mt-amp-inversor-i1} \\
-    x_{3o} &= \left. \frac{v_o}{e_3} \right|_{v_i=0} = \frac{R_f + R_s \parallel z_d}{z_o + R_f + R_s \parallel z_d} \label{eq:mt-amp-inversor-3o} \\
-    x_{31} &= \left. \frac{e_1}{e_3} \right|_{v_i=0} = \frac{R_s \parallel z_d}{z_o + R_f + R_s \parallel z_d} \label{eq:mt-amp-inversor-31}
-\end{align}
+\begin{align*}
+    x_{i0} &= \left. \frac{v_o}{v_i} \right|_{A=0} = \frac{(R_f + z_o) \parallel z_d}{R_s + (R_f + z_o) \parallel z_d} \cdot \frac{z_o}{z_o + R_f} \\
+    x_{i1} &= \left. \frac{e_1}{v_i} \right|_{A=0} = \frac{(R_f + z_o) \parallel z_d}{R_s + (R_f + z_o) \parallel z_d} \\
+    x_{3o} &= \left. \frac{v_o}{e_3} \right|_{v_i=0} = \frac{R_f + R_s \parallel z_d}{z_o + R_f + R_s \parallel z_d} \\
+    x_{31} &= \left. \frac{e_1}{e_3} \right|_{v_i=0} = \frac{R_s \parallel z_d}{z_o + R_f + R_s \parallel z_d}
+\end{align*}
 
 Ahora, aproximando la impedancia de entrada y salida $Z_d \rightarrow \infty $ y $z_o \rightarrow 0$ entonces:
 
-\begin{align}
+\begin{align*}
 x_{i0} &= \left. \frac{v_o}{v_i} \right|_{A=0} = 0 \\
 x_{i1} &= \left. \frac{e_1}{v_i} \right|_{A=0} = -\frac{R_f}{R_s + R_f} \\
 x_{3o} &= \left. \frac{v_o}{e_3} \right|_{v_i=0} = 1 \\
 x_{31} &= \left. \frac{e_1}{e_3} \right|_{v_i=0} = -\frac{R_s}{R_f + R_s}
-\end{align}
+\end{align*}
 
 Aplicando la fórmula MAD se tiene: 
 
-\begin{align}
-A_{fb} &= 0 + \frac{-\frac{R_f}{R_s + R_f} \cdot A \cdot 1}{1 - \left( -\frac{R_s}{R_f + R_s} \right) A} \\
-\end{align}
+\begin{equation*}
+A_{fb} = 0 + \frac{-\frac{R_f}{R_s + R_f} \cdot A \cdot 1}{1 - \left( -\frac{R_s}{R_f + R_s} \right) A} \\
+\end{equation*}
 
 \begin{equation}
     \boxed{A_{fb} = -\frac{R_f}{R_s}}
+    \label{eq:mt-ganancia-amp-inversor}
 \end{equation}
 
 
 Por otro lado, la impedancia de entrada se busca utilizando el teorema de Blackman.
 
-\begin{align}
+\begin{align*}
 z_a &= R_s \parallel z_d + R_f = R_s + R_f \\
 x_{31cc} &= -\frac{R_s \parallel z_d}{R_f + R_s \parallel z_d} = -\frac{R_s}{R_f + R_s} \\
 x_{31ca} &= -\frac{z_d}{z_d + R_f} \approx -1
-\end{align}
+\end{align*}
 
 
 Por lo tanto, aplicando la formula 
 
-\begin{align}
-z_{in} &= (R_s + R_f) \cdot \frac{1 - \left( \frac{-R_s}{R_f + R_s} \right) A}{1 - (-1)A} \\
-\end{align}
+\begin{equation*}
+z_{in} = (R_s + R_f) \cdot \frac{1 - \left( \frac{-R_s}{R_f + R_s} \right) A}{1 - (-1)A} \\
+\end{equation*}
 
 Tomando $A \rightarrow \infty$ 
 
@@ -188,12 +182,12 @@ Tomando $A \rightarrow \infty$
 
 Por último, también utilizamos la fórmula de blackman para encontrar la impedancia de salida.
 
-\begin{align}
+\begin{align*}
 z_a &= r_o \parallel (R_f + R_s \parallel z_d) = r_o \\
 x_{31cc} &= 0 \\
 x_{31ca} &= -\frac{R_s \parallel z_d}{R_f + R_s \parallel z_d} = -\frac{R_s}{R_f + R_s} \\
 z_o &= r_o \cdot \frac{1 - 0}{1 - \left( -\frac{R_s}{R_f + R_s} \right) A} 
-\end{align}
+\end{align*}
 
 Lo cual se puede escribir como:
 
@@ -214,12 +208,12 @@ Al igual que el amplificador inversor, este es uno de las topologías básicas d
 
 Aplicando el Método de Amplificador Desvanecido y aproximando la impedancia de entrada y salida $z_d \rightarrow \infty$ y $z_o \rightarrow 0$, entonces
 
-\begin{align}
+\begin{align*}
 x_{i0} &= \left. \frac{v_o}{v_i} \right|_{A=0} = 0 \\
 x_{i1} &= \left. \frac{e_1}{v_i} \right|_{A=0} = 1 \\
 x_{3o} &= \left. \frac{v_o}{e_3} \right|_{v_i=0} = 1 \\
 x_{31} &= \left. \frac{e_1}{e_3} \right|_{v_i=0} = -\frac{R_s}{R_f + R_s}
-\end{align}
+\end{align*}
 
 
 Por lo tanto, aplicando la fórmula de MAD
@@ -230,21 +224,22 @@ A_{fb} &= 0 + \frac{1 \cdot A \cdot 1}{1 - \left( -\frac{R_s}{R_f + R_s} \right)
 
 \begin{equation}
     \boxed{A_{fb} = 1 + \frac{R_f}{R_s}}
+    \label{eq:mt-ganancia-amp-no-inversor}
 \end{equation}
 
 Por otro lado, la impedancia de entrada se busca utilizando el Teorema de Blackman.
 
-\begin{align}
+\begin{align*}
 z_a &= z_d + R_s \parallel R_f = z_d \\
 x_{31cc} &= \frac{-R_s \parallel z_d}{R_f + R_s \parallel z_d} = \frac{-R_s}{R_f + R_s} \\
 x_{31ca} &= 0
-\end{align}
+\end{align*}
 
 Donde este último es nulo debido que al abrir el circuito no pasa corriente por $z_d$, por consiguiente no habrá tensión.
 
-\begin{align}
+\begin{align*}
 z_{in} &= z_d \cdot \frac{1 - \left( \frac{-R_s}{R_f + R_s} \right) A}{1 - 0 \cdot A} \\
-\end{align}
+\end{align*}
 
 \begin{equation}
     \boxed{z_{in} = z_d \cdot \frac{ A}{1 + \frac{R_f}{R_s}}}
@@ -287,14 +282,15 @@ simplificar
 
 \begin{equation}
     \boxed{v_o = \frac{R_2}{R_1} (v_2 - v_1)}
+    \label{eq:mt-ganancia-restador}
 \end{equation}
 
 Sin embargo, existe una diferencia entre las impedancias de entrada.
 
-\begin{align}
+\begin{align*}
 z_{in1} &= R_1 \\
 z_{in2} &= R_3 + R_4 = R_1 + R_2
-\end{align}
+\end{align*}
 
 
 Un amplificador en diferencia será insensible a la tensión en modo común,
@@ -334,11 +330,11 @@ El circuito consiste en una fuente de entrada $V_i$ con una resistencia en serie
 
 Podemos simplificar el circuito aplicando Blackman tomando parte del cirtuito cómo un amplificador no inversor:
 
-\begin{align}
+\begin{align*}
     z & = z_a \cdot \frac{1 - X_{3icc}A}{1 - X_{3ica}A} \\
     z_a & = R_1 \parallel R_2 \\
     X_{31cc} Q& = \left. \frac{e_1}{e_3} \right|_{v_a=0} \\
-\end{align}
+\end{align*}
 
 al utilizar la formula de MAD, obtenemos la ganancia:
 
@@ -357,16 +353,16 @@ Podemos aproximar la impedancia de entrada y salida $Z_d \rightarrow \infty $ y 
 
 Aplicando nuevamente Blackman en el circuito simplificado:
 
-\begin{align}
+\begin{align*}
     X_{31ca} = \left. \frac{e_1}{e_3} \right|_{I_a=0} = \frac{R_1}{R_1 + R_2} \\
     z_o = R_1 \parallel R_2 (\frac{1 - 0A}{1 - \frac{R_1}{R_1 + R_2}(1 + \frac{R_4}{R_3})}) \\
     z_o = \frac{R_1 R_2 / R_1 + R_2}{\frac{R_3(R_1 + R_2) - R_1(R_3 + R_4)}{(R_1 + R_2)R_3}} \\
-\end{align}
+\end{align*}
 
 resultando en:
 
 \begin{equation}
-    \boxed{z_o = \frac{R_1 R_2 R_3}{R_2 R_3 - R_1 R_4}}
+    z_o = \frac{R_1 R_2 R_3}{R_2 R_3 - R_1 R_4}
 \end{equation}
 
 para que $Z_o \rightarrow\infty$ el denominador debe ser igual a 0:
@@ -379,14 +375,15 @@ para que $Z_o \rightarrow\infty$ el denominador debe ser igual a 0:
 por lo que 
 
 \begin{align}
-    R_1 = R_3 \\
-    R_2 = R_4 \\
+    \boxed{R_1 = R_3} \\
+    \boxed{R_2 = R_4} 
 \end{align}
 
 Cuando se cumple esta condición, la salida se vuelve independiente de $V_l$:
 
 \begin{equation}
     \boxed{i_o = \frac{1}{R1} V_i}
+    \label{eq:mt-io-fuente-corriente}
 \end{equation}
 
 Dado que $V_L = V_o \frac{R_3}{R_3 + R_4} = V_o \frac{R_1}{R_1 + R_2}$, el máximo  voltaje de salida para actuar en la zona lineal es, asumiendo una saturación de salida simétrica,  
