@@ -393,3 +393,35 @@ Dado que $V_L = V_o \frac{R_3}{R_3 + R_4} = V_o \frac{R_1}{R_1 + R_2}$, el máxi
 \end{equation}
 
 Para el proposito de extender el rango de linealidad, es deseable mantener $R_2$ suficientemente pequeño en comparación	con $R_1$ (por ejemplo, $R_2 \approx 0.1 R_1$).
+
+\subsection{Integrador no inversor (Integrador de Deboo)}
+
+El integrador de Deboo usa una fuente de corriente de Howland, sustituyendo la carga por una capacitancia para obtener un integrador no inversor. El circuito de la figura \ref{fig:mt-integrador-deboo} es la representación de un integrador de Deboo.
+
+Cómo sabemos, la fuente de corriente fuerca una corriente $i = \frac{v_i}{R}$ en la capacitancia, resultando en un voltaje de entrada no inversor:
+
+\begin{equation*}
+    v_p = \frac{1}{s2C} i = \frac{i-i}{sRC}
+\end{equation*}
+
+Luego, el amplificador operacional amplifica este voltaje de manera que:
+
+\begin{align*}
+    v_o = \frac{1 + R}{R} v_p \\
+    v_o = \frac{v_i}{sRC}
+\end{align*}
+
+Por lo que la función de transferencia es: 
+
+\begin{equation}
+    H(s) = \frac{1}{sRC}
+    \label{eq:mt-func-transferencia-integrador-deboo}
+\end{equation}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{src/images/integrador-deboo.png}
+    \caption{Integrador de Deboo}
+    \label{fig:mt-integrador-deboo}
+\end{figure}
+
