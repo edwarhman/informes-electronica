@@ -19,5 +19,8 @@
         "**/*.synctex.gz": true,
         "**/*.toc": true,
         "**/*.xdv": true
-    }
+    },
+    "cSpell.words": [
+        "GBWP"
+    ]
 }
