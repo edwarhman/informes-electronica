@@ -220,6 +220,26 @@ entonces:
     \boxed{R_4 = R_5 = 2k\Omega}
 \end{equation*}
 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/variables-montaje.png}
+    \caption{Filtro variables de estado realimentación montaje}\label{fig:sim-variables-montaje} 
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/variables-cuadrada.png}
+    \caption{Filtro multiple realimentación respuesta a onda cuadrad  }
+    \label{fig:sim-variables-cuadrada} 
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/variables-respuesta.png}
+    \caption{Filtro multiple realimentación respuesta en frecuencia  }
+\end{figure}
+
 \subsection{Filtro pasa bajos con topología de Sallen-Key}
 
 Para diseñar este filtro partimos de la ecuación \ref{eq:transferencia-pasa-bajo-sallen-key} de la función de transferencia de un filtro pasa bajos con topología de Sallen-Key.
@@ -297,4 +317,114 @@ despejando $R_2$ tenemos:
     \boxed{R_2 = 8335 \Omega}
 \end{equation*}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/sallen-montaje.png}
+    \caption{Filtro sallen key  realimentación montaje}\label{fig:sim-sallen-montaje} 
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/sallen-cuadrada.png}
+    \caption{Filtro sallen key respuesta a onda cuadrad  }
+    \label{fig:sim-sallen-cuadrada} 
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/sallen-respuesta.png}
+    \caption{Filtro Sallen key respuesta en frecuencia  }
+\end{figure}
+
 \subsection{Filtro pasa bajos con realimentación múltiple}
+
+Partiendo de la ecuación \ref{eq:func-transferencia-pasa-bajos-multirealimentacion} de la función de transferencia de un filtro pasa bajos con realimentación múltiple podemos obtener:
+
+\begin{align*}
+    H_0 &= \frac{-R_4}{R_1} \\
+    R_4 &= - H_0 R_1 \\
+\end{align*}
+
+\begin{equation}
+    R_4 = 2 R_1\\
+    \label{eq:r4-multirealimentacion-pasa-bajos}
+\end{equation}
+
+también tenemos que: 
+
+\begin{equation}
+    \omega_0 = \sqrt{\frac{1}{R_3 R_4 C_2 C_5}}
+    \label{eq:omega-0-multirealimentacion-pasa-bajos}
+\end{equation}
+
+Si decimos que: 
+
+\begin{equation*}
+    \boxed{C_5 = C_2 = 10nF}
+\end{equation*}
+
+la ecuación \ref{eq:omega-0-multirealimentacion-pasa-bajos} se simplifica a:
+
+\begin{equation}
+    \omega_0 = \frac{1}{C_2\sqrt{R_3 R_4}}
+    \label{eq:omega-0-multirealimentacion-pasa-bajos-simple}
+\end{equation}
+
+Por último, tenemos la ecuación:
+
+\begin{equation}
+    2\factorAmortiguamiento = \sqrt{\frac{C_5}{C_2}} \left( \sqrt{\frac{R_3}{R_4}} + \sqrt{\frac{R_4}{R_3}} + \frac{\sqrt{R_3 R_4}}{R_1} \right)
+    \label{eq:factor-amortiguamiento-multirealimentacion-pasa-bajos}
+\end{equation}
+
+
+que al decir $C_5 = C_2$ entonces la ecuación \ref{eq:factor-amortiguamiento-multirealimentacion-pasa-bajos} se simplifica a:
+
+\begin{equation}
+    2\factorAmortiguamiento = \sqrt{\frac{R_3}{R_4}} + \sqrt{\frac{R_4}{R_3}} + \frac{\sqrt{R_3 R_4}}{R_1} 
+    \label{eq:factor-amortiguamiento-multirealimentacion-pasa-bajos-simple}
+\end{equation}
+
+Ahora, usando la ecuación \ref{eq:omega-0-multirealimentacion-pasa-bajos-simple} en la ecuación \ref{eq:factor-amortiguamiento-multirealimentacion-pasa-bajos-simple} obtenemos:
+
+\begin{equation}
+    2\factorAmortiguamiento = \frac{1}{\freqCorte C_2 R_4} + \frac{\freqCorte C_2 R_4}{1} + \frac{1}{\freqCorte R_1 C_2} 
+    \label{eq:factor-amortiguamiento-multirealimentacion-pasa-bajos-final}
+\end{equation}
+
+Usando \ref{eq:r4-multirealimentacion-pasa-bajos} en la ecuación \ref{eq:factor-amortiguamiento-multirealimentacion-pasa-bajos-final} obtenemos:
+
+\begin{equation}
+    2\factorAmortiguamiento = \frac{1}{\freqCorte C_2 2R_1} + \frac{\freqCorte C_2 2R_1}{1} + \frac{1}{\freqCorte R_1 C_2} 
+    \label{eq:factor-amortiguamiento-multirealimentacion-pasa-bajos-final-final}
+\end{equation}
+
+Todo esto da como resultado:
+
+\begin{align*}
+    R_1 &= 1.27k \\
+    R_3 &= 640 \\
+    R_4 &= 1.88k \\
+    C_2 &= 10nF \\
+    C_5 &= 100nF \\
+\end{align*}
+
+\subsubsection{Simulación circuito multirealimentacion}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/multirealimentacion-montaje.png}
+    \caption{Filtro multiple realimentación montaje}\label{fig:sim-multirealimentacion-montaje} 
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/multirealimentacion-cuadrada.png}
+    \caption{Filtro multiple realimentación respuesta a onda cuadrad  }
+    \label{fig:sim-multirealimentacion-cuadrada} 
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{simulaciones/multirealimentacion-respuesta.png}
+    \caption{Filtro multiple realimentación respuesta en frecuencia  }
+    \label{fig:sim-multirealimentacion-respuesta} 
+\end{figure}
