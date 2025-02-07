@@ -3,7 +3,7 @@ Los primeros amplificadores operacionales fueron implementados con tubos de vac�
 
 En 1968 se introdujo el $\mu A741$, como el primer amplificador estándar en la industria electrónica.
 
-Un amplificador es un dispositivo que tiene dos puertods de entrada, llamados puerto inversor y puerto no inversor, y una salida que es proporcional
+Un amplificador es un dispositivo que tiene dos puertos de entrada, llamados puerto inversor y puerto no inversor, y una salida que es proporcional
 al valor de la entrada por una ganancia.
 
 Un amplificador $\mu$741 tiene una ganancia típica de 200V/mV , o 106dB. Sin embargo, esta ganancia se sostiene en un pequeño ancho de banda cuando el amplificador no está realimentado.
@@ -179,7 +179,7 @@ Tomando $A \rightarrow \infty$
     \boxed{z_{in} = R_s}
 \end{equation}
 
-Por último, también utilizamos la fórmula de blackman para encontrar la impedancia de salida.
+Por último, también utilizamos la fórmula de Blackman para encontrar la impedancia de salida.
 
 \begin{align*}
 z_a &= r_o \parallel (R_f + R_s \parallel z_d) = r_o \\
@@ -304,7 +304,7 @@ Si se sustituye la resistencia de realimentación Rf por un condensador en un am
 \frac{v_o}{v_i} &= -\frac{1}{sRC}
 \end{align*}
 
-Si se apaga la tensión $v_i$ en el integrador, este estará influenciado solo por la acción de la tensión y la crriente de offset. Estudiando sólo la tensión de offset, se tiene que el voltaje de salida es:
+Si se apaga la tensión $v_i$ en el integrador, este estará influenciado solo por la acción de la tensión y la corriente de offset. Estudiando sólo la tensión de offset, se tiene que el voltaje de salida es:
 
 \begin{align*}
 v_o &= v_{os} + \frac{t}{RC} v_{os}
@@ -327,7 +327,7 @@ El circuito consiste en una fuente de entrada $V_i$ con una resistencia en serie
     \label{fig:mt-fuente-corriente-howland}
 \end{figure}
 
-Podemos simplificar el circuito aplicando Blackman tomando parte del cirtuito cómo un amplificador no inversor:
+Podemos simplificar el circuito aplicando Blackman tomando parte del circuito cómo un amplificador no inversor:
 
 \begin{align*}
     z & = z_a \cdot \frac{1 - X_{3icc}A}{1 - X_{3ica}A} \\
@@ -391,13 +391,13 @@ Dado que $V_L = V_o \frac{R_3}{R_3 + R_4} = V_o \frac{R_1}{R_1 + R_2}$, el máxi
     \left| V_L \right| \leq  \frac{R_1}{R_1 + R_2} V_{sat}
 \end{equation}
 
-Para el proposito de extender el rango de linealidad, es deseable mantener $R_2$ suficientemente pequeño en comparación	con $R_1$ (por ejemplo, $R_2 \approx 0.1 R_1$).
+Para el propósito de extender el rango de linealidad, es deseable mantener $R_2$ suficientemente pequeño en comparación	con $R_1$ (por ejemplo, $R_2 \approx 0.1 R_1$).
 
 \subsection{Integrador no inversor (Integrador de Deboo)}
 
 El integrador de Deboo usa una fuente de corriente de Howland, sustituyendo la carga por una capacitancia para obtener un integrador no inversor. El circuito de la figura \ref{fig:mt-integrador-deboo} es la representación de un integrador de Deboo.
 
-Cómo sabemos, la fuente de corriente fuerca una corriente $i = \frac{v_i}{R}$ en la capacitancia, resultando en un voltaje de entrada no inversor:
+Cómo sabemos, la fuente de corriente fuera una corriente $i = \frac{v_i}{R}$ en la capacitancia, resultando en un voltaje de entrada no inversor:
 
 \begin{equation*}
     v_p = \frac{1}{s2C} i = \frac{i-i}{sRC}
