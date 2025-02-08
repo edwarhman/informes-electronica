@@ -1,0 +1,1 @@
+%s/- ´\n//ge | %s/-´\n//ge | %s/´\n/ /ge | %s/˜/´/ge | %s/ ´ ´/´/ge | %s/´´/´/ge | %s/´ ´/´/ge | %s/ ´ a/á/ge | %s/ ´ e/é/ge | %s/ ´ o/ó/ge | %s/ ´ u/ú/ge | %s /´ ı/í/ge | %s /˜ n/ñ/ge | %s/´ a/á/ge | %s/´ e/é/ge | %s/´ o/ó/ge | %s/´ u/ú/ge | %s/´ ı/í/ge | %s/˜ n/ñ/ge | %s/´a/á/ge | %s/´e/é/ge | %s/´o/ó/ge | %s/´u/ú/ge | %s/´ı/í/ge | %s/˜n/ñ/ge | %s/  / /ge
