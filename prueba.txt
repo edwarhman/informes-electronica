@@ -1,20 +1,8 @@
-Los filtros en electronica son circuitos que se utilizan para seleccionar o rechazar ciertas ´
-frecuencias de una senal el ˜ ectrica. Los filtros pueden ser pasivos, que utilizan solo componentes ´
-pasivos como resistencias, capacitores e inductores, o activos, que utilizan componentes activos
-como amplificadores operacionales. Los filtros se utilizan en una amplia variedad de aplicaciones, como en la radio, la television, la telefon ´ ´ıa, la m´usica, la medicina y la investigacion´
-cient´ıfica.
+Los filtros en electronica son circuitos que se utilizan para seleccionar o rechazar ciertas frecuencias de una senal eléctrica. Los filtros pueden ser pasivos, que utilizan solo componentes pasivos como resistencias, capacitores e inductores, o activos, que utilizan componentes activos
+como amplificadores operacionales. Los filtros se utilizan en una amplia variedad de aplicaciones, como en la radio, la television, la telefonía, la música, la medicina y la investigacion científica.
 
-Los filtros activos son circuitos que incluyen uno o mas amplificadores operacionales para ´
-implementar la funcion de filtrado. Estos filtros se utilizan para lograr un alto grado de selectivi- ´
-dad en la respuesta en frecuencia, una mayor ganancia y una impedancia de entrada y salida mas´
-alta que los filtros pasivos. Los filtros activos se dividen en dos categor´ıas: filtros de retroalimentacion y filtros Sallen-Key. Los filtros de retroalimentaci ´ on se basan en la retroalimentaci ´ on´
-de la senal de salida al amplificador operacional para lograr la funci ˜ on de filtrado. Los filtros ´
-Sallen-Key utilizan un par de resistencias y capacitores para lograr la funcion de filtrado. 
+Los filtros activos son circuitos que incluyen uno o mas amplificadores operacionales para implementar la funcion de filtrado. Estos filtros se utilizan para lograr un alto grado de selectividad en la respuesta en frecuencia, una mayor ganancia y una impedancia de entrada y salida mas alta que los filtros pasivos. Los filtros activos se dividen en dos categorías: filtros de retroalimentacion y filtros Sallen-Key. Los filtros de retroalimentación se basan en la retroalimentación de la senal de salida al amplificador operacional para lograr la función de filtrado. Los filtros Sallen-Key utilizan un par de resistencias y capacitores para lograr la funcion de filtrado. 
 
-Son dispositivos electronicos que transforman la energ ´ ´ıa electrica de una fuente de alimenta- ´
-cion en una tensi ´ on continua regulada y estabilizada. Estas fuentes utilizan componentes pasivos, ´
-como resistencias y capacitores, para filtrar y regular la tension de salida.
+Son dispositivos electronicos que transforman la energía electrica de una fuente de alimentacion en una tensión continua regulada y estabilizada. Estas fuentes utilizan componentes pasivos, como resistencias y capacitores, para filtrar y regular la tension de salida.
 
-Son dispositivos electronicos que se utilizan para regular y estabilizar la tensi ´ on de salida ´
-en un circuito electrico. Estos reguladores se fabrican en un solo chip, lo que los hace m ´ as´
-compactos y faciles de usar en comparaci ´ on con los reguladores de tensi ´ on discretos
+Son dispositivos electronicos que se utilizan para regular y estabilizar la tensión de salida en un circuito electrico. Estos reguladores se fabrican en un solo chip, lo que los hace más compactos y faciles de usar en comparación con los reguladores de tensión discretos
