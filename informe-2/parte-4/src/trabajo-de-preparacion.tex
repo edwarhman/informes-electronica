@@ -1,4 +1,4 @@
-\subsection{Regulador con tensión de salida fija}
+\subsubsection{Regulador con tensión de salida fija}
 
 \begin{figure}[ht]
     \centering
@@ -65,7 +65,7 @@ Por tanto la regulación de voltaje será:
     reg = \frac{5 -5}{5} 100 = 0\%
 \end{equation}
 
-\subsection{Fuente regulada ajustable}
+\subsubsection{Fuente regulada ajustable}
 
 \begin{figure}[ht]
     \centering
@@ -117,7 +117,7 @@ Partiendo de la expresión del valor máximo de $V_o$ podemos obtener el valor d
     \boxed{R_{1} = 5k \Omega}
 \end{equation}
 
-\subsubsection{Determinar la corriente de polarización que suministra el amplificador operacional}
+\subsubsection*{Determinar la corriente de polarización que suministra el amplificador operacional}
 
 La corriente de polarización es la corriente que pasa por la resistencia $R_1$, por lo tanto:
 
@@ -127,7 +127,7 @@ La corriente de polarización es la corriente que pasa por la resistencia $R_1$,
     I &= 1mA
 \end{align*}
 
-\subsubsection{Determinar la tensión minima de secundario del transformador en función de la corriente de salida, de manera que el regulador pueda mantener la regulación}
+\subsubsection*{Determinar la tensión minima de secundario del transformador en función de la corriente de salida, de manera que el regulador pueda mantener la regulación}
 
 Para obtener la tensión mínima del secundario se vuelve a utilizar la ecuación \ref{eq:tension-min-secundario}, está vez sustituyendo $V_{ir}$ por 15V:
 
@@ -142,7 +142,7 @@ $$ V_{srms} = \frac{V_s}{\sqrt{2}} $$
 
 $$ V_{srms} = (11.60 + 12.53 I_{dc} )V $$
 
-\subsection{Fuente de corriente variable}
+\subsubsection{Fuente de corriente variable}
 
 \begin{figure}[ht]
     \centering
@@ -151,7 +151,7 @@ $$ V_{srms} = (11.60 + 12.53 I_{dc} )V $$
     \label{fig:fuente-corriente-variable}
 \end{figure}
 
-\subsubsection{Determinar el rango de corrientes de salida en función del accionamiento <<x>>}
+\subsubsection*{Determinar el rango de corrientes de salida en función del accionamiento <<x>>}
 
 utilizando la relación:
 
@@ -169,9 +169,9 @@ para rangos de $x$ entre $0$ y $1$ se tiene que:
     4.03 mA \leq I_o \leq 20.83 mA 
 \end{equation*}
 
-\subsection{Simulaciones}
+\subsubsection{Simulaciones}
 
-\subsubsection{Regulador de tensión de salida fija}
+\subsubsection*{Regulador de tensión de salida fija}
 
 \begin{figure}[ht]
     \centering
@@ -210,7 +210,7 @@ En la figura \ref{fig:regulacion-voltaje-regulador-salida-fija} se puede aprecia
 \end{figure}
 
 \FloatBarrier
-\subsubsection{Fuente regulada ajustable}
+\subsubsection*{Fuente regulada ajustable}
 
 La figura \ref{fig:simulacion-fuente-ajustable} muestra el montaje de una fuente ajustable usando el valor de $R_1 = 5k \Omega$. En esta figura se puede observar que cuando $X=0$ la tensión de salida es $V_0 = 7 V$
 
@@ -249,7 +249,7 @@ En la figura \ref{fig:minima-excursion-regulador-salida-variable} se observa que
 \end{figure}
 
 \FloatBarrier
-\subsubsection{Fuente de corriente variable}
+\subsubsection*{Fuente de corriente variable}
 
 En la figura \ref{fig:simulacion-fuente-corriente} se puede observar el montaje de la fuente de corriente variable.
 
@@ -271,9 +271,9 @@ Cuando $x=0$, $I_o = 5.58 mA$ y cuando $x=1$, $I_o = 20.9mA$.
     \label{fig:rango-corriente-salida}
 \end{figure}
 
-\subsection{Procedimiento ensayo de laboratorio}
+\subsubsection{Procedimiento ensayo de laboratorio}
 
-\subsubsection{Rectificador de tensión}
+\subsubsection*{Rectificador de tensión}
 
 \begin{enumerate}
     \item Se realiza el montaje de la etapa del rectificador de onda completa y filtro capacitivo.
@@ -282,7 +282,7 @@ Cuando $x=0$, $I_o = 5.58 mA$ y cuando $x=1$, $I_o = 20.9mA$.
     \item se conecta la referencia del osciloscopio al nodo b.
 \end{enumerate}
 
-\subsubsection{Regulador de tensión de salida fija}
+\subsubsection*{Regulador de tensión de salida fija}
 
 \begin{enumerate}
     \item Se realiza el montaje del circuito de la figura \ref{fig:regulador-lineal-tension-fija}
@@ -292,7 +292,7 @@ Cuando $x=0$, $I_o = 5.58 mA$ y cuando $x=1$, $I_o = 20.9mA$.
     \item Ahora se quita la carga y se mide la tensión de salida, para luego colocar una carga de $50 \Omega$ y se vuelve a medir la tensión de salida.
 \end{enumerate}
 
-\subsubsection{Regulador de tensión de salida variable}
+\subsubsection*{Regulador de tensión de salida variable}
 
 \begin{enumerate}
     \item Se realiza el montaje del circuito de la figura \ref{fig:regulador-tension-salida-ajustable}
@@ -303,7 +303,7 @@ Cuando $x=0$, $I_o = 5.58 mA$ y cuando $x=1$, $I_o = 20.9mA$.
     \item se repite el paso anterior, esta vez con el transformador suministrando menos de $12Vrms$.
 \end{enumerate}
 
-\subsubsection{Fuente de corriente variable}
+\subsubsection*{Fuente de corriente variable}
 
 \begin{enumerate}
     \item Se realiza el montaje del circuito de la figura \ref{fig:fuente-corriente-variable}

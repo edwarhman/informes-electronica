@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{cancel}
 \usepackage{xr}
 \usepackage{graphicx} % Para incluir imágenes
 \usepackage[spanish]{babel}
@@ -11,7 +12,8 @@
 \usepackage{hyperref}
 \usepackage{placeins}
 \usepackage{adjustbox}
-\usepackage{import}
+\usepackage{multicol}
+\usepackage{../utils/laboratorio}
 
 
 \hypersetup{
@@ -28,26 +30,42 @@
 
 \graphicspath{
     {./parte-1/src/images/}
+    {./parte-2/src/images/}
+    {./parte-3/src/images/}
+    {./parte-4/src/images/}
 }
 
 
 \begin{document}
-\import{./}{portada.tex}
+\input{portada.tex}
 \tableofcontents
 \newpage
 \section{Introducción}
-\import{./}{introduccion.tex}
+\input{introduccion.tex}
 
 \section{Resumen}
-\import{./}{resumen.tex}
+\input{resumen.tex}
 
 \section{Objetivos}
-\import{parte-1/src/}{objetivos.tex}
+\input{parte-1/src/objetivos.tex}
 
 \section {Marco teórico}
-\import{./parte-1/src/}{marco-teorico.tex}
+\input{parte-1/src/marco-teorico.tex}
+\input{parte-2/src/marco-teorico.tex}
+\input{parte-3/src/marco-teorico.tex}
+\input{parte-4/src/marco-teorico.tex}
 
 \section{Metodología}
-\import{./parte-1/src/}{trabajo-de-preparacion.tex}
+\subsection{Aplicaciones de las topologías clásicas}
+\input{parte-1/src/trabajo-de-preparacion.tex}
+\FloatBarrier
+\subsection{Amplificador operacional real}
+\input{parte-2/src/trabajo-de-preparacion.tex}
+\FloatBarrier
+\subsection{Filtros activos}
+\input{parte-3/src/trabajo-de-preparacion.tex}
+\FloatBarrier
+\subsection{Fuentes lineales y reguladores monolíticos}
+\input{parte-4/src/trabajo-de-preparacion.tex}
 
 \end{document}

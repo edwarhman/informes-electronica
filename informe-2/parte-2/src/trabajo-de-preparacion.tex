@@ -2,8 +2,6 @@
 Offset y como medir la corriente de polarización de cada
 .
 
-Hola mundo cómo está usted? 
-
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{topologias-basicas.png}
@@ -11,7 +9,7 @@ Hola mundo cómo está usted?
     \label{fig:offset-y-bias}
 \end{figure}
 
-Tensión Offset:
+\subsubsection{Tensión Offset}
 
 Para hallar la tension offset  , denotada como $V_{os}$, se va a cerrar los Jumper(JP1) y
 (JP2), de esa manera se obtiene la siguiente expresión: 
@@ -24,7 +22,7 @@ Se medirá la tensión de salida  $V_o$, por esa razón, se despeja  $V_{os}$, o
 
 $V_{os}=\frac{V_o}{1+\frac{R_5}{R_2}}$
 
-Corriente de Bias
+\subsubsection{Corriente de Bias}
 
  Se halla la Corriente de polarización 1 , denotada como $I_{B1}$, se cierra JP 2 y se abre JP 1. Nota: Importante acotación para facilitar los cálculos es que la resistencia  $R_1$ no se tomara en cuenta su caída de tension, debido a que la corriente que pasa por allí es muy pequeña, en consecuencia se desprecia esa tension. Por lo tanto, se obtiene lo siguiente:
 
@@ -62,6 +60,8 @@ Al hallar las corrientes de polarización de cada entrada, se puede hacer uso de
     I_{os} = \left| I_{B1} - I_{B2} \right|
 \end{equation}
 
+\subsubsection{Producto del ancho de banda por la ganancia}
+
 2- Mediante el montaje de la Figura \ref{fig:gbwp} explique como comprobar que el Producto del Ancho de Banda por la Ganancia
 se mantiene
 
@@ -88,7 +88,7 @@ En este caso, se verificara que con distintas configuraciones de la figura \ref{
 
 \end{itemize}
 
-1- Mediante el montaje de seguidor de tension de la Figura \ref{fig:medicion-sr}, indique como medir el SlewRate, los limites máximos de excursion y la corriente de corto circuito
+\subsubsection{SlewRate, Excursión máxima y corriente de cortocircuito}
 
 \begin{figure}[ht]
     \centering

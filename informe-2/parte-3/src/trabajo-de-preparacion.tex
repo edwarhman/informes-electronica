@@ -29,7 +29,8 @@ Para cada uno de los circuitos que se muestran en las figuras \ref{fig:filtro-va
     \label{fig:filtro-realimentacion-multiple}
 \end{figure}
 
-\subsection{Filtro de variables de estado}
+\FloatBarrier
+\subsubsection{Filtro de variables de estado}
 
 De la figura \ref{fig:filtro-variables-de-estado} se observa que las etapas con los amplificadores $U2A0$ y $U3A0$ corresponden a a integradores con ganancia $A = \frac{1}{RCs}$, por lo tanto podemos expresar $V_{bp}$ y $V_{lp}$ como:
 
@@ -224,23 +225,24 @@ entonces:
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/variables-montaje.png}
-    \caption{Filtro variables de estado realimentación montaje}\label{fig:sim-variables-montaje} 
+    \caption{Montaje Filtro variables de estado}\label{fig:sim-variables-montaje} 
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/variables-cuadrada.png}
-    \caption{Filtro multiple realimentación respuesta a onda cuadrad  }
+    \caption{Filtro variables de estado respuesta a onda cuadrada  }
     \label{fig:sim-variables-cuadrada} 
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/variables-respuesta.png}
-    \caption{Filtro multiple realimentación respuesta en frecuencia  }
+    \caption{Filtro variables de estado respuesta en frecuencia  }
 \end{figure}
 
-\subsection{Filtro pasa bajos con topología de Sallen-Key}
+\FloatBarrier
+\subsubsection{Filtro pasa bajos con topología de Sallen-Key}
 
 Para diseñar este filtro partimos de la ecuación \ref{eq:transferencia-pasa-bajo-sallen-key} de la función de transferencia de un filtro pasa bajos con topología de Sallen-Key.
 
@@ -320,13 +322,13 @@ despejando $R_2$ tenemos:
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/sallen-montaje.png}
-    \caption{Filtro sallen key  realimentación montaje}\label{fig:sim-sallen-montaje} 
+    \caption{Montaje Filtro sallen key}\label{fig:sim-sallen-montaje} 
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/sallen-cuadrada.png}
-    \caption{Filtro sallen key respuesta a onda cuadrad  }
+    \caption{Filtro sallen key respuesta a onda cuadrada  }
     \label{fig:sim-sallen-cuadrada} 
 \end{figure}
 
@@ -336,7 +338,8 @@ despejando $R_2$ tenemos:
     \caption{Filtro Sallen key respuesta en frecuencia  }
 \end{figure}
 
-\subsection{Filtro pasa bajos con realimentación múltiple}
+\FloatBarrier
+\subsubsection{Filtro pasa bajos con realimentación múltiple}
 
 Partiendo de la ecuación \ref{eq:func-transferencia-pasa-bajos-multirealimentacion} de la función de transferencia de un filtro pasa bajos con realimentación múltiple podemos obtener:
 
@@ -409,17 +412,15 @@ Todo esto da como resultado:
     C_5 &= 100nF \\
 \end{align*}
 
-\subsubsection{Simulación circuito multirealimentacion}
-
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/multirealimentacion-montaje.png}
-    \caption{Filtro multiple realimentación montaje}\label{fig:sim-multirealimentacion-montaje} 
+    \caption{Montaje Filtro multiple realimentación}\label{fig:sim-multirealimentacion-montaje} 
 \end{figure}
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/multirealimentacion-cuadrada.png}
-    \caption{Filtro multiple realimentación respuesta a onda cuadrad  }
+    \caption{Filtro multiple realimentación respuesta a onda cuadrada}
     \label{fig:sim-multirealimentacion-cuadrada} 
 \end{figure}
 \begin{figure}[ht]

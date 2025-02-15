@@ -19,18 +19,14 @@
     \label{fig:topologias-basicas}
 \end{figure}
 
-\subsection{Amplificador inversor}
+\subsubsection{Amplificador inversor}
 
 Para construir un inversor a partir de la topología base, se realizarán las siguientes conexiones:
-
-\newcommand{\volt}[1]{$v_{#1}$}
-\newcommand{\curr}[1]{$i_{#1}$}
-\newcommand{\jumper}[1]{$JP_{#1}$}
 
 \begin{itemize}
     \item a fuente: $v_1$
     \item a tierra: $JP1$
-    \item abierto: \volt{2}, \volt{3}, \volt{4}, \jumper{2}, \jumper{3}, \jumper{4}
+    \item abierto: $\volt{2}$, $\volt{3}$, $\volt{4}$, $\jumper{2}$, $\jumper{3}$, $\jumper{4}$
 \end{itemize}
 
 Para que la ganancia sea $-2$, debemos usar la formula \ref{eq:mt-ganancia-amp-inversor}, y seleccionar una resistencia $R_1$ cualquiera, en este caso se escoge $R_1 = 10k\Omega$, por lo que:
@@ -57,14 +53,14 @@ En la figura \ref{fig:sim-amp-inversor} podemos observar la simulación del ampl
     \label{fig:sim-amp-inversor-ganancia}
 \end{figure}
 
-\subsection{Amplificador restador}
+\subsubsection{Amplificador restador}
 
 Para construir un restador a partir de la topología base, se realizarán las siguientes conexiones:
 
 \begin{itemize}
-    \item a fuente: \volt{1} y \volt{3}
-    \item a tierra: \jumper{4}
-    \item abierto: \volt{2}, \volt{4}, \jumper{1}, \jumper{2}, \jumper{3}
+    \item a fuente: $\volt{1}$ y $\volt{3}$
+    \item a tierra: $\jumper{4}$
+    \item abierto: $\volt{2}$, $\volt{4}$, $\jumper{1}$, $\jumper{2}$, $\jumper{3}$
 \end{itemize}
 
 \newcommand{\res}[1]{$r_{#1}$}
@@ -103,14 +99,14 @@ En la figura \ref{fig:sim-amp-restador} podemos observar la simulación del ampl
 
 
 \FloatBarrier
-\subsection{Amplificador no inversor}
+\subsubsection{Amplificador no inversor}
 
 Para construir un no inversor a partir de la topología base, se realizarán las siguientes conexiones:
 
 \begin{itemize}
-    \item a fuente: \volt{3}
-    \item a tierra: \volt{1}
-    \item abierto: \volt{2}, \volt{4}, \jumper{1}, \jumper{2}, \jumper{3}, \jumper{4}
+    \item a fuente: $\volt{3}$
+    \item a tierra: $\volt{1}$
+    \item abierto: $\volt{2}$, $\volt{4}$, $\jumper{1}$, $\jumper{2}$, $\jumper{3}$, $\jumper{4}$
 \end{itemize}
 
 Siguiendo la formula de ganancia del no inversor (\ref{eq:mt-ganancia-amp-no-inversor}), y utilizando las resistencias $r_3$ y $r_6$ utilizadas anteriormente, se obtiene:
@@ -137,18 +133,18 @@ En la figura \ref{fig:sim-amp-no-inversor} podemos observar la simulación del a
 \end{figure}
 
 \FloatBarrier
-\subsection{Fuente de corriente}
+\subsubsection{Fuente de corriente}
 
 Para construir un convertidor de tensión a corriente a partir de la topología base, se realizarán las siguientes conexiones:
 
 \begin{itemize}
-    \item a fuente: \volt{4}
-    \item a tierra: \volt{2}, \jumper{1}
-    \item abierto: \volt{1}, \volt{3}, \jumper{2}, \jumper{4}
-    \item cerrado: \jumper{3}
+    \item a fuente: $\volt{4}$
+    \item a tierra: $\volt{2}$, $\jumper{1}$
+    \item abierto: $\volt{1}$, $\volt{3}$, $\jumper{2}$, $\jumper{4}$
+    \item cerrado: $\jumper{3}$
 \end{itemize}
 
-Para esta conexión se utilizarán las mismas resistencias \res{6} = \res{7} que con las conexiones anteriores, sin embargo, para aumentar la estabilidad de la salida, es necesario que $R_1 \gg R_7$, por ello, para las entradas \volt{2} y \volt{4} se escogeran las resistencias:
+Para esta conexión se utilizarán las mismas resistencias \res{6} = \res{7} que con las conexiones anteriores, sin embargo, para aumentar la estabilidad de la salida, es necesario que $R_1 \gg R_7$, por ello, para las entradas $\volt{2}$ y $\volt{4}$ se escogeran las resistencias:
 
 \begin{align*}
     R_2 &= R_4 = 100k\Omega \\
@@ -197,15 +193,15 @@ En la figura \ref{fig:sim-fuente-corriente} podemos observar el circuito de la f
 
 
 \FloatBarrier
-\subsection{Integrador no inversor}
+\subsubsection{Integrador no inversor}
 
 Para construir el integrador no inversor, simplemente sustituimos la carga $R_5$ por una capacitancia $C_1 = 10nF$ en la fuente de voltaje, las conexiones serán las siguientes:
 
 \begin{itemize}
-    \item a fuente: \volt{4}
-    \item a tierra: \volt{2}, \jumper{2}
-    \item abierto: \volt{1}, \volt{3}, \jumper{1}, \jumper{4}
-    \item cerrado: \jumper{3}
+    \item a fuente: $\volt{4}$
+    \item a tierra: $\volt{2}$, $\jumper{2}$
+    \item abierto: $\volt{1}$, $\volt{3}$, $\jumper{1}$, $\jumper{4}$
+    \item cerrado: $\jumper{3}$
 \end{itemize}
 
 Este circuito debe integrar la señal de entrada. Si se la entrada es una señal cuadrada, la salida debe ser una señal triangular.
