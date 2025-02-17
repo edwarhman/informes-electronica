@@ -4,7 +4,7 @@ Offset y como medir la corriente de polarización de cada
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{topologias-basicas.png}
+    \includegraphics[width=0.5\textwidth]{tension-offset.png}
     \caption{Medición de la tensión Offset y corrientes de polarización}
     \label{fig:offset-y-bias}
 \end{figure}
@@ -34,7 +34,7 @@ $V_{os}=\frac{V_o}{1+\frac{R_5}{R_2}}$
 
 
  \begin{equation}
- I_{B_1} = \frac{V_{os} \left( 1 + \frac{R_5}{R_2} \right) - V_o}{R_3 \left( 1 + \frac{R_5}{R_2} \right)}
+ \boxed{I_{B_1} = \frac{V_{os} \left( 1 + \frac{R_5}{R_2} \right) - V_o}{R_3 \left( 1 + \frac{R_5}{R_2} \right)}}
  \end{equation}
 
  Se halla asi la corriente de polarización 1, en la medición indirecta de la ecuación 2.
@@ -43,13 +43,13 @@ Para hallar la Corriente de polarización 2, denotada como $I_{B2}$, se cierra J
 abre JP2. Se toma en cuenta la nota anterior, se obtiene:
 
 \begin{equation}
-    V_o = \left( V_{os} + I_{B_2} R_3 \right) \left( 1 + \frac{R_5}{R_2} \right)
+    V_o = \left( V_{os} + I_{B_2} R_4 \right) \left( 1 + \frac{R_5}{R_2} \right)
 \end{equation}
 
 Se medirá la tension de salida $V_o$. Teniendo todos los demás datos exceptuando $I_{B2}$, es la que se despejara, resultando la siguiente ecuación:
 
 \begin{equation}
-    I_{B_2} = \frac{V_o - V_{os} \left( 1 + \frac{R_5}{R_2} \right)}{R_4 \left( 1 + \frac{R_5}{R_2} \right)}
+    \boxed{I_{B_2} = \frac{V_o - V_{os} \left( 1 + \frac{R_5}{R_2} \right)}{R_4 \left( 1 + \frac{R_5}{R_2} \right)}}
 \end{equation}
 
 Se halla asi la corriente de polarización 2, en la medición indirecta de la ecuación 3.
@@ -57,7 +57,7 @@ Se halla asi la corriente de polarización 2, en la medición indirecta de la ec
 Al hallar las corrientes de polarización de cada entrada, se puede hacer uso de la siguiente ecuación para conocer la Corriente offset
 
 \begin{equation}
-    I_{os} = \left| I_{B1} - I_{B2} \right|
+    \boxed{I_{os} = \left| I_{B1} - I_{B2} \right|}
 \end{equation}
 
 \subsubsection{Producto del ancho de banda por la ganancia}
