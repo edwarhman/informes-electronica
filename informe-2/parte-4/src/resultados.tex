@@ -59,13 +59,13 @@ La tabla \ref{tab:mediciones-regulador-ajustable} muestra las mediciones de volt
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
-        x & $V_o$ (V) & $\Delta V_o$ (V) \\
+        x & $V_o$ (V) & $\Delta V_o$ (V) & $V_o$ teórico (V) & Error (\%) \\
         \hline
-        1.0 & 15 & 1 \\
-        0.5 & 10 & 1 \\
-        0.0 & 8 & 1 \\
+        1.0 & 15 & 1 & 15 & 0.00 \\
+        0.5 & 10 & 1 & 10 & 0.00 \\
+        0.0 & 8 & 1 & 5 & 60.00 \\
         \hline
     \end{tabular}
     \caption{Mediciones de voltaje de salida para el regulador ajustable.}
@@ -123,9 +123,3 @@ La tabla \ref{tab:mediciones-fuente-corriente-ajustable} muestra las mediciones 
     \caption{Mediciones de voltaje de salida para la fuente de corriente ajustable.}
     \label{tab:mediciones-fuente-corriente-ajustable}
 \end{table}
-
-
-
-
-
-

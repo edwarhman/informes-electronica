@@ -1,0 +1,46 @@
+\subsubsection{Voltaje de rizado}
+
+En el cuadro \ref{tab:mediciones-voltaje-rizado} se observa como a medida que la carga $R_L$ disminuye, el voltaje de rizado $V_{rpp}$ aumenta. Puede llegar a un punto en el que el voltaje de rizado haga caer la tensión por debajo del voltaje mínimo necesario para que el amplificador funcione correctamente. Por lo cual es importante mantener una carga mínima en la salida del regulador.
+
+\subsubsection{Regulador de voltaje de salida fija}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Regulación de voltaje (\%) & $\Delta$Regulación de voltaje (\%) & Regulación teórica (\%) & Error (\%) \\
+        \hline
+        0.00 & 10.88 & 0.00 & 0.00 \\
+        \hline
+    \end{tabular}
+    \caption{Error de la medición de regulación de voltaje para el regulador de voltaje de salida fija.}
+    \label{tab:error-mediciones-regulacion-voltaje-fija}
+\end{table}
+
+Del cuadro \ref{tab:error-mediciones-regulacion-voltaje-fija} se observa que el error de la medición de regulación de voltaje es de 0.00\%, por lo tanto el valor medido es exactamente el valor teórico.
+
+\subsubsection{Regulador de salida ajustable}
+
+Del cuadro \ref{tab:mediciones-regulador-ajustable} se observa que para $x=1$ y $x=0.5$ el porcentaje de error es de 0\%, mientras que para $x=0$ el porcentaje de error es de 60\%, lo cual es altisimo, esto puede ser debido a que el amplificador $\mu A741$ requiere ser polarizado con tensión positiva en la entrada $V_{cc}$ y tensión negativa en la entrada $V_{ee}$ mientras que en esta práctica se polarizó con la tensión convertidor AC a DC y una conexión a tierra desde la entrada $V_{ee}$ del amplificador por lo que vimos una tensión offset en la salida del amplificador de $3 V$, que al restarlos a los 8V medidos en la sálida da 5V, que es el voltaje esperado con $x=0$.
+
+
+\subsubsection{Fuente de corriente ajustable}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        x & I (mA) & $\Delta$I (mA) & I teórico (mA) & Error (\%) \\
+        \hline
+        1.0 & 21.8 & 2.1 & 20.83 & 4.66 \\
+        0.5 & 9.1 & 1.0 & 6.756 & 34.69 \\
+        0.5 & 7.7 & 0.6 & 6.756 & 13.97 \\
+        0.5 & 7.0 & 1.1 & 6.756 & 3.61 \\
+        0.0 & 5.5 & 3.6 & 4.03 & 36.48 \\
+        0.0 & 4.0 & 1.0 & 4.03 & 0.74 \\
+        \hline
+    \end{tabular}
+    \caption{Mediciones de corriente de salida para la fuente de corriente ajustable.}
+    \label{tab:error-mediciones-fuente-corriente-ajustable}
+\end{table}
+
+Observando el cuadro \ref{tab:error-mediciones-fuente-corriente-ajustable} se observa por un lado algunos errores de 4.66\% para cada valor de $x$ mientras que para $x=0$ y $x=0.5$ se hallan errores de 36.48\% y 34.69\% estos errores tan altos pueden ser debidos a que es dificil ajustar el potenciometro en un valor exacto de $x$.
