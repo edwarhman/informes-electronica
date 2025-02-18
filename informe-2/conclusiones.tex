@@ -1,0 +1,32 @@
+\section{Conclusiones}
+
+A lo largo de este trabajo de laboratorio, se estudiaron diferentes aspectos de los amplificadores operacionales y sus aplicaciones, llegando a las siguientes conclusiones:
+
+\begin{itemize}
+    \item Las topologías clásicas (inversor y no inversor) mostraron un comportamiento muy cercano al ideal, con errores del 0\% en sus ganancias. Esto demuestra la fiabilidad de estas configuraciones básicas cuando están correctamente implementadas.
+    
+    \item El amplificador operacional real $\mu A741$ mostró limitaciones importantes en comparación con el modelo ideal:
+    \begin{itemize}
+        \item La tensión de offset medida fue significativamente mayor que la especificada (error del 700\% respecto al valor típico), posiblemente debido a las diferentes condiciones de operación.
+        \item Las corrientes de bias mostraron una gran desviación (99.09\% de error), evidenciando la sensibilidad de estos parámetros a las condiciones de operación.
+        \item El producto ganancia-ancho de banda (GBWP) se mantuvo relativamente constante con errores menores al 13\%, validando esta característica fundamental del dispositivo.
+    \end{itemize}
+    
+    \item Los filtros activos implementados demostraron ser efectivos en el procesamiento de señales:
+    \begin{itemize}
+        \item El filtro Sallen-Key mostró una excelente precisión en ganancia (0\% error) aunque con un error del 12.23\% en frecuencia.
+        \item El filtro de realimentación múltiple presentó mayores desviaciones (10\% en ganancia, 27.10\% en frecuencia), probablemente debido a las tolerancias de los componentes.
+        \item No fue posible medir el filtro de variables de estado debido a un error en el circuito implementado.
+        \item No se pudo medir el factor de amortiguamiento, por lo cual es necesario realizar más mediciones en las zonas de interes al realizar el barrido.
+        \item Por un lado el filtro de realimentación múltiple fue el más dificil de diseñar debido a la fuerte dependencia de sus parámetros de ganancia, frecuencia de corte y factor de amortiguamiento, esto se vio reflejado en los resultados, donde cambios en los componentes utilizados tuvieron un impacto significativo en los parámetros del filtro.
+    \end{itemize}
+    
+    \item En cuanto a las fuentes lineales y reguladores:
+    \begin{itemize}
+        \item El regulador de voltaje de salida fija demostró excelente precisión con 0\% de error.
+        \item La fuente de corriente ajustable mostró variaciones significativas en su precisión (errores entre 0.74\% y 36.48\%), evidenciando la dificultad de ajuste preciso.
+        \item Se observó que el voltaje de rizado aumenta a medida que disminuye la carga, lo cual es un factor importante a considerar en el diseño de cualquier circuito que use reguladores.
+    \end{itemize}
+\end{itemize}
+
+Estas observaciones demuestran la importancia de considerar las no idealidades y limitaciones prácticas al trabajar con circuitos analógicos reales, así como la necesidad de seleccionar cuidadosamente los componentes y condiciones de operación para obtener los resultados deseados.
