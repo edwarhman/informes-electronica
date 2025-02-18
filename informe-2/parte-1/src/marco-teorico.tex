@@ -9,23 +9,23 @@ al valor de la entrada por una ganancia.
 Un amplificador $\mu$741 tiene una ganancia típica de 200V/mV , o 106dB. Sin embargo, esta ganancia se sostiene en un pequeño ancho de banda cuando el amplificador no está realimentado.
 
 Suponga que tenemos un amplificador con ganancia A, como se observa
-en la figura \ref{fig:mt-amplificador-sin-realimentar}.
+en la ilustración \ref{ilus:mt-amplificador-sin-realimentar}.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{amplificador-sin-realimentar.png}
     \caption{Amplificador sin realimentación}
-    \label{fig:mt-amplificador-sin-realimentar}
-\end{figure}
+    \label{ilus:mt-amplificador-sin-realimentar}
+\end{ilustracion}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{amplificador-realimentado.png}
     \caption{Diagrama de bloque del amplificador realimentado}
-    \label{fig:mt-amplificador-realimentado}
-\end{figure}
+    \label{ilus:mt-amplificador-realimentado}
+\end{ilustracion}
 
-Y este amplificador se realimenta con una red de ganancia $\beta$ como se muestra en la figura \ref{fig:mt-amplificador-realimentado}. Entonces podemos definir el siguiente sistema de ecuaciones:
+Y este amplificador se realimenta con una red de ganancia $\beta$ como se muestra en la ilustración \ref{ilus:mt-amplificador-realimentado}. Entonces podemos definir el siguiente sistema de ecuaciones:
 
 \begin{align*}
     v_o & = e_1 \cdot A \\
@@ -110,25 +110,25 @@ estudio (aa') en circuito abierto.
 
 \subsection{Amplificador Inversor}
 
-El amplificador inversor constituye una de las aplicaciones básicas y fundamentales de los amplificadores operacionales. Este amplificador se puede observar en la figura \ref{fig:mt-amplificador-inversor}, donde se observa un amplificador base, el cual tiene
-una impedancia de entrada $Z_d$, una impedancia de salida $Z_o$ y una ganancia $A$, tal como se observa en la figura \ref{fig:mt-modelo-amp-base}.
+El amplificador inversor constituye una de las aplicaciones básicas y fundamentales de los amplificadores operacionales. Este amplificador se puede observar en la ilustración \ref{ilus:mt-amplificador-inversor}, donde se observa un amplificador base, el cual tiene
+una impedancia de entrada $Z_d$, una impedancia de salida $Z_o$ y una ganancia $A$, tal como se observa en la ilustración \ref{ilus:mt-modelo-amp-base}.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{amplificador-inversor.png}
     \caption{Amplificador inversor}
-    \label{fig:mt-amplificador-inversor}
-\end{figure}
+    \label{ilus:mt-amplificador-inversor}
+\end{ilustracion}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{modelo-amp-base.png}
     \caption{Modelo de amplificador base}
-    \label{fig:mt-modelo-amp-base}
-\end{figure}
+    \label{ilus:mt-modelo-amp-base}
+\end{ilustracion}
 
 
-Aplicando el Método de Amplificador Desvanecido al amplificador inversor, tomando en cuenta los modelos de las figuras 2.2 y 2.3, se tiene
+Aplicando el Método de Amplificador Desvanecido al amplificador inversor, tomando en cuenta los modelos de las ilustracións 2.2 y 2.3, se tiene
 
 \begin{align*}
     x_{i0} &= \left. \frac{v_o}{v_i} \right|_{A=0} = \frac{(R_f + z_o) \parallel z_d}{R_s + (R_f + z_o) \parallel z_d} \cdot \frac{z_o}{z_o + R_f} \\
@@ -196,14 +196,14 @@ Lo cual se puede escribir como:
 
 \subsection{Amplificador no inversor}
 
-Al igual que el amplificador inversor, este es uno de las topologías básicas de los amplificadores operacionales. Este amplificador se muestra en la figura \ref{fig:mt-amp-no-inversor}, cuya diferencia radica en que la entrada ahora es directamente en el puerto no inversor.
+Al igual que el amplificador inversor, este es uno de las topologías básicas de los amplificadores operacionales. Este amplificador se muestra en la ilustración \ref{ilus:mt-amp-no-inversor}, cuya diferencia radica en que la entrada ahora es directamente en el puerto no inversor.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{amp-no-inversor.png}
     \caption{Amplificador no inversor}
-    \label{fig:mt-amp-no-inversor}
-\end{figure}
+    \label{ilus:mt-amp-no-inversor}
+\end{ilustracion}
 
 Aplicando el Método de Amplificador Desvanecido y aproximando la impedancia de entrada y salida $z_d \rightarrow \infty$ y $z_o \rightarrow 0$, entonces
 
@@ -262,12 +262,12 @@ otro lado las resistencias vistas desde sus entradas son finitas y diferentes la
 una de la otra. Si las fuentes de entrada son diferentes, entonces se producirá
 un efecto de carga distinto debido a la diferencia entre estas impedancias.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{amp-restador.png}
     \caption{Amplificador en diferencia o restador}
-    \label{fig:mt-amp-restador}
-\end{figure}
+    \label{ilus:mt-amp-restador}
+\end{ilustracion}
 
 El amplificador en diferencia es un circuito que responde sólo al componente en modo diferencial, rechazando el componente en modo común.
 
@@ -318,14 +318,14 @@ v_o &= -I_{b2}R + \left( I_{b1} - \frac{I_{b2}R}{R} \right) \frac{t}{C}
 
 \subsection{Convertidor de tensión a corriente}
 
-El circuito consiste en una fuente de entrada $V_i$ con una resistencia en serie $R_1$, y un convertidor de resistencia negativa que sintetiza una resistencia a tierra de valor $-R_2 R_3 / R_4$ como en la figura \ref{fig:mt-fuente-corriente-howland}.
+El circuito consiste en una fuente de entrada $V_i$ con una resistencia en serie $R_1$, y un convertidor de resistencia negativa que sintetiza una resistencia a tierra de valor $-R_2 R_3 / R_4$ como en la ilustración \ref{ilus:mt-fuente-corriente-howland}.
 
-\begin{figure}
+\begin{ilustracion}
     \centering
     \includegraphics[width=0.5\textwidth]{fuente-corriente-howland.png}
     \caption{Fuente de corriente de Howland}
-    \label{fig:mt-fuente-corriente-howland}
-\end{figure}
+    \label{ilus:mt-fuente-corriente-howland}
+\end{ilustracion}
 
 Podemos simplificar el circuito aplicando Blackman tomando parte del cirtuito cómo un amplificador no inversor:
 
@@ -341,14 +341,14 @@ al utilizar la formula de MAD, obtenemos la ganancia:
     A_1 = 1 + \frac{R_2}{R_1}
 \end{equation}
 
-Podemos aproximar la impedancia de entrada y salida $Z_d \rightarrow \infty $ y $z_o \rightarrow 0$ y obtener el nuevo circuito simplificado de la figura \ref{fig:mt-fuente-corriente-howland-simplificado}.
+Podemos aproximar la impedancia de entrada y salida $Z_d \rightarrow \infty $ y $z_o \rightarrow 0$ y obtener el nuevo circuito simplificado de la ilustración \ref{ilus:mt-fuente-corriente-howland-simplificado}.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{fuente-corriente-howland-simplificado.png}
     \caption{Fuente de corriente de Howland simplificada}
-    \label{fig:mt-fuente-corriente-howland-simplificado}    
-\end{figure}
+    \label{ilus:mt-fuente-corriente-howland-simplificado}    
+\end{ilustracion}
 
 Aplicando nuevamente Blackman en el circuito simplificado:
 
@@ -395,7 +395,7 @@ Para el proposito de extender el rango de linealidad, es deseable mantener $R_2$
 
 \subsection{Integrador no inversor (Integrador de Deboo)}
 
-El integrador de Deboo usa una fuente de corriente de Howland, sustituyendo la carga por una capacitancia para obtener un integrador no inversor. El circuito de la figura \ref{fig:mt-integrador-deboo} es la representación de un integrador de Deboo.
+El integrador de Deboo usa una fuente de corriente de Howland, sustituyendo la carga por una capacitancia para obtener un integrador no inversor. El circuito de la ilustración \ref{ilus:mt-integrador-deboo} es la representación de un integrador de Deboo.
 
 Cómo sabemos, la fuente de corriente fuerca una corriente $i = \frac{v_i}{R}$ en la capacitancia, resultando en un voltaje de entrada no inversor:
 
@@ -417,10 +417,10 @@ Por lo que la función de transferencia es:
     \label{eq:mt-func-transferencia-integrador-deboo}
 \end{equation}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{integrador-deboo.png}
     \caption{Integrador de Deboo}
-    \label{fig:mt-integrador-deboo}
-\end{figure}
+    \label{ilus:mt-integrador-deboo}
+\end{ilustracion}
 

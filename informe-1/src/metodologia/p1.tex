@@ -1,13 +1,13 @@
 \subsection{Amplificador de potencia}
 
-En primer lugar identificamos la etapa del amplificador de potencias en el diagrama del amplificador multietapas, la cual es la que contiene a los transistores $Q4$, $Q5$ y $Q6$. Dicha etapa se muestra en la figura \ref{fig:met-etapa-amplificador-de-potencia}.
+En primer lugar identificamos la etapa del amplificador de potencias en el diagrama del amplificador multietapas, la cual es la que contiene a los transistores $Q4$, $Q5$ y $Q6$. Dicha etapa se muestra en la ilustración \ref{ilus:met-etapa-amplificador-de-potencia}.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.23\textwidth]{src/images/metodología/etapa-de-potencia.png}
     \caption{Etapa del amplificador de potencia}
-    \label{fig:met-etapa-amplificador-de-potencia}
-\end{figure}
+    \label{ilus:met-etapa-amplificador-de-potencia}
+\end{ilustracion}
 
 Ahora procedemos a calcular los puntos estáticos de operación, para ello tomamos los capacitores como circuitos abiertos, ya que estamos trabajando en DC y empezamos a calcular las corrientes en el transistor $Q4$.
 
@@ -132,14 +132,14 @@ El resumén de los puntos estáticos de operación del amplificador de potencia 
     \label{tab:amplificador-de-potencia-puntos-estaticos}
 \end{table}
 
-A continuación, en la figura \ref{fig:met-puntos-estaticos-amplificador-de-potencia} se muestran los puntos estáticos de operación del amplificador de potencia.
+A continuación, en la ilustración \ref{ilus:met-puntos-estaticos-amplificador-de-potencia} se muestran los puntos estáticos de operación del amplificador de potencia.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{src/images/metodología/simulacion-etapa-potencia-puntos-estaticos.png}
     \caption{Puntos estáticos de operación del amplificador de potencia}
-    \label{fig:met-puntos-estaticos-amplificador-de-potencia}
-\end{figure}
+    \label{ilus:met-puntos-estaticos-amplificador-de-potencia}
+\end{ilustracion}
 
 Ahora, para la parte dinámica, calculamos los parámetros del transistor utilizando $V_t = 26 mV$ y $V_A = 100 V$
 
@@ -190,20 +190,20 @@ $$ Z_o = r_{13} + \frac{r_{\pi5} + r_{17}/2}{1 + gmr_{\pi5}} $$
     \label{tab:met-amp-potencia-modelo-dinamico}
 \end{table}
 
-en la figura \ref{fig:sim-amp-potencia-ganancia} se muestra la ganancia del amplificador de potencia. Se puede observar que el voltaje de entrada y de salida se superponen, ya que la ganancia es aproximadamente 1.
+en la ilustración \ref{ilus:sim-amp-potencia-ganancia} se muestra la ganancia del amplificador de potencia. Se puede observar que el voltaje de entrada y de salida se superponen, ya que la ganancia es aproximadamente 1.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{src/images/p1/p1-sim-ganancia.png}
     \caption{Ganancia del amplificador de potencia}
-    \label{fig:sim-amp-potencia-ganancia}
-\end{figure}
+    \label{ilus:sim-amp-potencia-ganancia}
+\end{ilustracion}
 
-En la figura \ref{fig:sim-amp-potencia-efecto-crossover} se muestra el efecto crossover del amplificador de potencia. 
+En la ilustración \ref{ilus:sim-amp-potencia-efecto-crossover} se muestra el efecto crossover del amplificador de potencia. 
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{src/images/p1/p1-sim-efecto-crossover.png}
     \caption{Efecto crossover del amplificador de potencia}
-    \label{fig:sim-amp-potencia-efecto-crossover}
-\end{figure}
+    \label{ilus:sim-amp-potencia-efecto-crossover}
+\end{ilustracion}

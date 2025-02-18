@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import sys
 
-df = pd.read_excel('./filtro-sallen-key.xlsx', header=0)
+df = pd.read_excel('./filtro-realimentacion-multiple.xlsx', header=0)
 
 
 # Convert the DataFrame to a NumPy array
@@ -21,8 +21,8 @@ def graficar_respuesta_en_frecuencia(datos, titulo):
 
     plt.figure(figsize=(10, 5))
     
-    # Configurar escala logarítmica para el eje x
-    plt.semilogx(frecuencia, magnitud, 'b-', label='Respuesta en frecuencia')
+    # Conilustraciónr escala logarítmica para el eje x
+    plt.semilogx(frecuencia, 20 * np.log10(magnitud), 'b-', label='Respuesta en frecuencia')
     
     # Añadir etiquetas y título
     plt.xlabel('Frecuencia (Hz)')
@@ -31,8 +31,8 @@ def graficar_respuesta_en_frecuencia(datos, titulo):
     plt.grid(True)
     plt.legend()
     
-    # Guardar la figura
+    # Guardar la ilustración
     plt.savefig(titulo + '.png', dpi=300, bbox_inches='tight')
     plt.close()
 
-graficar_respuesta_en_frecuencia(datos_filtro_ordenado, 'Respuesta en frecuencia - Filtro Sallen-Key')
+graficar_respuesta_en_frecuencia(datos_filtro_ordenado, 'Respuesta en frecuencia - Filtro Realimentación Múltiple')

@@ -1,0 +1,96 @@
+\subsubsection{Tensión offset}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+$V_{os}$ [mV] & $\Delta V_{os}$ [mV] & $V_{os}$ teórico [mV] & Error [\%] \\ \hline
+8.000 & 0.690 & 1 & 700 \\ \hline
+\end{tabular}
+\caption{Error porcentual de tensión de offset usando el valor teórico típico.}
+\label{tab:erro-resultados-tension-offset-valor-tipico}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+$V_{os}$ [mV] & $\Delta V_{os}$ [mV] & $V_{os}$ teórico [mV] & Error [\%] \\ \hline
+8.000 & 0.690 & 5 & 60 \\ \hline
+\end{tabular}
+\caption{Error porcentual de tensión de offset usando el valor teórico máximo.}
+\label{tab:erro-resultados-tension-offset-valor-extremo}
+\end{table}
+
+
+Observando los resultados de la tabla \ref{tab:erro-resultados-tension-offset-valor-tipico} y \ref{tab:erro-resultados-tension-offset-valor-extremo}, se puede apreciar que el error porcentual es muy alto, Este error se puede deber a que las condiciones de medición no son iguales a cuando se midió en el datasheet. En el datasheet se usaron voltajes $V_{cc}=15V$ mientras que en la práctica se usaron $V_{cc}=10V$. otra razón puede ser que el amplificador integrador de la figura \ref{fig:offset-y-bias} afecte el voltaje de salida $V_o$.
+
+\subsubsection{Corriente Bias}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$I_{B1}$ [nA] & $\Delta I_{B1}$ [nA] & $I_{B2}$ [nA] & $\Delta I_{B2}$ [nA] & $I_{BIAS}$ [nA] & $\Delta I_{BIAS}$ [nA] & $I_B$ teórica [nA] & Error [\%] \\ \hline
+-0.00069 & 0.045 & 0.73 & 0.071 & 0.73 & 0.084 & 80 & 99.09 \\ \hline
+\end{tabular}
+\caption{Error porcentual de la corriente $I_{BIAS}$ usando el valor teórico típico.}
+\label{tab:erro-resultados-corrientes-bias-valor-tipico}
+\end{table}
+
+Para la corriente de bias, se observa un error muy significativo del 99.09\% respecto al valor teórico típico de 80nA especificado en el datasheet. Este error tan elevado puede deberse a varios factores:
+
+- Las condiciones de medición diferentes a las del datasheet (voltajes de alimentación menores)
+- La sensibilidad del método de medición indirecto utilizado
+- La variabilidad inherente de este parámetro entre diferentes unidades del componente
+- Posibles efectos de temperatura que afectan las corrientes de polarización
+
+
+\subsubsection{Producto de la ganancia por ancho de banda}
+
+Al no contar con un valor teórico para el gbwp, se calculó el promedio de los valores obtenidos en la tabla \ref{tab:error-porcentual-resultados-gbwp} y se obtuvo el resultado de la tabla \ref{tab:promedio-gbwp}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+GBWP promedio [Hz] & $\Delta$GBWP promedio [Hz] \\ \hline
+816223.16 & 67093.02 \\ \hline
+\end{tabular}
+\caption{Promedio del producto ganancia ancho de banda.}
+\label{tab:promedio-gbwp}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+A & $\Delta$A & $f_l$ [Hz] & $\Delta f_l$ [Hz] & $f_h$ [kHz] & $\Delta f_h [kHz] $ & GBWP & $\Delta$GBWP [Hz] & GBWP promedio [Hz] & Error [\%] \\ \hline
+100 & 7.86 & 2 & 0.8 & 7.14 & 0.051 & 714085.71 & 56335.44 & 816223 & 12.51 \\ \hline
+11.11 & 0.83 & 2 & 0.08 & 75.76 & 2.30 & 841728.62 & 67887.11 & 816223 & 3.13 \\ \hline
+1.00 & 0.08 & 2 & 0.08 & 892.86 & 31.89 & 892855.14 & 77056.50 & 816223 & 9.39 \\ \hline
+\end{tabular}
+}
+\caption{Error porcentual del producto ganancia ancho de banda.}
+\label{tab:error-porcentual-resultados-gbwp}
+\end{table}
+
+
+Los errores del cuadro \ref{tab:error-porcentual-resultados-gbwp} menores al 13\% indican que efectivamente se cumple la característica de que el GBWP se mantiene aproximadamente constante para diferentes ganancias, validando el comportamiento teórico esperado del amplificador operacional. Las pequeñas variaciones pueden atribuirse a efectos de carga, no idealidades del amplificador operacional real y tolerancias de los componentes utilizados, el error también puede deberse a un efecto del slew rate sobre el voltaje de salida. Si el slew rate no es suficiente, la salida no podrá seguir la señal de entrada, causando distorsión.
+
+
+\subsubsection{Corriente de cortocircuito}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+V [V] & $\Delta$V [V] & R [k$\Omega$] & $\Delta$R [k$\Omega$] & $I_{SC}$ [mA] & $\Delta I_{SC}$ [mA] & $I_{SC}$ teórica [mA] & Error [\%] \\ \hline
+2.0 & 0.2 & 6.800 & 0.034 & 294.12 & 29.45 & 25 & 1076.48 \\ \hline
+\end{tabular}
+\caption{Error porcentual de la corriente de cortocircuito.}
+\label{tab:error-porcentual-resultados-corriente-cortocircuito}
+\end{table}
+
+Observando el cuadro \ref{tab:error-porcentual-resultados-corriente-cortocircuito}, podemos apreciar que el error porcentual es muy alto, este error se puede deber a que la resistencia utilizada en la medición puede no ser lo suficientemente pequeña para simular un verdadero cortocircuito.

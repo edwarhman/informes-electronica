@@ -1,13 +1,13 @@
 \subsection{Etapa impulsora}
 
-Identificamos la etapa impulsora en el diagrama del amplificador multietapas, la cual es la que contiene al  transistor $Q_3$. Dicha etapa se muestra en la figura \ref{fig:met-etapa-impulsora}.
+Identificamos la etapa impulsora en el diagrama del amplificador multietapas, la cual es la que contiene al  transistor $Q_3$. Dicha etapa se muestra en la ilustración \ref{ilus:met-etapa-impulsora}.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.23\textwidth]{src/images/p3/etapa-impulsora.png}
     \caption{Etapa impulsora del amplificador}
-    \label{fig:met-etapa-impulsora}
-\end{figure}
+    \label{ilus:met-etapa-impulsora}
+\end{ilustracion}
 
 aplicamos thevenim de manera que:
 
@@ -54,14 +54,14 @@ La tabla \ref{tab:etapa-impulsora-puntos-estaticos} presenta los puntos estátic
     \label{tab:etapa-impulsora-puntos-estaticos}
 \end{table}
 
-La figura \ref{fig:sim-etapa-impulsora-puntos-estaticos} muestra la simulación de los puntos estáticos de operación en la etapa impulsora.
+La ilustración \ref{ilus:sim-etapa-impulsora-puntos-estaticos} muestra la simulación de los puntos estáticos de operación en la etapa impulsora.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{src/images/p3/ punto-estatico-etapa-impulsora.png}
     \caption{Simulación puntos estáticos etapa impulsora}
-    \label{fig:sim-etapa-impulsora-puntos-estaticos}
-\end{figure}
+    \label{ilus:sim-etapa-impulsora-puntos-estaticos}
+\end{ilustracion}
 
 Haciendo el analisis AC, tenemos 
 $$gm = \frac{I_{c}}{V_t} = 0.09$$
@@ -102,14 +102,14 @@ para calcular la ganancia tenemos:
 
 $$A = \frac{gmr_\pi R16}{r_\pi} = 619.90$$
 
-La figura \ref{fig:sim-etapa-impulsora-ganancia} muestra la simulación de la ganancia en la etapa impulsora.
+La ilustración \ref{ilus:sim-etapa-impulsora-ganancia} muestra la simulación de la ganancia en la etapa impulsora.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{src/images/p3/etapa-impulsora-ganancia.png}
     \caption{Simulación ganancia etapa impulsora}
-    \label{fig:sim-etapa-impulsora-ganancia}
-\end{figure}
+    \label{ilus:sim-etapa-impulsora-ganancia}
+\end{ilustracion}
 
 La tabla \ref{tab:met-etapa-impulsora-parametros-dinamicos} presenta el modelo dinamico de la etapa impulsora.
 
@@ -181,14 +181,14 @@ La tabla \ref{tab:met-amp-multietapas-mod-diferencial} presenta el modelo dinám
     \label{tab:met-amp-multietapas-mod-diferencial}
 \end{table}
 
-La figura \ref{fig:sim-amp-multietapas-mod-diferencial} muestra la simulación del amplificador multietapas en modo diferencial.
+La ilustración \ref{ilus:sim-amp-multietapas-mod-diferencial} muestra la simulación del amplificador multietapas en modo diferencial.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{src/images/p3/multietapa-modo-diff-ganancia.png}
     \caption{Simulación amplificador multietapas en modo diferencial}
-    \label{fig:sim-amp-multietapas-mod-diferencial} 
-\end{figure}
+    \label{ilus:sim-amp-multietapas-mod-diferencial} 
+\end{ilustracion}
 
 Para encontrar el valor de la ganancia en el modo común se utiliza la misma fórmula que en el modo diferencial pero se reemplaza el valor de $A_1$ por:
 
@@ -219,11 +219,11 @@ La tabla \ref{tab:met-amp-multietapas-mod-comun} presenta el modelo dinámico de
     \label{tab:met-amp-multietapas-mod-comun}
 \end{table}
 
-La figura \ref{fig:sim-amp-multietapas-mod-comun} muestra la simulación del amplificador multietapas en modo común.
+La ilustración \ref{ilus:sim-amp-multietapas-mod-comun} muestra la simulación del amplificador multietapas en modo común.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{src/images/p3/multietapa-modo-comun-ganancia.png}
     \caption{Simulación amplificador multietapas en modo común}
-    \label{fig:sim-amp-multietapas-mod-comun}
-\end{figure}
+    \label{ilus:sim-amp-multietapas-mod-comun}
+\end{ilustracion}

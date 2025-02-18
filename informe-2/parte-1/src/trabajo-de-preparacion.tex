@@ -37,21 +37,21 @@ Para que la ganancia sea $-2$, debemos usar la formula \ref{eq:mt-ganancia-amp-i
     r_6 &= 20k\Omega
 \end{align*}
 
-En la figura \ref{fig:sim-amp-inversor} podemos observar la simulación del amplificador no inversor, y en la figura \ref{fig:sim-amp-inversor-ganancia} podemos ver que la ganancia es -2, que corresponde con el valor teórico.
+En la ilustración \ref{ilus:sim-amp-inversor} podemos observar la simulación del amplificador no inversor, y en la ilustración \ref{ilus:sim-amp-inversor-ganancia} podemos ver que la ganancia es -2, que corresponde con el valor teórico.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/amp-inversor.png}
     \caption{Simulación amplificador inversor}
-    \label{fig:sim-amp-inversor}
-\end{figure}
+    \label{ilus:sim-amp-inversor}
+\end{ilustracion}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/amp-inversor-ganancia.png}
     \caption{Simulación ganancia amplificador inversor}
-    \label{fig:sim-amp-inversor-ganancia}
-\end{figure}
+    \label{ilus:sim-amp-inversor-ganancia}
+\end{ilustracion}
 
 \subsubsection{Amplificador restador}
 
@@ -81,21 +81,21 @@ Ahora podemos utilizar la formula simplificada de ganancia del restador (\ref{eq
     A &= \frac{20k\Omega}{10k\Omega} = 2
 \end{align*}
 
-En la figura \ref{fig:sim-amp-restador} podemos observar la simulación del amplificador no inversor, y en la figura \ref{fig:sim-amp-restador-ganancia} podemos ver que la ganancia es 2, que corresponde con el valor teórico. Aunque pareciera que las señales de entrada y salida están desfasadas, eso es debido a que $V_2 < V_1$
+En la ilustración \ref{ilus:sim-amp-restador} podemos observar la simulación del amplificador no inversor, y en la ilustración \ref{ilus:sim-amp-restador-ganancia} podemos ver que la ganancia es 2, que corresponde con el valor teórico. Aunque pareciera que las señales de entrada y salida están desfasadas, eso es debido a que $V_2 < V_1$
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/amp-restador.png}
     \caption{Simulación amplificador restador}
-    \label{fig:sim-amp-restador}
-\end{figure}
+    \label{ilus:sim-amp-restador}
+\end{ilustracion}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/amp-restador-ganancia.png}
     \caption{Simulación ganancia amplificador restador}
-    \label{fig:sim-amp-restador-ganancia}
-\end{figure}
+    \label{ilus:sim-amp-restador-ganancia}
+\end{ilustracion}
 
 
 \FloatBarrier
@@ -116,21 +116,21 @@ Siguiendo la formula de ganancia del no inversor (\ref{eq:mt-ganancia-amp-no-inv
     A = 1 + \frac{20k\Omega}{10k\Omega} = 3
 \end{align*}
 
-En la figura \ref{fig:sim-amp-no-inversor} podemos observar la simulación del amplificador no inversor, y en la figura \ref{fig:sim-amp-no-inversor-ganancia} podemos ver que la ganancia es 3, que corresponde con el valor teórico.
+En la ilustración \ref{ilus:sim-amp-no-inversor} podemos observar la simulación del amplificador no inversor, y en la ilustración \ref{ilus:sim-amp-no-inversor-ganancia} podemos ver que la ganancia es 3, que corresponde con el valor teórico.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/conexion-no-inversor.png}
     \caption{Simulación amplificador no inversor}
-    \label{fig:sim-amp-no-inversor}
-\end{figure}
+    \label{ilus:sim-amp-no-inversor}
+\end{ilustracion}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/ganancia-no-inversor.png}
     \caption{Simulación ganancia amplificador no inversor}
-    \label{fig:sim-amp-no-inversor-ganancia}
-\end{figure}
+    \label{ilus:sim-amp-no-inversor-ganancia}
+\end{ilustracion}
 
 \FloatBarrier
 \subsubsection{Fuente de corriente}
@@ -158,38 +158,38 @@ Ahora, utilizando la formula (\ref{eq:mt-io-fuente-corriente}) y asumiendo un vo
     i_o & = 10\mu A
 \end{align*}
 
-En la figura \ref{fig:sim-fuente-corriente} podemos observar el circuito de la fuente de corriente. Y en las siguientes figuras podemos observar que para distintos valores de resistencias (20k, 16k, 5k y 1k) obtuvimos valores cercanos a $10\mu A$, que fue el valor esperado.
+En la ilustración \ref{ilus:sim-fuente-corriente} podemos observar el circuito de la fuente de corriente. Y en las siguientes ilustracións podemos observar que para distintos valores de resistencias (20k, 16k, 5k y 1k) obtuvimos valores cercanos a $10\mu A$, que fue el valor esperado.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{simulaciones/fuente-corriente-rango-amplio.png}
     \caption{Simulación circuito fuente de corriente}
-    \label{fig:sim-fuente-corriente}
-\end{figure}
-\begin{figure}[ht]
+    \label{ilus:sim-fuente-corriente}
+\end{ilustracion}
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{simulaciones/fuente-corriente-mejor-20k.png}
     \caption{I y V de la fuente de corriente con R=20k}
-    \label{fig:sim-fuente-corriente-20k}
-\end{figure}
-\begin{figure}[ht]
+    \label{ilus:sim-fuente-corriente-20k}
+\end{ilustracion}
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{simulaciones/fuente-corriente-mejor-13k.png}
     \caption{I y V de la fuente de corriente con R=20k}
-    \label{fig:sim-fuente-corriente-13k}
-\end{figure}
-\begin{figure}[ht]
+    \label{ilus:sim-fuente-corriente-13k}
+\end{ilustracion}
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{simulaciones/fuente-corriente-mejor-5k.png}
     \caption{I y V de la fuente de corriente con R=5k}
-    \label{fig:sim-fuente-corriente-5k}
-\end{figure}
-\begin{figure}[ht]
+    \label{ilus:sim-fuente-corriente-5k}
+\end{ilustracion}
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{simulaciones/fuente-corriente-mejor-1k.png}
     \caption{I y V de la fuente de corriente con R=1k}
-    \label{fig:sim-fuente-corriente-1k}
-\end{figure}
+    \label{ilus:sim-fuente-corriente-1k}
+\end{ilustracion}
 
 
 \FloatBarrier
@@ -206,34 +206,34 @@ Para construir el integrador no inversor, simplemente sustituimos la carga $R_5$
 
 Este circuito debe integrar la señal de entrada. Si se la entrada es una señal cuadrada, la salida debe ser una señal triangular.
 
-En la figura \ref{fig:sim-integrador} podemos apreciar la conexión del circuito integrador.
+En la ilustración \ref{ilus:sim-integrador} podemos apreciar la conexión del circuito integrador.
 
-En las siguientes figuras podemos observar la como el circuito integra la señal de entrada, en este caso una señal cuadrada se transforma en una rampa. Las zonas donde la señal se curva es poque se encuentra en la zona de saturación.
+En las siguientes ilustracións podemos observar la como el circuito integra la señal de entrada, en este caso una señal cuadrada se transforma en una rampa. Las zonas donde la señal se curva es poque se encuentra en la zona de saturación.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{simulaciones/integrador.png}
     \caption{Simulación circuito integrador Deboo}
-    \label{fig:sim-integrador}
-\end{figure}
+    \label{ilus:sim-integrador}
+\end{ilustracion}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{simulaciones/integrador-transferencia-1khz.png}
     \caption{función de transferencia circuito integrador a 1kHz}
-    \label{fig:sim-integrador-1k}
-\end{figure}
+    \label{ilus:sim-integrador-1k}
+\end{ilustracion}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{simulaciones/integrador-transferencia-5kh.png}
     \caption{función de transferencia circuito integrador a 5kHz}
-    \label{fig:sim-integrador-5k}
-\end{figure}
+    \label{ilus:sim-integrador-5k}
+\end{ilustracion}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{simulaciones/integrador-transferencia-60hz.png}
     \caption{función de transferencia circuito integrador a 60Hz}
-    \label{fig:sim-integrador-60}
-\end{figure}
+    \label{ilus:sim-integrador-60}
+\end{ilustracion}

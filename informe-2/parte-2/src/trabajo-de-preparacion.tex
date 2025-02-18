@@ -1,4 +1,4 @@
-1- Haciendo uso del montaje indicado en el diagrama esquemático de la Figura \ref{fig:offset-y-bias} explicar como medir la tensión de
+1- Haciendo uso del montaje indicado en el diagrama esquemático de la figura \ref{fig:offset-y-bias} explicar como medir la tensión de
 Offset y como medir la corriente de polarización de cada
 .
 
@@ -62,7 +62,7 @@ Al hallar las corrientes de polarización de cada entrada, se puede hacer uso de
 
 \subsubsection{Producto del ancho de banda por la ganancia}
 
-2- Mediante el montaje de la Figura \ref{fig:gbwp} explique como comprobar que el Producto del Ancho de Banda por la Ganancia
+2- Mediante el montaje de la figura \ref{fig:gbwp} explique como comprobar que el Producto del Ancho de Banda por la Ganancia
 se mantiene
 
 \begin{figure}[ht]
@@ -72,7 +72,7 @@ se mantiene
     \label{fig:gbwp}
 \end{figure}
 
-En este caso, se verificara que con distintas configuraciones de la figura \ref{fig:gbwp}, se mantiene el GBWP, midiendo de manera experimental su frecuencia de corte en las distintas topologías
+En este caso, se verificara que con distintas conexiones de la figura \ref{fig:gbwp}, se mantiene el GBWP, midiendo de manera experimental su frecuencia de corte en las distintas topologías
 (variando su frecuencia y observar su atenuación) y poder aproximar su respuesta en frecuencia.
 
 \begin{itemize}
@@ -99,29 +99,29 @@ En este caso, se verificara que con distintas configuraciones de la figura \ref{
 
 \begin{itemize}
     \item SlewRate \\
-    Antes de realizar el experimento colocar una frecuencia de 1kHz para luego poder realizar las variaciones. Se realizara con las siguientes instrucciones: Para medir el slew rate utilizando un osciloscopio, se debe conectar el osciloscopio a la salida del amplificador y configurarlo para mostrar la forma de onda de la señal de salida. Luego, se debe aplicar una señal de entrada triangular al amplificador y ajustar la frecuencia de la señal para que este dentro del rango de operación del amplificador. A continuación, se debe medir el tiempo que tarda la señal de salida en cambiar desde el 10 \% al 90 \% de su valor máximo, y utilizar esta información para calcular el slew rate utilizando la siguiente formula:
+    Antes de realizar el experimento colocar una frecuencia de 1kHz para luego poder realizar las variaciones. Se realizara con las siguientes instrucciones: Para medir el slew rate utilizando un osciloscopio, se debe conectar el osciloscopio a la salida del amplificador y conilustraciónrlo para mostrar la forma de onda de la señal de salida. Luego, se debe aplicar una señal de entrada triangular al amplificador y ajustar la frecuencia de la señal para que este dentro del rango de operación del amplificador. A continuación, se debe medir el tiempo que tarda la señal de salida en cambiar desde el 10 \% al 90 \% de su valor máximo, y utilizar esta información para calcular el slew rate utilizando la siguiente formula:
 
     $$SR = \frac{\Delta V}{\Delta t}$$
 
     Donde SR es el slew rate, $\Delta V$ es el cambio en la tension de salida y $\Delta V$ es el tiempo que tarda la señal de salida en cambiar desde el 10 \% al 90 \% de su valor máximo. Es importante tener en cuenta que el slew rate puede variar dependiendo de la frecuencia de la señal de entrada, por lo que se deben realizar mediciones en diferentes frecuencias para obtener una medida precisa del slew rate.
 
-    \begin{figure}[ht]
+    \begin{ilustracion}[ht]
         \centering
         \includegraphics[width=0.5\textwidth]{senales-retardo.png}
         \caption{Comparación tiempo de retardo entre señal de entrada y de salida debido al S.R de la variación de la frecuencia}
-        \label{fig:comparacion-funciones-sr}
-    \end{figure}
+        \label{ilus:comparacion-funciones-sr}
+    \end{ilustracion}
 
     \item Limites máximo de excursion
     Se sube solo el voltaje para observar la señal de salida cuando esta se distorsione, recordar que se debe colocar nuevamente la frecuencia en 1KHz.
 
     \item Corriente de corto circuito
-    \begin{figure}[ht]
+    \begin{ilustracion}[ht]
         \centering
         \includegraphics[width=0.5\textwidth]{medicion-corriente-cortocircuito.png}
         \caption{Medición de corriente en corto circuito}
-        \label{fig:medicion-corriente-cortocircuito}
-    \end{figure}
+        \label{ilus:medicion-corriente-cortocircuito}
+    \end{ilustracion}
     Para la corriente de cortocircuito, se puede usar la técnica de "Resistencia de Carga virtual",esto es colocar una resistencia virtual en serie con la carga real del circuito, lo que permite medir la caída de tension a traves de la carga virtual.
 
     La resistencia debe ser lo mas pequeña posible entre $1\Omega$ y $10\Omega$, mido la tension sobre esta resistencia y por ley de Ohm se puede hallar la corriente de cortocircuito

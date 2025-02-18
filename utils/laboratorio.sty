@@ -1,3 +1,4 @@
+\RequirePackage{newfloat}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{laboratorio}[2025/02/02 Paquete para practicas de laboratorio]
 
@@ -16,3 +17,9 @@
 \newcommand{\volt}[1]{v_{#1}}
 \newcommand{\curr}[1]{i_{#1}}
 \newcommand{\jumper}[1]{JP_{#1}}
+
+\DeclareFloatingEnvironment[
+    name=Ilustración,
+    listname={Lista de ilustraciones},
+    fileext=loi
+]{ilustracion}

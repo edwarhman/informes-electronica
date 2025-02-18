@@ -29,7 +29,7 @@ Los amplificadores inversor y no inversor mostraron un comportamiento muy cercan
 
 \subsubsection{Efecto del integrador no inversor}
 
-La figura \ref{fig:entrada-salida-integrador-no-inversor} muestra que al pasar una señal cuadrada al amplificador integrador no inversor, la señal de salida es una señal triangular cuya pendiente positiva coincide con el semiciclo positivo de la señal cuadrada, mientras que la pendiente negativa coincide con el semicliclo negativo de la señal cuadrada, este es el comportamiento que se esperaba observar.
+La ilustración \ref{ilus:entrada-salida-integrador-no-inversor} muestra que al pasar una señal cuadrada al amplificador integrador no inversor, la señal de salida es una señal triangular cuya pendiente positiva coincide con el semiciclo positivo de la señal cuadrada, mientras que la pendiente negativa coincide con el semicliclo negativo de la señal cuadrada, este es el comportamiento que se esperaba observar.
 
 \subsubsection{Convertidor de tensión a corriente}
 
@@ -62,3 +62,5 @@ I (mA) & \(\Delta I\) (mA) & I Teórica [mA] & Error (\%) \\ \hline
 \end{table}
 
 De los cuadros \ref{tab:analisis-resultados-convertidor-tension-corriente} y \ref{tab:analisis-resultados-convertidor-tension-corriente-promedio} se observa que la corriente medida se mantiene relativamente constante alrededor de los 48 mA, con una desviación promedio del 7.56\% respecto al valor teórico de 52 mA. y una desviación máxima del 12.59\%. Esto puede ser debido a que $R_1$ (100k) no era significativamente grande en comparación con $R_2$ (40k). Las incertidumbres en las mediciones son significativas, especialmente en las primeras mediciones, Esto puede ser debido a que para las primeras mediciones los valores medidos de voltaje fueron bajos, o que las primeras resistencias fueron de un valor bajo, siendo su incertidumbre baja y al ser una división la incertidumbre de la corriente fue alta.
+
+El valor teórico de la corriente se obtuvo de la formula \ref{eq:mt-io-fuente-corriente} con $R_1 = 100k\Omega$ y $V_i = 5.2V$.

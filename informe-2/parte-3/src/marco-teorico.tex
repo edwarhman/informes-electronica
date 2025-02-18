@@ -61,12 +61,12 @@ Rechaza banda:
 
 Esta topología puede convertirse en un cualquiera de las funciones de segundo orden (pasa bajo, pasa alto o pasa banda) con solo ubicar apropiadamente resistencias y condensadores.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{marco-teorico/filtro-multiples-realimentaciones.png}
     \caption{Filtro de múltiples realimentaciones}
-    \label{fig:filtro-multiples-realimentacion}
-\end{figure}
+    \label{ilus:filtro-multiples-realimentacion}
+\end{ilustracion}
 
 La función de transferencia puede resolverse de varias maneras, pero resulta compacto en términos de sus admitancias y usando el inversor $-Y_3/Y_5$ como amplificador base.
 
@@ -96,14 +96,14 @@ lo cual queda como:
 
 \subsubsection{Filtro pasa bajo de múltiples realimentaciones}
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{marco-teorico/filtro-multiples-realimentaciones.png}
     \caption{Filtro pasa bajo de múltiples realimentaciones}
-    \label{fig:filtro-multiples-realimentacion-pasa-bajo}
-\end{figure}
+    \label{ilus:filtro-multiples-realimentacion-pasa-bajo}
+\end{ilustracion}
 
-Al sustituir las admitancias $Y_2$ y $Y_5$ de la figura \ref{fig:filtro-multiples-realimentacion} por condensadores, obtenemos un filtro pasa bajo con la siguiente función de transferencia:
+Al sustituir las admitancias $Y_2$ y $Y_5$ de la ilustración \ref{ilus:filtro-multiples-realimentacion} por condensadores, obtenemos un filtro pasa bajo con la siguiente función de transferencia:
 
 \begin{equation}[ht]
     H(s) = \frac{V_o(s)}{V_i(s)} = \frac{-\frac{1}{R_1}\cdot R_2C_2 C_5}{s^2 + (1/C_2)(1/R_1 + 1/R_3 + 1/R_4)s + 1/(R_3 R_4 C_2 C_5)}
@@ -114,12 +114,12 @@ Al sustituir las admitancias $Y_2$ y $Y_5$ de la figura \ref{fig:filtro-multiple
 
 Usando esta estructura y ubicando en ella solo capacitancias y resistencias (sin inductancias) pueden lograrse los tres tipos de filtro básicos, esta vez, sin inversión de fase.
 
-\begin{figure}[ht]
+\begin{ilustracion}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{marco-teorico/filtro-sallen-key.png}
     \caption{Filtro con topología de Sallen-Key}
-    \label{fig:filtro-activo-sallen-key}
-\end{figure}
+    \label{ilus:filtro-activo-sallen-key}
+\end{ilustracion}
 
 Tomando en cuenta que:
 
@@ -148,13 +148,13 @@ Sustituyendo en la ecuación MAD:
 sustituyendo $Y_2$ y $Y_5$ por condensadores, obtenemos un filtro pasa bajo con la siguiente función de transferencia:
 
 
-\begin{figure}
+\begin{ilustracion}
     \centering
     \includegraphics[width=0.5\textwidth]{marco-teorico/filtro-pasa-bajo-sallen-key.png}
     \caption{Filtro pasa bajo de topología de Sallen-Key}
-\end{figure}
+\end{ilustracion}
 
-Al sustituir las admitancias $Y_2$ y $Y_5$ de la figura \ref{fig:filtro-activo-sallen-key} por condensadores, obtenemos un filtro pasa bajo con la siguiente función de transferencia:
+Al sustituir las admitancias $Y_2$ y $Y_5$ de la ilustración \ref{ilus:filtro-activo-sallen-key} por condensadores, obtenemos un filtro pasa bajo con la siguiente función de transferencia:
 
 \begin{equation}
     H(s) = \frac{\frac{K}{R_1 R_4 C_2 C_5}}{s^2 + \left(\frac{1}{R_1 C_2} + \frac{1}{R_4 C_2} + \left(1 - K\right) \frac{1}{R_4 C_5}\right)s + \frac{1}{R_1 R_4 C_2 C_5}}
