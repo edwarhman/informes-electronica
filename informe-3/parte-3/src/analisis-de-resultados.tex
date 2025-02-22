@@ -1,0 +1,43 @@
+
+\subsection{Filtro Sallen Key}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        Ganancia & $\Delta$Ganancia & Ganancia teórica & Error A [\%] & f (Hz) & $\Delta$f (Hz) & f teórica (Hz) & Error f [\%] \\
+        \hline
+        2.000 & 0.224 & 2.000 & 0.00 & 3030.3 & 91.8 & 2700.0 & 12.23 \\
+        \hline
+    \end{tabular}
+    \caption{Mediciones de ganancia y frecuencia del filtro Sallen Key.}
+    \label{tab:error-filtro-sallen-key-ganancia-frecuencia}
+\end{table}
+
+Al observar la tabla \ref{tab:error-filtro-sallen-key-ganancia-frecuencia}, se puede apreciar que el error de la ganancia es de 0, dando exactamente igual al valor teórico. Para la frecuencia, el error es de 12.23\%, este error es relativamente alto, esto puede ser debido a que las resistencias y condensadores utilizados no fueron exactamente los mismos a los calculados, así como la incertidumbre de los diversos componentes utilizados.
+
+Al observar la ilustración \ref{ilus:filtro-sallen-key-superposicion}, se puede observar que la respuesta en frecuencia del filtro Sallen Key coincide con la simulación, no se pudo observar el factor de amortiguamiento en la gráfica, esto puede ser debido a que era necesario tomar más mediciones en el barrido.
+
+En la ilustración \ref{ilus:filtro-sallen-key} se puede observar que al pasar una señal cuadrada al filtro Sallen Key, obtenemos una señal senoidal con algunas distorsiones, esto es exactamente el comportamiento esperado.
+
+\subsubsection{Filtro de realimentación múltiple}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        Ganancia & $\Delta$Ganancia & Ganancia teórica & Error A [\%] & f (Hz) & $\Delta$f (Hz) & f teórica (Hz) & Error f [\%] \\
+        \hline
+        2.200 & 0.297 & 2.000 & 10.00 & 3703.7 & 137.2 & 2700.0 & 27.10 \\
+        \hline
+    \end{tabular}
+    \caption{Mediciones de ganancia y frecuencia del filtro de realimentación múltiple.}
+    \label{tab:error-filtro-realimentacion-multiple-ganancia-frecuencia}
+\end{table}
+
+Al observar la tabla \ref{tab:error-filtro-realimentacion-multiple-ganancia-frecuencia}, se puede apreciar que el error de la ganancia es de 10\%, este error es relativamente alto, esto puede ser debido a que las resistencias y condensadores utilizados no fueron exactamente los mismos a los calculados, siendo algunos de ellos bastantes distintos del valor teórico, ya que con las resistencias más cercanas a los valores calculados no se pudieron realizar mediciones en el filtro, así como la incertidumbre de los diversos componentes utilizados.
+
+Al observar la ilustración \ref{ilus:filtro-realimentacion-multiple-superposicion}, se puede observar que la respuesta en frecuencia del filtro de realimentación múltiple coincide con la simulación, no se pudo observar el factor de amortiguamiento en la gráfica, esto puede ser debido a que era necesario tomar más mediciones en el barrido.
+
+
+En la ilustración \ref{ilus:filtro-realimentacion-multiple-tercera-armonica} se puede observar que al pasar una señal cuadrada al filtro de realimentación múltiple, obtenemos una señal senoidal con algunas distorsiones, lo cual es el resultado esperado.

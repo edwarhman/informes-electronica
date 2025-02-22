@@ -1,0 +1,36 @@
+\subsection{Corriente de polarización (Bias)}
+
+Es el promedio dela pequeña corriente que fluye hacia o desde las entradas de un amplificador operacional (u otro dispositivo activo) para polarizar los transistores internos y asegurar su correcto funcionamiento.
+
+\begin{equation}
+    I_{B}=\frac{I_{P}+I_{N}}{2}
+    \label{eq:corriente-polarizacion}
+\end{equation}
+
+En los op-amps, las entradas están conectadas a transistores bipolares o MOSFETs, que requieren una pequeña corriente para operar. Esta corriente es necesaria para establecer el punto de operación (polarización) de los transistores.
+
+La corriente de bias puede causar errores en circuitos de alta precisión, especialmente cuando se trabaja con resistencias grandes, ya que genera caídas de voltaje no deseadas
+
+
+\subsection{Corriente de Offset}
+
+ La corriente de offset es la diferencia entre las corrientes de bias de las dos entradas de un amplificador operacional. Matemáticamente, se expresa como:
+
+ \begin{equation}
+    I_{os}=I_{P}-I_{N}
+    \label{eq:corriente-offset}
+ \end{equation}
+
+ La corriente de offset puede generar un voltaje de offset en la salida del amplificador, lo que introduce errores en aplicaciones de precisión.
+
+ \subsection{Voltaje de Offset}
+
+ El voltaje de offset es el voltaje que debe aplicarse entre las entradas de un amplificador operacional para que la salida sea cero. En un amplificador operacional ideal, la salida debería ser cero cuando las entradas están al mismo voltaje, pero en la práctica, debido a imperfecciones en la fabricación y desajustes internos, esto no ocurre.
+
+ El voltaje de offset puede causar errores en aplicaciones de precisión, especialmente en circuitos donde se amplifican señales pequeñas. Este error se manifiesta como un voltaje no deseado en la salida, incluso cuando la entrada es cero.
+
+ El voltaje de offset se define como:
+
+ \begin{equation}
+    V_{os}=\frac{V_{out}}{A}
+ \end{equation}

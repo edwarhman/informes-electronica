@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{cancel}
+\usepackage{xr}
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage[spanish]{babel}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage{../utils/laboratorio}
+
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\graphicspath{
+    {./parte-1/src/images/}
+    {./parte-2/src/images/}
+    {./parte-3/src/images/}
+    {./parte-4/src/images/}
+}
+
+
+\begin{document}
+\input{portada.tex}
+\tableofcontents
+\newpage
+\section{Resumen}
+\input{resumen.tex}
+
+\section{Introducción}
+\input{introduccion.tex}
+
+\section{Objetivos}
+\input{parte-1/src/objetivos.tex}
+
+\section {Marco teórico}
+\input{parte-1/src/marco-teorico.tex}
+\input{parte-2/src/marco-teorico.tex}
+\input{parte-3/src/marco-teorico.tex}
+\input{parte-4/src/marco-teorico.tex}
+
+\section{Metodología}
+\subsection{Aplicaciones de las topologías clásicas}
+\input{parte-1/src/trabajo-de-preparacion.tex}
+\FloatBarrier
+\subsection{Amplificador operacional real}
+\input{parte-2/src/trabajo-de-preparacion.tex}
+\FloatBarrier
+\subsection{Filtros activos}
+\input{parte-3/src/trabajo-de-preparacion.tex}
+\FloatBarrier
+\subsection{Fuentes lineales y reguladores monolíticos}
+\input{parte-4/src/trabajo-de-preparacion.tex}
+
+\input{instrumentos.tex}
+
+\section{Presentación de resultados}
+\subsection{Aplicaciones de las topologías clásicas}
+\input{parte-1/src/resultados.tex}
+\FloatBarrier
+\subsection{Amplificador operacional real}
+\input{parte-2/src/resultados.tex}
+\FloatBarrier
+\subsection{Filtros activos}
+\input{parte-3/src/resultados.tex}
+\FloatBarrier
+\subsection{Fuentes lineales y reguladores monolíticos}
+\input{parte-4/src/resultados.tex}
+
+\section{Análisis de resultados}
+\subsection{Análisis de las aplicaciones de las topologías clásicas}
+\input{parte-1/src/analisis-de-resultados.tex}
+\FloatBarrier
+\subsection{Análisis del amplificador operacional real}
+\input{parte-2/src/analisis-de-resultados.tex}
+\FloatBarrier
+\subsection{Análisis de los filtros activos}
+\input{parte-3/src/analisis-de-resultados.tex}
+\FloatBarrier
+\subsection{Análisis de las fuentes lineales y reguladores monolíticos}
+\input{parte-4/src/analisis-de-resultados.tex}
+\FloatBarrier
+\input{conclusiones.tex}
+
+\FloatBarrier
+\input{anexos.tex}
+\end{document}

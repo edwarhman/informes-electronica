@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{xr}
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage[spanish]{babel}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{adjustbox}
+\usepackage{cancel}
+\usepackage{multicol}
+\usepackage{../../utils/laboratorio}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\graphicspath{
+    {./src/images/}
+}
+
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+\include{src/portada}
+\tableofcontents
+\newpage
+
+\section{Objetivos}
+
+\subsection{Objetivo General}
+
+\input{src/objetivos.tex}
+
+\subsection{Objetivos específicos}
+
+\input{src/objetivos-especificos.tex}
+
+
+\section{Marco Teórico}
+
+\input{src/marco-teorico.tex}
+
+\section{Trabajo de preparación}
+
+\input{src/trabajo-de-preparacion.tex}
+
+\FloatBarrier
+% \section{Metodología}
+
+% \begin{enumerate}
+%     \item se monta el circuito de la ilustración \ref{ilus:topologias-basicas} y se energiza con los voltajes $V_{cc}$ y $V_{ee}$. 
+%     \item Se conecta un generador de señales senoidales y se le conecta un divisor de tensión para obtener dos salidas de voltaje con la misma fase.
+%     \item  se realiza la conexión del amplificador inversor y se realizan las mediciones de voltaje de entrada $V_i$ y voltaje de salida $V_o$.
+%     \item se repite el procedimiento anterior para las conexión del amplificador no inversor.
+%     \item se realizan las conexiones del restador y se toman las medidas de voltaje de entrada $V_1$ y $V_2$ y de salida $V_o$.
+%     \item se conecta la fuente de corriente con una resistencia $R5$ inicial y se mide la tensión $V_5$ en dicha resistencia, luego se intercambia la resistencia $R5$ por otras resistencias de otros valores y se vuelve a medir el voltaje cada vez.
+%     \item se cambia el generador para entregar una señal cuadrada, y se realiza la conexión del integrador, conectando el osciloscopio a la salida se ajusta la frecuancia hasta obtener una señal triangular.
+% \end{enumerate}
+
+\end{document}

@@ -1,0 +1,162 @@
+\subsection{Filtros activos}
+
+Un filtro es en general aquel dispositivo que modifica linealmente el
+contenido espectral de una señal. Un filtro activo es aquel el cual, ademas de contar con elementos pasivos, también tiene elementos activos cómo el amplificador operacional.
+
+No es difícil encontrar una situación cuyos requerimientos exijan un filtro de orden alto y tampoco es imposible realizarlo, lo difícil es sintonizarlo, esto es, hacer que cada coeficiente de la función de transferencia tome el valor adecuado para cumplir con los requerimientos.
+
+La sintonización se hace difícil, porque los parámetros de red susceptibles de variarse, modifican a mas de un coeficiente a la vez y si el número de coeficientes es alto, la tarea, además de ser iterativa, es muy costosa en tiempo y en equipos.
+
+Si el orden del filtro es alto, entonces puede dividirse en una cascada de etapas de 2do orden y a lo mas una de primer orden en el caso de orden impar
+
+\begin{align*}
+    H &= \frac{1}{s^5 + 3.236s^4 + 5.236s^3 + 5.236s^2 + 3.236s + 1} \\
+    H &= \frac{1}{(s^2 + 0.61803s + 1) \cdot (s^2 + 1.61803) \cdot (s + 1)}
+\end{align*}
+
+De manera tal que solo sea necesario sintonizar varias etapas de 2do orden y quizás de 1er orden, que aunque para cada una de ellas debe sintonizarse iterativamente, llevarán mucho menor tiempo y con la garantía de convergencia.
+
+\subsubsection{Función de transferencia de los filtros}
+
+Las funciones de transferencia de los filtros más utilizados son bien conocidas y son las siguientes:
+
+\begin{itemize}
+\item 
+Pasa bajos:
+\begin{multicols}{2}
+\begin{equation}
+    H(s) = \frac{H_o \cdot \omega_o^2}{s^2 + \alpha \cdot \omega_o \cdot s + \omega_o^2}
+    \label{eq:func-transferencia-pasa-bajos}
+\end{equation}
+\includegraphics[width=0.1\textwidth]{marco-teorico/respuesta-freq-pasa-bajos.png}
+\end{multicols}
+    \item 
+    Pasa banda:
+    \begin{multicols}{2}
+    \begin{equation}
+        H(s) = \frac{H_o \cdot \omega_o \cdot s}{s^2 + \alpha \cdot \omega_o \cdot s + \omega_o^2}
+        \label{eq:func-transferencia-pasa-banda}
+    \end{equation}
+    \includegraphics[width=0.1\textwidth]{marco-teorico/respuesta-freq-pasa-banda.png}
+    \end{multicols}
+Pasa altos:
+\begin{multicols}{2}
+\begin{equation}
+    H(s) = \frac{H_o \cdot s^2}{s^2 + \alpha \cdot \omega_o \cdot s + \omega_o^2}
+    \label{eq:func-transferencia-pasa-altos}
+\end{equation}
+    \includegraphics[width=0.1\textwidth]{marco-teorico/respuesta-freq-pasa-altos.png}
+\end{multicols}
+Rechaza banda:
+\begin{multicols}{2}
+\begin{equation}
+    H(s) = \frac{H_o \left( s^2 + \omega_o^2 \right)}{s^2 + \alpha \cdot \omega_o \cdot s + \omega_o^2}
+    \label{eq:func-transferencia-rechaza-banda}
+\end{equation}
+    \includegraphics[width=0.1\textwidth]{marco-teorico/respuesta-freq-rechaza-banda.png}
+\end{multicols}
+\end{itemize}
+
+\subsection{Filtros de múltiples realimentaciones}
+
+Esta topología puede convertirse en un cualquiera de las funciones de segundo orden (pasa bajo, pasa alto o pasa banda) con solo ubicar apropiadamente resistencias y condensadores.
+
+\begin{ilustracion}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{marco-teorico/filtro-multiples-realimentaciones.png}
+    \caption{Filtro de múltiples realimentaciones}
+    \label{ilus:filtro-multiples-realimentacion}
+\end{ilustracion}
+
+La función de transferencia puede resolverse de varias maneras, pero resulta compacto en términos de sus admitancias y usando el inversor $-Y_3/Y_5$ como amplificador base.
+
+Utilizando el método del amplificador desvanecido, tenemos:
+
+$$A_b = - \frac{Y_3}{Y_5}$$
+
+\begin{align*}
+    a_{io} &= 0 \\
+    a_{i1} &= \frac{Y_1}{Y_1 + Y_2 + Y_3 + Y_4}\\
+    a_{31} &= \frac{Y_4}{Y_1 + Y_2 + Y_3 + Y_4}\\
+    a_{3o} &= 1
+\end{align*}
+
+Aplicandolo a la formula MAD:
+
+\begin{equation}
+    \frac{V_o}{V_i} = \frac{Y_1}{Y_1 + Y_2 + Y_3 + Y_4} \frac{\frac{-Y_3}{Y_5}}{1 - \frac{Y_4}{Y_1 + Y_2 + Y_3 + Y_4} \WrapParenthesis{\frac{-Y_3}{Y_5}}}
+\end{equation}
+
+lo cual queda como:
+
+\begin{equation}
+    \frac{V_o}{V_i} = \frac{-Y_1 \cdot Y_3}{Y_5(Y_1 + Y_2 + Y_3 + Y_4)+ Y_3.Y_4} 
+    \label{eq:filtro-multirealimentacion}
+\end{equation}
+
+\subsubsection{Filtro pasa bajo de múltiples realimentaciones}
+
+\begin{ilustracion}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{marco-teorico/filtro-multiples-realimentaciones.png}
+    \caption{Filtro pasa bajo de múltiples realimentaciones}
+    \label{ilus:filtro-multiples-realimentacion-pasa-bajo}
+\end{ilustracion}
+
+Al sustituir las admitancias $Y_2$ y $Y_5$ de la ilustración \ref{ilus:filtro-multiples-realimentacion} por condensadores, obtenemos un filtro pasa bajo con la siguiente función de transferencia:
+
+\begin{equation}[ht]
+    H(s) = \frac{V_o(s)}{V_i(s)} = \frac{-\frac{1}{R_1}\cdot R_2C_2 C_5}{s^2 + (1/C_2)(1/R_1 + 1/R_3 + 1/R_4)s + 1/(R_3 R_4 C_2 C_5)}
+    \label{eq:func-transferencia-pasa-bajos-multirealimentacion}
+\end{equation}
+
+\subsection{Filtro por fuente de tensión controlada por tensión o Sallen-Key}
+
+Usando esta estructura y ubicando en ella solo capacitancias y resistencias (sin inductancias) pueden lograrse los tres tipos de filtro básicos, esta vez, sin inversión de fase.
+
+\begin{ilustracion}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{marco-teorico/filtro-sallen-key.png}
+    \caption{Filtro con topología de Sallen-Key}
+    \label{ilus:filtro-activo-sallen-key}
+\end{ilustracion}
+
+Tomando en cuenta que:
+
+\begin{equation}
+    K = 1 + \frac{R_B}{R_A}
+\end{equation}
+
+Aplicando el método del amplificador desvanecido, tenemos:
+
+\begin{align}
+    A &= K \\
+    a_{io} &= 0 \\
+    a_{i1} &= \frac{Y_1}{Y_1 + Y_2 + Y_3 + \WrapParenthesis{\frac{Y_4 Y_5}{Y_4}} + Y_5} \WrapParenthesis{\frac{Y_4}{Y_4 + Y_5}} \\
+    a_{30} &= 1 \\
+    a_{31} &= \frac{Y_2}{Y_1 + Y_2 + Y_3 + \WrapParenthesis{\frac{Y_4 Y_5}{Y_4 + Y_5}}} \WrapParenthesis{\frac{Y_4}{Y_4 + Y_5}} \\
+\end{align}
+
+Sustituyendo en la ecuación MAD:
+
+\begin{equation}
+    H(s) = \frac{V_o}{V_i} = \frac{Y_1 Y_4 K}{(Y_1 + Y_2 * Y_3 + Y_4)Y_5 + (Y_1 +Y_2(1-K)+Y_3)Y_4}
+\end{equation}
+
+\subsubsection{Filtro pasa bajo de topología de Sallen-Key}
+
+sustituyendo $Y_2$ y $Y_5$ por condensadores, obtenemos un filtro pasa bajo con la siguiente función de transferencia:
+
+
+\begin{ilustracion}
+    \centering
+    \includegraphics[width=0.5\textwidth]{marco-teorico/filtro-pasa-bajo-sallen-key.png}
+    \caption{Filtro pasa bajo de topología de Sallen-Key}
+\end{ilustracion}
+
+Al sustituir las admitancias $Y_2$ y $Y_5$ de la ilustración \ref{ilus:filtro-activo-sallen-key} por condensadores, obtenemos un filtro pasa bajo con la siguiente función de transferencia:
+
+\begin{equation}
+    H(s) = \frac{\frac{K}{R_1 R_4 C_2 C_5}}{s^2 + \left(\frac{1}{R_1 C_2} + \frac{1}{R_4 C_2} + \left(1 - K\right) \frac{1}{R_4 C_5}\right)s + \frac{1}{R_1 R_4 C_2 C_5}}
+    \label{eq:transferencia-pasa-bajo-sallen-key}
+\end{equation}
