@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{xr}
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage[spanish]{babel}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{adjustbox}
+\usepackage{../../utils/laboratorio}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\graphicspath{
+    {./images/}
+}
+
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+\include{portada}
+\tableofcontents
+\newpage
+
+\section{Objetivos}
+
+\input{objetivos.tex}
+
+\section{Marco Teórico}
+
+\input{marco-teorico.tex}
+
+\section{Metodología}
+
+\input{trabajo-de-preparacion.tex}
+
+\FloatBarrier
+
+\end{document}
