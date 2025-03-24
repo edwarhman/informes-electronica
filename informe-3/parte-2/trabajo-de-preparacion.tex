@@ -12,16 +12,24 @@
 Al usar un amplificador operacional UA741 alimentado con voltajes +VCC=10±1V y                     VEE= -10±1V este tendrá tensiones de saturación +Vsat = 8,005 V y –Vsat= -8,005 V, dichos valores fueron estudiados y comprobados en prácticas anteriores por lo cual serán utilizados como datos para esta práctica y para la práctica 3.3 del capítulo siguiente. 
 
 \begin{equation}
-    Vp = \frac{R_5}{R_5 + R_6} \cdot Vo_{\text{max}}
+    Vp = \frac{R_5}{R_5 + R_8} \cdot Vo_{\text{max}}
 \end{equation}
 
 Sustituyendo $Vp= 2V$ y $Vo = Vsat+$ se tiene
 
 $$
+2 R_5  + 2 R_8 = 8.1 R_5
+$$
+
+$$
+2 R_8 = (8.1 - 2) R_5
+$$
+
+$$
 2 = \frac{R_5}{R_5 + R_8}
 $$
 
-$$ R_8 = (6,005)R_5$$
+$$ R_8 = 3,05R_5$$
 
 si $R_5 = 3.3k $
 
@@ -40,13 +48,13 @@ $$ T = \frac{1}{f} = 0.2ms$$
 El periodo está dado por
 
 \[
-\mathcal{T} = t_1 + t_2 = - 2 R_\gamma \mathcal{C}_4 \ln \left( \frac{R_8}{2 R_5 + R_6} \right)
+\mathcal{T} = t_1 + t_2 = - 2 R_7 \mathcal{C}_4 \ln \left( \frac{R_8}{2 R_5 + R_8} \right)
 \]
 
 Asumiendo que $C_4 = 10nF$ se tiene
 
 \[
-R_7 = - \frac{T}{2C_4 \ln \left( \frac{R_B}{2R_S + R_g} \right)} = \frac{0,2 \times 10^{-3}}{2 (100 \times 10^{-9}) \ln \left( \frac{1500}{2 \times 510 + 1500} \right)}
+R_7 = - \frac{T}{2C_4 \ln \left( \frac{R_B}{2R_S + R_g} \right)} = - \frac{0,2 \times 10^{-3}}{2 (100 \times 10^{-9}) \ln \left( \frac{1500}{2 \times 510 + 1500} \right)}
 \]
 
 $$R_7 = 22k\Omega$$

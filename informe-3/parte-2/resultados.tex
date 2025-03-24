@@ -1,87 +1,84 @@
 \FloatBarrier
-\subsubsection{Mediciones de ganancia y frecuencia}
+\subsubsection{Multivibrador astable}
 
-La ilustración \ref{ilus:entrada-salida-inversor} muestra las mediciones de voltaje de entrada y salida del amplificador inversor.
-
-\begin{ilustracion}[hb]
-    \centering
-    \includegraphics[width=0.8\textwidth]{resultados/inversor.jpg}
-    \caption{Entrada y salida amplificador inversor.}
-    \label{ilus:entrada-salida-inversor}
-\end{ilustracion}
-
-La ilustración \ref{ilus:entrada-salida-no-inversor} muestra las mediciones de voltaje de entrada y salida del amplificador no inversor.
-
-\begin{ilustracion}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth]{resultados/no-inversor.jpg}
-    \caption{Entrada y salida amplificador no inversor.}
-    \label{ilus:entrada-salida-no-inversor}
-\end{ilustracion}
-
-La ilustración \ref{ilus:entrada-salida-restador} muestra las mediciones de voltaje de entrada y salida del amplificador restador.
-
-\begin{ilustracion}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth]{resultados/restador.jpg}
-    \caption{Entrada y salida amplificador restador.}
-    \label{ilus:entrada-salida-restador}
-\end{ilustracion}
-
-
+La tabla \ref{tab:resultados-multivibrador-astable} muestra las mediciones del multivibrador astable.
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-Topología & \(V_i(i)\) & \(\Delta V_i(i)\) & \(V_o(i)\) & \(\Delta V_o(i)\) & \(T\) (ms) & \(\Delta T\) (ms) & Ganancia & \(\Delta \text{Ganancia}\) \\ \hline
-Inversor & 1         & 0.2               & -2         & 0.2               & 1.0        & 0.02              & -2.00             & 0.447 \\ \hline
-No inversor & 1         & 0.2               & 3          & 0.2               & 1.0        & 0.02              & 3.00              & 0.632 \\ \hline
-Restador & 0.5       & 0.22              & 2          & 0.1               & 1.0        & 0.02              & 4.00              & 1.77 \\ \hline
+\(V_c\) & \(\Delta V_c\) & \(V_o\) & \(\Delta V_o\) & \(T\) & \(\Delta T\) & \(f\) & \(\Delta f\) \\ \hline
+2.80 & 0.20 & 9.00 & 1.00 & 0.00023 & 0.00001 & 4347.826087 & \\ \hline
 \end{tabular}
-\caption{Ganancia topologías clásicas.}
-\label{tab:resultados-ganancia-frecuencia-topologias-basicas}
+\caption{Mediciones del multivibrador astable.}
+\label{tab:resultados-multivibrador-astable}
 \end{table}
 
-\subsubsection{Efecto del integrador no inversor}
-
-La ilustración \ref{ilus:entrada-salida-integrador-no-inversor} muestra las mediciones de voltaje de entrada y salida del amplificador integrador no inversor.
 \begin{ilustracion}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{resultados/integrador-no-inversor.jpg}
-    \caption{Entrada vs salida amplificador integrador no inversor.}
-    \label{ilus:entrada-salida-integrador-no-inversor}
+    \includegraphics[width=0.6\textwidth]{resultados/astable-salida.jpg}
+    \caption{Medición de voltajes del multivibrador astable (canal 1 $V_o$, canal 2 $V_c$).}
+    \label{fig:multivibrador-astable-salida}
 \end{ilustracion}
 
-\subsubsection{Convertidor de tensión a corriente}
+\subsubsection{Multivibrador monostable}
 
-El cuadro \ref{tab:medicion-voltaje-entrada-convertidor-tension-corriente} muestra la medición de voltaje de entrada del convertidor tensión-corriente.
+La tabla \ref{tab:resultados-multivibrador-monostable} muestra las mediciones DC del multivibrador monoestable antes de conectar el generador. $V_c$ es el voltaje en el condensador $C_6$ y $V_p$ es el voltaje en la salida del amplificador operacional.
 
 \begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|c|}
-        \hline
-        \(V_i\) & \(\Delta V_i\) \\ \hline
-        5.2 & 0.4 \\ \hline
-    \end{tabular}
-    \caption{Medición de voltaje de entrada del convertidor tensión-corriente.}
-    \label{tab:medicion-voltaje-entrada-convertidor-tension-corriente}
-\end{table}
-
-El cuadro \ref{tab:resultados-convertidor-tension-corriente} muestra las mediciones del convertidor tensión-corriente.
-
-\begin{table}[h!]
 \centering
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\(V_o\) & \(\Delta V_o\) & \(R\) [$k\Omega$] & \(\Delta R\) [$k\Omega$] & I (mA) & \(\Delta I\) (mA) \\ \hline
-0.05 & 0.01 & 1.000 & 0.050 & 50.00 & 10.30 \\ \hline
-0.5 & 0.1 & 11.000 & 0.550 & 45.50 & 9.370 \\ \hline
-1.0 & 0.1 & 22.000 & 1.100 & 45.50 & 5.080 \\ \hline
-2.0 & 0.2 & 39.000 & 1.950 & 51.30 & 5.730 \\ \hline
-1.3 & 0.1 & 27.000 & 1.350 & 48.10 & 4.420 \\ \hline
+\(V_c\) & \(\Delta V_c\) & \(V_p\) & \(\Delta V_p\) \\ \hline
+3.00 & 0.20 & 5.20 & 0.40 \\ \hline
 \end{tabular}
-\caption{Mediciones del convertidor tensión-corriente.}
-\label{tab:resultados-convertidor-tension-corriente}
+\caption{Mediciones voltaje DC del multivibrador monoestable.}
+\label{tab:resultados-multivibrador-monostable}
 \end{table}
 
+La ilustración \ref{ilus:multivibrador-monostable-salida} muestra la tensión en el condensador y el voltaje del generador con un periodo de 13ms y un duty cycle de 90\%.
+
+\begin{ilustracion}
+    \centering
+    \includegraphics[width=0.6\textwidth]{resultados/monostable-90duty.png}
+    \caption{Medición de voltajes del multivibrador monoestable (canal 1 $V_c$, canal 2 $V_c$). con un duty cycle del 90\% y T=13ms.}
+    \label{ilus:multivibrador-monostable-salida}
+\end{ilustracion}
+
+\begin{ilustracion}
+    \centering
+    \includegraphics[width=0.6\textwidth]{resultados/monostable-11ms.png}
+    \caption{Medición de voltajes del multivibrador monoestable (canal 1 $V_c$, canal 2 $V_c$). con un duty cycle del 10\% y T=11ms.}
+    \label{ilus:multivibrador-monostable-salida-11ms}
+\end{ilustracion}
+
+\begin{ilustracion}
+    \centering
+    \includegraphics[width=0.6\textwidth]{resultados/monostable-7ms.png}
+    \caption{Medición de voltajes del multivibrador monoestable (canal 1 $V_c$, canal 2 $V_c$). con un duty cycle del 10\% y T=7ms.}
+    \label{ilus:multivibrador-monostable-salida-7ms}
+\end{ilustracion}
+
+La tabla \ref{tab:resultados-multivibrador-monostable-2} muestra las mediciones adicionales del multivibrador monoestable a partir de la ilustración \ref{ilus:multivibrador-monostable-salida-7ms}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(V_c\) [V] & \(\Delta V_c\) [V] & \(T\) [ms] & \(\Delta T\) [ms]\\ \hline
+2.00 & 0.40 & 14.00 & 0.40 \\ \hline
+\end{tabular}
+\caption{Mediciones del multivibrador monoestable con el generador conectado.}
+\label{tab:resultados-multivibrador-monostable-2}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(T\) [ms] & \(\Delta T\) [ms] & Valor teórico [ms] & Error \% \\ \hline
+14 & 0.4 & 10 & 40 \\ \hline
+\end{tabular}
+\caption{Comparación de mediciones y valores teóricos del multivibrador monoestable.}
+\label{tab:comparacion-multivibrador-monostable}
+\end{table}

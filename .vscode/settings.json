@@ -21,9 +21,12 @@
         "**/*.xdv": true
     },
     "cSpell.words": [
+        "astable",
         "Blackman",
         "GBWP",
+        "monoestable",
         "Multisim",
+        "multivibrador",
         "Multivibradores"
     ]
 }
