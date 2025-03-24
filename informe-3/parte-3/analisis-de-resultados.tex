@@ -1,0 +1,66 @@
+\subsubsection{Ganancias topologías clásicas}
+
+A partir de los resultados obtenidos, se presenta el siguiente análisis de las ganancias medidas para cada topología:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Topología & Ganancia & $\Delta$ Ganancia & Ganancia teórica & Error (\%) \\ \hline
+Inversor & -2.00 & 0.45 & -2 & 0 \\ \hline
+No Inversor & 3.00 & 0.63 & 3 & 0 \\ \hline
+Restador & 4.00 & 1.77 & 2 & 100 \\ \hline
+\end{tabular}
+\caption{Comparación de ganancias medidas vs teóricas}
+\label{tab:comparacion-ganancias}
+\end{table}
+
+Del análisis de los resultados se puede observar que:
+
+\begin{itemize}
+    \item Para el amplificador inversor, se obtuvo una ganancia de $-2.00 \pm 0.45$, lo cual coincide exactamente con la ganancia teórica esperada de $-2$, resultando en un error del 0\%.
+    
+    \item En el caso del amplificador no inversor, se midió una ganancia de $3.00 \pm 0.63$, que también coincide perfectamente con el valor teórico de $3$, presentando un error del 0\%.
+    
+    \item Para el amplificador restador, se obtuvo una ganancia de $4.00 \pm 1.77$. Este valor difiere significativamente del valor teórico esperado de $2$, presentando un error del 100\%. Esta discrepancia se debe a un error cometido al momento de tomar la medición, ya que se consideró que el voltaje de entrada era $V_1$ cuando realmente es la resta $V_2 - V_1$, esto llevó a una mala interpretación de los valores observados en el osciloscopio.
+\end{itemize}
+
+Los amplificadores inversor y no inversor mostraron un comportamiento muy cercano al ideal, mientras que el restador presentó desviaciones significativas debido a un error humano.
+
+\subsubsection{Efecto del integrador no inversor}
+
+La ilustración \ref{ilus:entrada-salida-integrador-no-inversor} muestra que al pasar una señal cuadrada al amplificador integrador no inversor, la señal de salida es una señal triangular cuya pendiente positiva coincide con el semiciclo positivo de la señal cuadrada, mientras que la pendiente negativa coincide con el semicliclo negativo de la señal cuadrada, este es el comportamiento que se esperaba observar.
+
+\subsubsection{Convertidor de tensión a corriente}
+
+A continuación se presentan los resultados de la corriente medida para cada valor de resistencia, junto con el error porcentual respecto al valor teórico.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+I (mA) & \(\Delta I\) (mA) & I Teórica [mA] & Error (\%) \\ \hline
+50.00 & 10.30 & 52 & 3.85 \\ \hline
+45.50 & 9.370 & 52 & 12.59 \\ \hline
+45.50 & 5.080 & 52 & 12.59 \\ \hline
+51.30 & 5.730 & 52 & 1.38 \\ \hline
+48.10 & 4.420 & 52 & 7.41 \\ \hline
+\end{tabular}
+\caption{Porcentaje de error del convertidor tensión-corriente.}
+\label{tab:analisis-resultados-convertidor-tension-corriente}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+I (mA) & \(\Delta I\) (mA) & I Teórica [mA] & Error (\%) \\ \hline
+48.07 & 6.982 & 52 & 7.56 \\ \hline
+\end{tabular}
+\caption{Porcentaje de error promedio del convertidor tensión-corriente.}
+\label{tab:analisis-resultados-convertidor-tension-corriente-promedio}
+\end{table}
+
+De los cuadros \ref{tab:analisis-resultados-convertidor-tension-corriente} y \ref{tab:analisis-resultados-convertidor-tension-corriente-promedio} se observa que la corriente medida se mantiene relativamente constante alrededor de los 48 mA, con una desviación promedio del 7.56\% respecto al valor teórico de 52 mA. y una desviación máxima del 12.59\%. Esto puede ser debido a que $R_1$ (100k) no era significativamente grande en comparación con $R_2$ (40k). Las incertidumbres en las mediciones son significativas, especialmente en las primeras mediciones, Esto puede ser debido a que para las primeras mediciones los valores medidos de voltaje fueron bajos, o que las primeras resistencias fueron de un valor bajo, siendo su incertidumbre baja y al ser una división la incertidumbre de la corriente fue alta.
+
+El valor teórico de la corriente se obtuvo de la formula \ref{eq:mt-io-fuente-corriente} con $R_1 = 100k\Omega$ y $V_i = 5.2V$.

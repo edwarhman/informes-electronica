@@ -14,6 +14,12 @@
 \usepackage{adjustbox}
 \usepackage{multicol}
 \usepackage{../utils/laboratorio}
+\usepackage{csquotes}
+\usepackage[
+    backend=biber,
+    style=ieee,
+    sorting=none
+]{biblatex}
 
 
 \hypersetup{
@@ -24,15 +30,16 @@
     urlcolor=black
 }
 
+\addbibresource{parte-3/bibliografia.bib}
+
 \geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
 \renewcommand{\familydefault}{\sfdefault}
 
 
 \graphicspath{
-    {./parte-1/src/images/}
-    {./parte-2/src/images/}
-    {./parte-3/src/images/}
-    {./parte-4/src/images/}
+    {./parte-1/images/}
+    {./parte-2/images/}
+    {./parte-3/images/}
 }
 
 
@@ -47,57 +54,53 @@
 \input{introduccion.tex}
 
 \section{Objetivos}
-\input{parte-1/src/objetivos.tex}
+\input{parte-1/objetivos.tex}
 
 \section {Marco teórico}
-\input{parte-1/src/marco-teorico.tex}
-\input{parte-2/src/marco-teorico.tex}
-\input{parte-3/src/marco-teorico.tex}
-\input{parte-4/src/marco-teorico.tex}
+\input{parte-1/marco-teorico.tex}
+\input{parte-2/marco-teorico.tex}
+\input{parte-3/marco-teorico.tex}
 
 \section{Metodología}
-\subsection{Aplicaciones de las topologías clásicas}
-\input{parte-1/src/trabajo-de-preparacion.tex}
+\subsection{Osciladores}
+\input{parte-1/trabajo-de-preparacion.tex}
 \FloatBarrier
-\subsection{Amplificador operacional real}
-\input{parte-2/src/trabajo-de-preparacion.tex}
+\subsection{Multivibradores}
+\input{parte-2/trabajo-de-preparacion.tex}
 \FloatBarrier
-\subsection{Filtros activos}
-\input{parte-3/src/trabajo-de-preparacion.tex}
+\subsection{Generador de funciones}
+\input{parte-3/trabajo-de-preparacion.tex}
 \FloatBarrier
-\subsection{Fuentes lineales y reguladores monolíticos}
-\input{parte-4/src/trabajo-de-preparacion.tex}
 
 \input{instrumentos.tex}
 
 \section{Presentación de resultados}
-\subsection{Aplicaciones de las topologías clásicas}
-\input{parte-1/src/resultados.tex}
+\subsection{Osciladores}
+\input{parte-1/resultados.tex}
 \FloatBarrier
-\subsection{Amplificador operacional real}
-\input{parte-2/src/resultados.tex}
+\subsection{Multivibradores}
+\input{parte-2/resultados.tex}
 \FloatBarrier
-\subsection{Filtros activos}
-\input{parte-3/src/resultados.tex}
+\subsection{Generador de funciones}
+\input{parte-3/resultados.tex}
 \FloatBarrier
 \subsection{Fuentes lineales y reguladores monolíticos}
-\input{parte-4/src/resultados.tex}
 
 \section{Análisis de resultados}
 \subsection{Análisis de las aplicaciones de las topologías clásicas}
-\input{parte-1/src/analisis-de-resultados.tex}
+\input{parte-1/analisis-de-resultados.tex}
 \FloatBarrier
 \subsection{Análisis del amplificador operacional real}
-\input{parte-2/src/analisis-de-resultados.tex}
+\input{parte-2/analisis-de-resultados.tex}
 \FloatBarrier
 \subsection{Análisis de los filtros activos}
-\input{parte-3/src/analisis-de-resultados.tex}
+\input{parte-3/analisis-de-resultados.tex}
 \FloatBarrier
 \subsection{Análisis de las fuentes lineales y reguladores monolíticos}
-\input{parte-4/src/analisis-de-resultados.tex}
 \FloatBarrier
 \input{conclusiones.tex}
 
 \FloatBarrier
-\input{anexos.tex}
+% \input{anexos.tex}
+\printbibliography[heading=bibintoc, title={Bibliografía}]
 \end{document}
