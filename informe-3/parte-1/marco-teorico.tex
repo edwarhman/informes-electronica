@@ -1,7 +1,7 @@
 \subsection{Osciladores}
 
 Existen distintos sistemas capaces de generar señales por sí solas, tales como:
-triangulares, cuadráticas, sinusoidales, etc. Las dos categorías principales de generadores de señales son los osciladores sinusoidales y los osciladores de relajación. El primero emplea un lazo de realimentación positiva compuesto por una red RC o RL, utilizando el fenómeno de resonancia. También se conoce como oscilador lineal. El segundo caso, se conoce como oscilador no lineal y emplean bloques conocidos como multivibradores.
+triangulares, cuadráticas, sinusoidales, etc. Las dos categorías principales de generadores de señales son los osciladores sinusoidales y los osciladores de relajación \cite{herrera-osciladores}. El primero emplea un lazo de realimentación positiva compuesto por una red RC o RL, utilizando el fenómeno de resonancia. También se conoce como oscilador lineal. El segundo caso, se conoce como oscilador no lineal y emplean bloques conocidos como multivibradores \cite{herrera-osciladores}.
 
 \begin{ilustracion}[ht]
   \centering
@@ -31,9 +31,9 @@ Por lo tanto, la ganancia del sistema realimentado está dada por:
   \label{eq:ganancia-realimentacion}
 \end{equation}
 
-Cuando el resultado en el denominador es cero, entonces el sistema se encuentra en el límite de la estabilidad. Recordemos que un sistema con realimentación negativa es estable y el sistema con realimentación positiva es inestable.
+Cuando el resultado en el denominador es cero, entonces el sistema se encuentra en el límite de la estabilidad. Recordemos que un sistema con realimentación negativa es estable y el sistema con realimentación positiva es inestable \cite{herrera-osciladores}.
 
-Para que un sistema oscile, debe cumplirse la condición de Barkhausen:
+Para que un sistema oscile, debe cumplirse la condición de Barkhausen \cite{herrera-osciladores}:
 
 \begin{equation}
   A(j\omega_o)\beta(j\omega_o) = 1
@@ -103,7 +103,7 @@ resolviendo el sistema de ecuaciones \ref{eq:sistema-ecuaciones-oscilacion} se t
 
 \subsection{Oscilador de puente de Wien}
 
-Este circuito es uno de los osciladores más usados, por su sencillez y estabilidad. Está realimentado negativamente por un circuito resistivo y positivamente por dos redes RC, en serie y paralelo.
+Este circuito es uno de los osciladores más usados, por su sencillez y estabilidad \cite{herrera-osciladores}. Está realimentado negativamente por un circuito resistivo y positivamente por dos redes RC, en serie y paralelo.
 
 \begin{ilustracion}[ht]
   \centering
@@ -144,7 +144,6 @@ Por lo tanto, sustituyendo estos términos y simplificando la ecuación, se tien
 
 Identificando los términos:
 
-
 \begin{align}
   N_p(s) = 0 \\
   N_i(s) = A \frac{R1C2}{R1R2C1C2}s \\
@@ -153,7 +152,6 @@ Identificando los términos:
 \end{align}
 
 Partiendo de la igualdad $N_p = D_p$
-
 
 \begin{equation}
   s^2 + \frac{1}{R1R2C1C2} = 0
@@ -171,7 +169,7 @@ Y de la igualdad $N_i = D_i$, se obtiene la ganancia del circuito
   A = \frac{R2 \cdot C2 + R1 \cdot C1 + R1 \cdot C2}{R1 \cdot C2}
 \end{equation}
 
-En la vida real, los variaciones de temperatura de los componentes dificulta mantener la estabilidad del puente de Wien. Una manera de disminuir este efecto consiste en utilizar valores de resistencias iguales y de la misma tecnología, lo cual disminuye el efecto de oscilación debido a la temperatura.
+En la vida real, los variaciones de temperatura de los componentes dificulta mantener la estabilidad del puente de Wien \cite{herrera-osciladores}. Una manera de disminuir este efecto consiste en utilizar valores de resistencias iguales y de la misma tecnología, lo cual disminuye el efecto de oscilación debido a la temperatura.
 
 Si $R_1 = R_2 = R$ y $C_1 = C_2 = C$, entonces la ganancia del circuito y su frecuencia de corte se vuelven:
 
@@ -187,10 +185,8 @@ Si $R_1 = R_2 = R$ y $C_1 = C_2 = C$, entonces la ganancia del circuito y su fre
 
 \subsection{Controles de amplitud}
 
-Para un oscilador, no es posible garatizar que mantenga las características
-de oscilación durante toda su vida útil.
-
-Para lograr esto, es necesario garantizar que la oscilación tenga un factor
+Para un oscilador, no es posible garantizar que mantenga las características
+de oscilación durante toda su vida útil \cite{herrera-osciladores}.Para lograr esto, es necesario garantizar que la oscilación tenga un factor
 de amortiguamiento no nulo, $A e^{\alpha t}sen(wt)$, de manera que pueda crecer y decrecer en amplitud.
 
-Se desea entonces que en el arranque, ese factor $\alpha$ sea mayor que cero, y que crezca en magnitud hasta lograr niveles utilizables. Cuando esta señal sea grande, entonces el factor de amortiguamiento será menor que cero, evitando que el oscilador llegue a la zona no lineal.
+Se desea entonces que en el arranque, ese factor $\alpha$ sea mayor que cero, y que crezca en magnitud hasta lograr niveles utilizables. Cuando esta señal sea grande, entonces el factor de amortiguamiento será menor que cero, evitando que el oscilador llegue a la zona no lineal \cite{herrera-osciladores}.
