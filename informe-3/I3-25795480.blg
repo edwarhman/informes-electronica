@@ -1,0 +1,14 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'I3-25795480.blg'
+[47] biber:340> INFO - === Tue Mar 25, 2025, 11:07:57
+[58] Biber.pm:420> INFO - Reading 'I3-25795480.bcf'
+[105] Biber.pm:994> INFO - Found 1 citekeys in bib section 0
+[114] Biber.pm:4463> INFO - Processing section 0
+[122] Biber.pm:4654> INFO - Looking for bibtex file 'parte-3/bibliografia.bib' for section 0
+[123] bibtex.pm:1713> INFO - LaTeX decoding ...
+[128] bibtex.pm:1519> INFO - Found BibTeX data source 'parte-3/bibliografia.bib'
+[163] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[163] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[163] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[164] bbl.pm:676> INFO - Writing 'I3-25795480.bbl' with encoding 'UTF-8'
+[165] bbl.pm:779> INFO - Output to I3-25795480.bbl
