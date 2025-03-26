@@ -5,10 +5,10 @@ La tabla \ref{tab:resultados-multivibrador-astable} muestra las mediciones del m
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\(V_c\) & \(\Delta V_c\) & \(V_o\) & \(\Delta V_o\) & \(T\) & \(\Delta T\) & \(f\) & \(\Delta f\) \\ \hline
-2.80 & 0.20 & 9.00 & 1.00 & 0.00023 & 0.00001 & 4347.826087 & \\ \hline
+\(V_c [V]\) & \(\Delta V_c [V]\) & \(V_o [V]\) & \(\Delta V_o [V]\) & \(T [\mu s]\) & \(\Delta T [\mu s]\) \\ \hline
+2.60 & 0.20 & 9.00 & 1.00 & 230 & 10  \\ \hline
 \end{tabular}
 \caption{Mediciones del multivibrador astable.}
 \label{tab:resultados-multivibrador-astable}
@@ -20,6 +20,19 @@ La tabla \ref{tab:resultados-multivibrador-astable} muestra las mediciones del m
     \caption{Medición de voltajes del multivibrador astable (canal 1 $V_o$, canal 2 $V_c$).}
     \label{fig:multivibrador-astable-salida}
 \end{ilustracion}
+
+La tabla \ref{tab:calculo-t-2tsr} muestra las mediciones del tiempo de retardo del Slewrate el cual se tomo al medir la distancia en el eje X entre los valores máximo y mínimo de $V_o$ y la medición indirecta de restar dos veces $V_{sr}$ al periodo T de la onda.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(T_{sr} [\mu s]\) & \(\Delta T_{sr} [\mu s]\) & \(T - 2T_{sr} [\mu s]\) & \(\Delta (T - 2T_{sr}) [\mu s]\) \\ \hline
+20 & 10 & 190 & 10 \\ \hline
+\end{tabular}
+\caption{Medición de \(T - 2T_{sr}\) para el multivibrador astable.}
+\label{tab:calculo-t-2tsr}
+\end{table}
 
 \subsubsection{Multivibrador monostable}
 
@@ -65,20 +78,9 @@ La tabla \ref{tab:resultados-multivibrador-monostable-2} muestra las mediciones 
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline
-\(V_c\) [V] & \(\Delta V_c\) [V] & \(T\) [ms] & \(\Delta T\) [ms]\\ \hline
-2.00 & 0.40 & 14.00 & 0.40 \\ \hline
+\(V_t\) [V] & \(\Delta V_t\) [V] & \(T\) [ms] & \(\Delta T\) [ms]\\ \hline
+2.00 & 0.40 & 13.60 & 0.40 \\ \hline
 \end{tabular}
 \caption{Mediciones del multivibrador monoestable con el generador conectado.}
 \label{tab:resultados-multivibrador-monostable-2}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\(T\) [ms] & \(\Delta T\) [ms] & Valor teórico [ms] & Error \% \\ \hline
-14 & 0.4 & 10 & 40 \\ \hline
-\end{tabular}
-\caption{Comparación de mediciones y valores teóricos del multivibrador monoestable.}
-\label{tab:comparacion-multivibrador-monostable}
 \end{table}
