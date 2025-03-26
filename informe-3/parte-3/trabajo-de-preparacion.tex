@@ -9,7 +9,7 @@
 
 \paragraph{Para el circuito de la figura \ref{fig:generador-funciones}, diseñar con el fin de obtener una oscilación de frecuencia 5.0kHz.\\}
 
-Llamaremos a la salida del astable $V_{C}$ y a la salida del integrador $V_{T}$
+Llamaremos a la salida del astable $V_{C}$, a la entrada positiva del astable $V_p$ y a la salida del integrador $V_{T}$
 
 Tenemos que la salida $V_{C}$ viene dada por los valores de los diodos y del zener, de modo que 
 
@@ -38,14 +38,14 @@ Pero el voltaje $V^- = 0$ ya que está conectado a la referencia y $V^+ = V^-$ p
 Se utilizarán el diodo zener 1N4734A y los diodos 1N4007, por lo que
 
 \begin{align*}
-    V_Z &= 5.6 V \\
-    V_D &= 0.65 V
+    V_Z &= 5.80 V \\
+    V_D &= 1.00 V
 \end{align*}
 
 Por tanto
 
 \begin{equation*}
-    V_{C} = \pm 6.9V
+    V_{C} = \pm 7.80V
 \end{equation*}
 
 Para el diseño no se pide ningún valor especifico para la magnitud de la señal triangular en el diseño, por lo tanto se puede escoger cualquier valor para $R_6$ y $R_7$ siempre y cuando $V_T$ no alcance el voltaje de saturación del amplificador. Por simplicidad se utilizará $R_6 = R_7$
@@ -57,8 +57,8 @@ por tanto
 \end{equation*}
 
 \begin{align}
-    V_C= 6.9V \rightarrow V_T = -6.9V \\
-    V_C = -6.9V \rightarrow V_T = 6.9V
+    V_C= 6.9V \rightarrow V_T = -7.8V \\
+    V_C = -6.9V \rightarrow V_T = 7.8V
 \end{align}
 
 Para cumplir con la condición de frecuencia primero hay que tomar en cuenta el tiempo de retardo de la señal debido al slew rate, el cual viene dado por la expresión
@@ -109,7 +109,7 @@ Si $C=10nF$ entonces
     R = 4.3k\Omega
 \end{equation}
 
-La resistencia $R_{10}$ es para proteger al amplificador debido a que los diodos fijan el voltaje de salida. Se escogerá un valor de
+La resistencia $R_{10}$ es para proteger al amplificador debido a que los diodos fijan el voltaje de salida y se debe asegurar que la corriente en la salida sea lo suficientemente pequeña, por lo tanto se escogerá un valor de
 
 \begin{equation}
     R_{10} = 1k\Omega
@@ -136,4 +136,4 @@ La ilustración \ref{ilus:montaje-generador-funciones} muestra la construcción 
     \label{ilus:salidas-generador-funciones}
 \end{ilustracion}
 
-La ilustración \ref{ilus:salidas-generador-funciones} muestra las formas de onda triangular y cuadrada generadas por el circuito en la simulación. Se puede observar que la frecuencia de las ondas es de aproximadamente 5kHz y que ambas ondas tienen magnitudes casi identicas, sin embargo las magnitudes son de máximo de 6V mientras que en los calculos la magnitud era de 6.9V
+La ilustración \ref{ilus:salidas-generador-funciones} muestra las formas de onda triangular y cuadrada generadas por el circuito en la simulación. Se puede observar que la frecuencia de las ondas es de aproximadamente 5kHz y que ambas ondas tienen magnitudes casi identicas, sin embargo las magnitudes son de máximo de 6V mientras que en los calculos la magnitud era de 7.8V. También se puede observar que la señal $V_c$ no es del todo cuadrada y que la señal $V_t$ tampoco es del todo triangular.
