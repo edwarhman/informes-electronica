@@ -1,3 +1,48 @@
+\subsubsection{Multivibrador astable}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(V_C\) [V] & \(\Delta V_C\) [V] & Valor teórico [V] & Error \% \\ \hline
+2.60 & 0.20 & 2.00 & 30.00 \\ \hline
+\end{tabular}
+\caption{Comparación de mediciones y valores teóricos de la amplitud $V_c$ del multivibrador astable.}
+\label{tab:comparacion-multivibrador-astable-amplitud}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Descripción & \(T\) [\(\mu\)s] & \(\Delta T\) [\(\mu\)s] & Valor teórico [\(\mu\)s] & Error \% \\ \hline
+Sin tomar en cuenta el SR &230 & 10 & 200 & 15.00 \\ \hline
+Tomando en cuenta el SR & 190 & 10 & 200 & 5.00 \\ \hline
+\end{tabular}
+\caption{Comparación de mediciones y valores teóricos de tiempo del multivibrador astable.}
+\label{tab:comparacion-tiempo-multivibrador-astable}
+\end{table}
+
+Del cuadro \ref{tab:comparacion-multivibrador-astable-amplitud} se observa un error del 30\% para el valor de la amplitud de la onda $Vc$, lo cual es algo elevado. Este error puede ser ocasionado porque durante el tiempo de respuesta debido al Slewrate el circuito deja de comportarse adecuadamente y el condensador se sigue cargando o descargando por encima del valor esperado, esto hace que la amplitud medida sea algo mayor a la esperada.
+
+El cuadro \ref{tab:comparacion-tiempo-multivibrador-astable} muestra un error del 15\% en el valor del periodo con respecto al valor teórico esperado cuando no se toma en cuenta el tiempo de retardo del Slewrate, cuando tomamos en cuenta el retardo del Slewrate el error es de tan solo 5 \%, lo cual es aceptable.
+
+
+\subsubsection{Multivibrador monoestable}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\(T\) [ms] & \(\Delta T\) [ms] & Valor teórico [ms] & Error \% \\ \hline
+13.60 & 0.40 & 10.00 & 36.00 \\ \hline
+\end{tabular}
+\caption{Comparación de mediciones y valores teóricos del multivibrador monoestable.}
+\label{tab:comparacion-multivibrador-monostable}
+\end{table}
+
+Viendo el cuadro \ref{tab:comparacion-multivibrador-monostable} obtenemos que el error del periodo de la onda $V_c$ es de $36.00$ es bastante elevado, sin embargo es poco probable a que este error sea debido al Slewrate ya que para esta configuración  $T_{sr}$ tiene un valor aproximado de $20\mu s$ lo cual es insignificante comparándolo con el periodo $T=10ms$. Esto también se hace evidente debido al hecho de que la forma de onda de $V_t$ es exponencial, y de que la onda $V_o$ tiene forma cuadrada. No hubo distorsión debido al Slewrate. El error observado puede ser debido a que el valor comercial de una de las resistencias $150k$ es algo distinto al valor teórico ($160k$), además de los errores debidos a los elementos como las resistencias y el condensador.
+
 \subsubsection{Ganancias topologías clásicas}
 
 A partir de los resultados obtenidos, se presenta el siguiente análisis de las ganancias medidas para cada topología:
