@@ -1,8 +1,14 @@
-Los amplificadores operacionales, comúnmente conocidos como op-amps, son dispositivos electrónicos ampliamente utilizados en circuitos analógicos debido a su versatilidad y eficiencia. Estos componentes son amplificadores de voltaje de alta ganancia, diseñados para realizar una variedad de operaciones matemáticas y de procesamiento de señales, como amplificación, filtrado, integración, diferenciación y sumación, entre otras.
+Los amplificadores operacionales (op-amps) son dispositivos versátiles que encuentran aplicaciones tanto en circuitos lineales como no lineales. Mientras que en configuraciones lineales se utilizan principalmente para operaciones de amplificación y filtrado, sus aplicaciones no lineales abren un panorama de posibilidades en generación y conformación de señales. Este informe explora tres configuraciones fundamentales de op-amps en régimen no lineal: el oscilador de puente de Wien, los multivibradores (astable y monoestable) y los generadores de funciones.
 
-Los amplificadores operacionales son componentes esenciales en la electrónica moderna, gracias a su flexibilidad y capacidad para realizar una amplia variedad de tareas. Su comprensión y manejo son fundamentales para el diseño y análisis de circuitos analógicos avanzados.
+El \textbf{oscilador de puente de Wien} representa una aplicación clásica en generación de señales sinusoidales. Su diseño aprovecha el balance entre una red de realimentación positiva (para mantener las oscilaciones) y un mecanismo de control de amplitud (usualmente mediante diodos o JFETs) que garantiza estabilidad en la señal de salida. La frecuencia de oscilación está determinada por la relación $f_o = \frac{1}{2\pi RC}$, demostrando cómo componentes pasivos simples pueden definir características fundamentales de la señal generada.
 
-En este informe, se estudiarán las características y aplicaciones de los amplificadores operacionales, como pueden ser los filtros activos, así como los reguladores de voltaje y fuentes de corriente, que son dispositivos esenciales en la electrónica analógica.
+Los \textbf{multivibradores} ilustran la capacidad de los op-amps para trabajar en conmutación:
+\begin{itemize}
+    \item El \textbf{astable} opera como oscilador libre, generando una onda cuadrada continua cuya frecuencia depende de los elementos RC en el circuito
+    \item El \textbf{monoestable} produce un pulso de duración fija ante un disparo externo, siendo útil en aplicaciones de temporización
+\end{itemize}
 
+Los \textbf{generadores de funciones} amplían estas capacidades para producir formas de onda complejas (triangulares, diente de sierra, etc.), a menudo mediante la integración controlada de señales cuadradas. Estos circuitos encuentran aplicaciones prácticas en sistemas de comunicaciones, instrumentación médica y equipos de prueba electrónicos.
 
+Este estudio experimental permitirá verificar los principios teóricos de operación, analizar las relaciones entre los componentes y los parámetros de salida, y evaluar las limitaciones prácticas de estos circuitos. Particular atención se dedicará al análisis de distorsión armónica en el oscilador Wien y a la precisión temporal en los multivibradores, aspectos críticos para aplicaciones reales.
 

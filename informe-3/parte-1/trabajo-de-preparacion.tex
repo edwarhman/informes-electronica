@@ -89,6 +89,37 @@ si decimos que $x=0.5$
     A &= 2
 \end{align*}
 
+Se pueden calcular los valores de x cuando se conecta el control de amplitud teniendo en cuenta que para cuando los diodos no están polarizados el potenciometro está en serie con la resistencia R3.
+
+\[ \frac{R_3 + xR_{v1}}{(1-x)R_{v1}} > 2 \]
+
+$$ 2 R_{v1} - 2x R_{v1} < R_3 + x R_{v1} $$
+$$ 2 R_{v1} - R3 < 3 x R_{v1} $$
+
+$$ x > \frac{2R_{v1} - R3}{3 R_{v1}}$$
+
+Por tanto
+
+$$ x > 0.50 $$
+
+
+cuando cualquiera de los diodos está conectado tenemos:
+
+\[ \frac{xR_{v1}}{(1-x)R_{v1}} < 2 \]
+
+$$ x < 2 - 2x$$
+
+$$ 3 x < 2 $$
+
+$$ x < 2/3 $$
+
+$$ x < 0.66 $$
+
+Por lo tanto
+
+$$ 0.50 <= x < 0.66 $$
+
+
 Queremos encontrar la expresión de la tensión en la entrada negativa del amplificador $V_N$, para ello aplicamos un divisor de tensión desde $V_o$
 
 \begin{align*}

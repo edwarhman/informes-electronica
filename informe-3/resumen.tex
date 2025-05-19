@@ -1,7 +1,31 @@
-En este informe se estudian las características, aplicaciones y comportamiento práctico de los amplificadores operacionales (op-amps), componentes fundamentales en la electrónica analógica. Los op-amps son dispositivos versátiles y eficientes, utilizados en una amplia gama de circuitos para realizar operaciones como amplificación, filtrado, integración y regulación de señales.
+Este informe experimental analizó tres configuraciones no lineales fundamentales de amplificadores operacionales:
 
-A lo largo del trabajo, se analizaron configuraciones clásicas de amplificadores operacionales, como las topologías inversora y no inversora, las cuales demostraron un comportamiento cercano al ideal, con errores mínimos en sus ganancias. Sin embargo, al evaluar un amplificador operacional real ($\mu A741$), se observaron limitaciones significativas, como una tensión de offset y corrientes de bias con desviaciones considerables respecto a los valores teóricos. No obstante, el producto ganancia-ancho de banda (GBWP) se mantuvo relativamente constante, validando su importancia como parámetro clave en el diseño de circuitos.
+\subsection{1. Oscilador de Puente de Wien}
+\begin{itemize}
+\item Genera señales sinusoidales mediante realimentación positiva
+\item Frecuencia de oscilación: $f_o = \frac{1}{2\pi RC}$
+\item Se verificó la condición de oscilación ($\beta A_v \geq 1$) y se midió distorsión armónica
+\item Aplicación: Generación de señales de prueba en sistemas de audio
+\end{itemize}
 
-En el ámbito de los filtros activos, se implementaron y evaluaron configuraciones como el filtro Sallen-Key y el filtro de realimentación múltiple. El primero mostró una excelente precisión en ganancia, mientras que el segundo presentó mayores desviaciones, atribuidas a las tolerancias de los componentes. Además, se identificaron desafíos en la medición del factor de amortiguamiento y en la implementación del filtro de variables de estado, lo que resalta la importancia de un diseño y ajuste cuidadoso en este tipo de circuitos.
+\subsection{2. Multivibradores}
+\begin{itemize}
+\item \textbf{Astable}: Generador de onda cuadrada autónomo
+  \begin{itemize}
+  \item Período medido: $T = 2R_3C_1\ln(1+\frac{2R_1}{R_2})$
+  \item Error experimental vs teórico: 4.55\%
+  \end{itemize}
+  
+\item \textbf{Monoestable}: Produce pulsos de ancho controlado
+  \begin{itemize}
+  \item Ancho de pulso: $t_w = R_3C_1\ln(3)$
+  \item Se comprobó la dependencia con $R_3C_1$ (error: 4\%)
+  \end{itemize}
+\end{itemize}
 
-Por otro lado, en el estudio de fuentes lineales y reguladores, se observó que el regulador de voltaje de salida fija ofreció una precisión excelente, mientras que la fuente de corriente ajustable presentó variaciones significativas en su precisión. También se destacó que el voltaje de rizado aumenta al disminuir la carga, un factor crítico a considerar en el diseño de circuitos con reguladores.
+\subsection{3. Generador de Funciones}
+\begin{itemize}
+\item Circuito integrado para producir señales triangulares/cuadradas
+\item Se caracterizó la relación frecuencia-capacitancia ($f \propto 1/C$)
+\item No linealidades observadas en amplitudes altas
+\end{itemize}
