@@ -1,0 +1,136 @@
+\documentclass[12pt, a4paper, Spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx, enumitem, chngcntr, csquotes, amsmath, mathptmx, amssymb,  float, amssymb, amsfonts, fullpage, caption}% makeidx, enumerate} %despues de float, enumerate
+\usepackage{hyperref} %[hidelinks]
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,     
+    urlcolor=cyan,
+    citecolor=black}
+%\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}} 
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5} %interlineado
+\usepackage[spanish, es-tabla]{babel} %es-tabla añadido
+\pagenumbering{arabic}
+%\usepackage[left=25mm, right=25mm, top=25mm, bottom=25mm]{geometry}
+\usepackage[backend=biber,citestyle=numeric]{biblatex}
+%\bibliography{referencias}
+%\usepackage[margin=25mm]{geometry}
+%\usepackage{hyperref}%para link referenciales
+\graphicspath{{imagenes}} %permite importar imagenes dentro de la carpeta imagenes
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{bm} % Para usar \bm{}
+
+\usepackage{caption}
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[
+    name=Ilustración,
+    listname={Lista de ilustraciones},
+    fileext=loi
+]{ilustracion}
+
+
+\begin{document}
+
+    %---PORTADA---
+
+\input{Portada}
+
+    %---INDICE---
+
+\tableofcontents
+\newpage
+
+    %---RESUMEN---
+    
+\input{Resumen}
+
+    %---INTRODUCCION---
+
+\input{Introduccion.tex} 
+\newpage
+
+    %---MARCO TEORICO---
+
+\input{Marco_teorico}
+\newpage
+
+    %---OBJETIVOS---
+
+\input{Objetivos}
+\newpage
+
+    %-----EQUIPOS E INSTRUMENTOS-----
+
+\input{Equipos e Instrumentos}
+
+    %-----COMPONENTES Y MATERIALES-----
+
+\input{Componentes y materiales}
+\newpage
+
+    %-----METODOLOGIA-----
+
+\input{Metodología}
+\newpage
+
+    %-----RESULTADOS-----
+
+\input{Resultados}
+\newpage
+
+    %-----ANALISIS DE RESULTADOS-----
+
+\input{Analisis de Resultados}
+\newpage
+
+    %-----CONCLUSIONES-----
+
+\input{Conclusiones}
+\newpage
+
+    %-----REFERENCIAS-----
+
+\begin{thebibliography}{200}
+
+\bibitem{1} 
+
+    Madrid, G. V., \& Izquierdo, M. A. Z. "TRANSISTORES DE UNION BIPOLAR (BJT)", [En línea]. Disponible: https://www.academia.edu/download/53490536/BJT.pdf. [Accedido: 25-05-2025].  
+
+\bibitem{2} 
+
+    Unicrom. (2023). Amplificadores \& Amplificación, [En línea]. Disponible: {https://unicrom.com/amplificadores-amplificacion/. [Accedido: 26-05-2025]. 
+
+\bibitem{3}
+
+    Amplificadores de Potencia, Amplificadores.info, [En línea]. Disponible: https://amplificadores.info/amplificadores-de-potencia. [Accedido: 4-06-2025].  
+
+\bibitem{4}
+
+    Amplificadores diferenciales, Electricity-Magnetism.org, [En línea]. Disponible: https://www.electricity-magnetism.org/es/amplificadores-diferenciales/. [Accedido: 15-05-2025].
+
+\bibitem{5}
+
+    "¿Qué es la respuesta en frecuencia de un amplificador?", PCHardwarePro.com, [En línea]. Disponible: https://www.pchardwarepro.com/que-es-la-respuesta-en-frecuencia-de-un-amplificador/. [Accedido: 1-06-2025].
+
+\bibitem{6}
+
+    F. Ubiría y P. Castro, "9. Realimentación", Universidad Tecnológica del Uruguay (UTU), 2024. [En línea]. Disponible: https://its.utu.edu.uy/wp-content/uploads/sites/33/2024/04/cap_9.pdf.
+    [Accedido: 05-06-2025]
+
+%\bibitem{libro10} 
+\end{thebibliography}
+
+    %-----APENDICE-----
+
+\input{Anexos}
+\newpage
+
+    %---ANEXOS---
+
+\input{Anexos}
+
+
+\end{document}

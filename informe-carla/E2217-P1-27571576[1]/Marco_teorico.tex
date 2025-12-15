@@ -1,0 +1,270 @@
+\section{Marco Teórico}
+
+\subsection{Constitución interna de un BJT}
+
+El transistor es un dispositivo semiconductor de tres terminales (emisor, base y colector), equivalente a dos diodos PN unidos en sentido opuesto. Existen dos tipos principales según la configuración de sus uniones: NPN y PNP.
+
+Funcionamiento básico:\par
+
+Polarización: la unión base-emisor se polariza en directa, mientras que la unión base-colector se polariza en inversa. Esto permite que circule una corriente inversa por la unión base-colector.
+
+\begin{ilustracion}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{IMAGENES - Marco_Teorico/M_T_1.PNG}
+    \caption{Transistores BJT}
+    \label{fig:enter-label}
+\end{ilustracion}
+
+\subsection{El transistor NPN}
+
+El transistor bipolar NPN es un dispositivo semiconductor compuesto por tres regiones dopadas: una capa delgada de material tipo P (base) intercalada entre dos capas de material tipo N (emisor y colector), fabricadas en un mismo cristal de silicio o germanio. Estas zonas corresponden a los terminales del transistor: emisor (E), base (B) y colector (C).
+
+\subsubsection{Flujo de portadores}
+
+El emisor (altamente dopado) inyecta portadores de carga (electrones) hacia la base.
+
+La base (delgada y poco dopada, $\approx$ 100 veces menos que el emisor/colector) controla el flujo de estos portadores.
+
+El colector (de mayor espesor, $\approx$ 2 veces el del emisor) recoge los portadores que no son recombinados en la base.
+
+\subsubsection{Uniones PN}
+
+\begin{itemize}
+    \item Unión emisor-base (P-N): Polarizada en directa para permitir la inyección de electrones.
+
+    \item Unión base-colector (N-P): Polarizada en inversa para facilitar la captura de electrones por el colector. 
+\end{itemize}
+
+\begin{ilustracion}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{IMAGENES - Marco_Teorico/M_T_2PNG.PNG}
+    \caption{Transistores NPN}
+    \label{fig:enter-label}
+\end{ilustracion}
+
+\subsection{Transistor Bipolar PNP}
+
+El transistor bipolar PNP es un dispositivo semiconductor con tres regiones (P-N-P), donde una capa delgada N (base) se encuentra entre dos capas P (emisor y colector).
+
+\subsubsection{Polarización:}
+
+\begin{itemize}
+    \item Emisor-Base: Polarizada en directa (tensión negativa en emisor respecto a base).
+
+    \item Base-Colector: Polarizada en inversa (tensión negativa en base respecto a colector).
+\end{itemize}
+
+\subsubsection{Flujo de corriente:}
+
+\begin{itemize}
+    \item El emisor inyecta huecos hacia la base.
+
+    \item La base (delgada y poco dopada) controla el flujo; los huecos no recombinados llegan al colector.
+\end{itemize}
+
+
+Comparación con NPN:
+
+Mismo principio, pero con polaridades y portadores invertidos (huecos en lugar de electrones). \cite{1}
+
+\subsection{Amplificadores - Amplificación}
+
+Los amplificadores son circuitos que se utilizan para aumentar (amplificar) el valor de la señal de entrada, generalmente muy pequeña, y así obtener una señal a la salida con una amplitud mucho mayor a la señal original.
+
+Los amplificadores pueden implementarse con:
+\begin{itemize}
+    \item Transistores bipolares
+    \item Amplificadores operacionales
+    \item Tubos o válvulas electrónicas
+    \item FETs
+\end{itemize} \cite{2}
+
+
+\subsection{Clasificación de los amplificadores}
+Los amplificadores se clasifican según las frecuencias con las que trabajan:
+
+\begin{itemize}
+    \item \textbf{Amplificadores de Audiofrecuencia (A.F.) o Baja Frecuencia (B.F.)}: Trabajan dentro de la banda audible
+    \item \textbf{Amplificadores de Radiofrecuencia (R.F.)}: Trabajan con altas frecuencias
+\end{itemize}
+
+Dentro de estas categorías, se clasifican según su forma de trabajo:
+
+\begin{enumerate}
+    \item \textbf{Amplificadores de tensión}: Proporcionan mayor tensión en la salida que en la entrada
+    \item \textbf{Amplificadores de potencia}: Proporcionan mayor tensión \textit{y} corriente (amplificación de potencia)
+\end{enumerate}
+
+\subsection{Clases de amplificadores de potencia}
+Los amplificadores de potencia (para B.F. o R.F.) se clasifican según cuánta señal entregan:
+
+\subsubsection{Amplificador Clase A}
+\begin{itemize}
+    \item Alta fidelidad de audio
+    \item Mayor costo y tamaño
+    \item Alta disipación de potencia
+    \item Eficiencia típica: 20-30\%
+\end{itemize}
+
+\begin{ilustracion}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{IMAGENES - Marco_Teorico/M_T_3.PNG}
+    \caption{Amplificador Clase A}
+    \label{fig:enter-label}
+\end{ilustracion}
+
+\subsubsection{Amplificador Clase B}
+\begin{itemize}
+    \item Reposo en corte (sin consumo en ausencia de señal)
+    \item Eficiencia típica: 70\%
+    \item Distorsión de cruce por cero
+\end{itemize}
+
+\begin{ilustracion}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{IMAGENES - Marco_Teorico/M_T_4.PNG}
+    \caption{Amplificador Clase B}
+    \label{fig:enter-label}
+\end{ilustracion}
+
+\subsubsection{Amplificador Clase AB}
+\begin{itemize}
+    \item Combina características de Clase A y B
+    \item Menor distorsión que Clase B
+    \item Mayor eficiencia que Clase A (50-60\%)
+\end{itemize}
+
+\begin{ilustracion}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{IMAGENES - Marco_Teorico/M_T_5.PNG}
+    \caption{Amplificador Clase AB}
+    \label{fig:enter-label}
+\end{ilustracion}
+
+\subsubsection{Amplificador Clase C}
+\begin{itemize}
+    \item Uso exclusivo en R.F.
+    \item Alta eficiencia (70-85\%)
+    \item Circuito resonante (tanque LC) en colector
+    \item Ecuación de frecuencia de resonancia:
+    \begin{equation}
+        f_r = \frac{1}{2\pi\sqrt{LC}}
+    \end{equation}
+\end{itemize}
+
+\begin{ilustracion}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{IMAGENES - Marco_Teorico/M_T_6.PNG}
+    \caption{Amplificador Clase C}
+    \label{fig:enter-label}
+\end{ilustracion}
+
+\subsubsection{Amplificador Clase D}
+\begin{itemize}
+    \item Amplificadores digitales (conversión PWM)
+    \item Eficiencia mayor del 90\%
+    \item Baja disipación térmica
+    \item Ecuación de modulación PWM:
+    \begin{equation}
+        D = \frac{t_{on}}{T}
+    \end{equation}
+    
+    donde $D$ es el ciclo de trabajo
+\end{itemize}
+\cite{3}
+
+\subsection{Amplificadores Diferenciales}
+
+Los amplificadores diferenciales son circuitos electrónicos especializados en amplificar exclusivamente la diferencia entre dos señales de entrada ($V_1$ y $V_2$), mientras rechazan eficientemente cualquier señal común a ambas entradas. La relación fundamental que describe su operación está dada por:
+
+\begin{equation}
+V_{out} = A_d(V_1 - V_2)
+\end{equation}
+
+donde $A_d$ representa la ganancia diferencial del amplificador. Una de sus características más importantes es el \textit{Common-Mode Rejection Ratio} (CMRR), que se expresa como:
+
+\begin{equation}
+\text{CMRR} = 20\log_{10}\left(\frac{A_d}{A_{cm}}\right) \quad [\text{dB}]
+\end{equation}
+
+siendo $A_{cm}$ la ganancia en modo común. Estos circuitos típicamente emplean:
+
+\begin{itemize}
+\item Un par de transistores cuidadosamente apareados (BJT o MOSFET)
+\item Una fuente de corriente constante para polarización
+\item Resistencias de carga precisas
+\end{itemize}
+
+\subsubsection{Aplicaciones Principales}
+Gracias a su capacidad para minimizar ruido e interferencias, estos amplificadores son componentes esenciales en:
+
+\begin{itemize}
+\item La etapa de entrada de amplificadores operacionales
+\item Sistemas de conversión analógico-digital (ADC)
+\item Equipos de audio profesional de alta fidelidad
+\item Instrumentación médica y equipos de diagnóstico
+\end{itemize}
+
+Su diseño versátil y alto rendimiento los hace indispensables en aplicaciones donde se requiere precisión y rechazo de señales parásitas.
+\cite{4}
+
+\subsection{Respuesta en Frecuencia}
+
+La respuesta en frecuencia es un concepto fundamental en la ingeniería electrónica y se refiere a la manera en que un sistema electrónico responde a diferentes frecuencias de señal. En particular, en el caso de un amplificador, la respuesta en frecuencia se refiere a cómo el amplificador afecta la amplitud y la fase de la señal de entrada a diferentes frecuencias.
+
+La respuesta en frecuencia de un amplificador se puede representar mediante una curva de respuesta en frecuencia, que muestra la amplitud de la señal de salida en función de la frecuencia de la señal de entrada. Esta curva puede mostrar las frecuencias en las que el amplificador tiene una ganancia máxima, así como las frecuencias en las que la ganancia es menor.
+
+Es importante comprender la respuesta en frecuencia de un amplificador porque puede afectar la calidad de la señal que se está amplificando. Si un amplificador tiene una respuesta en frecuencia deficiente, puede introducir distorsión en la señal de salida, lo que puede hacer que la señal sea difícil de interpretar o incluso inútil.
+
+Por lo tanto, es importante diseñar amplificadores con una respuesta en frecuencia adecuada y medir la respuesta en frecuencia de un amplificador existente para asegurarse de que está funcionando correctamente.
+
+En el caso de un amplificador, la respuesta en frecuencia puede afectar la calidad de la señal  amplificada y es importante diseñar y medir la respuesta en frecuencia de un amplificador para asegurarse de que está funcionando correctamente.\cite{5}
+
+\subsection{Sistemas Realimentados}
+
+En un sistema realimentado, se toma una muestra de la señal de salida y se aplica a la entrada a través de una red adecuada. En la ilustración \ref{fig:1} se muestra un amplificador cuya ganancia sin realimentación es $A \angle \alpha$ y una red (generalmente pasiva) con relación de transferencia $B \angle \beta$ que retorna parte de la señal de salida a la entrada. Ambos parámetros dependen de la frecuencia.
+
+\begin{ilustracion}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{IMAGENES - Marco_Teorico/M_T_8.PNG}
+    \caption{Sistemas Realimentados}
+    \label{fig:1}
+\end{ilustracion}
+
+\begin{equation}
+s_0 = s_c \cdot A \angle \alpha = (s_1 + s_r) A \angle \alpha
+\quad
+\end{equation}
+
+\subsubsection{Casos Notables de Realimentación}
+
+\begin{enumerate}
+
+\item \textbf{Realimentación Positiva}:
+
+Cuando $\alpha + \beta = 0^\circ$, la señal realimentada está en fase con la señal de entrada. 
+
+En este caso:
+
+\begin{itemize}
+    \item $|A_r| > |A|$
+    \item Si $A \cdot B = 1$, la amplificación tiende a infinito y el circuito oscila
+\end{itemize}
+
+\item \textbf{Realimentación Negativa}:
+
+Cuando $\alpha + \beta = 180^\circ$, la señal realimentada está en oposición de fase:
+
+\begin{itemize}
+\item $|A_r| < |A|$
+\item La ganancia con realimentación viene dada por:
+\begin{equation}
+A_r = \frac{s_o}{s_i} = \frac{A}{1 + A \cdot B}
+\quad \label{Ec.1}
+\end{equation}
+\end{itemize}
+\end{enumerate}
+
+\footnotetext[1]{La ecuación (\ref{Ec.1}) es válida cuando se cumple la condición de fase $\alpha + \beta = 180^\circ$} \cite{6}
+
+

@@ -1,0 +1,252 @@
+\begin{enumerate}
+    \item Identifique la etapa de Potencia (EP) en el amplificador base (anexo), si es necesario consulte a su instructor.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{IMAGENES - PRE1/EP.PNG}
+        \caption{Etapa de Potencia del amplificador base}
+        \label{fig:enter-label}
+    \end{figure} 
+
+    \item Determinar los puntos de reposo de todos los transistores en la EP.
+
+    Para determinar los puntos de operación de los transistores en la etapa de potencia, se realizó un análisis en DC, sin considerar los condensadores C5 y C7. 
+
+    Se comenzó por estudiar al transistor Q4. Este transistor para el caso de la etapa de potencia cumple la función de generar el voltaje necesario para que los transistores Q5 y Q6 conduzcan, asumiendo que la corriente que pasa por la base del transistor Q5 es muy pequeña, se puede decir por LCK:
+
+     \begin{equation}
+        I_{R17} = I_{RV1} + I_{CQ4}\label{ecuacion1}
+    \end{equation}
+
+    Donde:
+
+    \begin{itemize}
+        \item \( I_{CQ4} \): Corriente de colector en el transistor Q4.
+        \item \( I_{RV1} \): Corriente en el potenciómetro RV1.
+        \item \( I_{R17} \): Corriente en la resistencia R17.
+    \end{itemize}
+
+    Si se asume que la corriente en la base de Q4 se puede despreciar por ser muy pequeña, se tiene que la corriente que pasa por el potenciómetro es:
+
+    \begin{equation}
+        I_{RV1} = \frac{V_{BE}}{X(RV1)}\label{ecuacion2}
+    \end{equation}
+
+    Donde:
+
+    \begin{itemize}
+        \item $I_{RV1}$: Corriente en el potenciómetro.
+        \item $V_{BEQ4}$: Tensión base-emisor del transistor Q4.
+        \item $RV1$: Potenciómetro.
+    \end{itemize}
+    
+    Por LVK se tiene que:
+
+    \begin{equation}
+        V_{CEQ4} = I_{RV1}(RV1)\label{ecuacion3}
+    \end{equation}
+
+    Sustituyendo la Ec. \ref{ecuacion2}  en la Ec. \ref{ecuacion3} se tiene que:  
+
+    \begin{equation}
+        V_{CE} = \frac{V_{BE}}{X(RV1)}(RV1)
+    \end{equation}
+
+    Simplicando:
+
+    \begin{equation}
+        V_{CEQ4} = \frac{V_{BE}}{X}\label{ecuacion4}
+    \end{equation}
+
+    Como X solo puede adquirir valores entre 0 y 1 para que los transistores Q5 y Q6 conduzcan es necesario que el voltaje Colector – Emisor sea 2 veces el voltaje Base – Emisor por lo que se puede decir que X debería ser 0,5.
+
+    Para calcular la corriente que pasa por el transistor Q4 se despreciaron las corrientes de base de Q5 y Q6 y usando LVK se tiene:
+
+    \begin{equation}
+        20 - (R_{17} + R_{12})I_{R17} - 2V_{BE} = 0  
+    \end{equation}
+
+    Despejando la corriente que pasa por R17:
+
+    \begin{equation}
+        I_{R17} = \frac{20 - 2V_{BE}}{R_{17} + R_{12}}\label{ecuacion5}
+    \end{equation}
+
+    Reemplazando  la Ec.\ref{ecuacion5} y la Ec. \ref{ecuacion2} en la Ec. \ref{ecuacion1}  se despeja la corriente de colector de Q4:
+
+    \begin{equation}
+        V_{CQ4} = \frac{20 - 2V_{BE}}{R_{17} + R_{12}} - \frac{V_{BE}}{X}\label{ecuacion6}
+    \end{equation}
+
+    Usando:
+    \begin{itemize}
+        \item $X = 0,5$
+        \item $V_{BE} = 0,62V.$
+        \item $RV1 = 10K$$\Omega$$.$
+        \item $R_{12} = R_{17} = 22K$$\Omega$$.$ 
+    \end{itemize}
+    
+    Se tiene que:
+    
+    $$ I_{CQ4} = 302.36\mu\text{A} $$
+    
+    Para calcular el punto de operaciones de Q5 y Q6 se usó la LVK en la malla que tiene los 3 transistores sin tomar en cuenta las corrientes de base por ser muy pequeñas:
+    
+        \begin{equation}
+            V_{BEQ5} + 10I_{EQ5} + 10I_{EQ6} - V_{EBQ6} + V_{ECQ4} = 0 \label{ecuacion7}
+        \end{equation}
+    
+    Donde se tomó en consideración que: $ I_{EQ5} \approx I_{EQ6}; V_{CEQ4} = 2V_{BEQ4} $
+
+    Despejando $I_{E}$ 
+    
+    \begin{equation}
+        I_E = \frac{V_{CEQ4} - V_{BEQ5} - V_{BEQ6}}{R_{13} + R_{14}}
+    \end{equation}
+
+    Sabiendo que \( V_{BEQ5} = 0{,}62\,V \) y \( V_{BEQ6} = 0{,}614\,V \), se obtiene:
+
+    \[
+    \therefore I_E = 0{,}3\,mA
+    \]
+    
+    Por lo tanto, la corriente de colector para los transistores Q5 y Q6 se obtendrá de la siguiente relación: 
+
+    \begin{equation}
+        I_C = I_E \left( \frac{\beta}{1 + \beta} \right)
+        \label{eq:corriente_colector}
+    \end{equation}
+
+    Para Q5 se tiene un \(\beta_{Q5} = 210\).\par
+    Para Q6 se tiene un \(\beta_{Q6} = 240\).
+    
+
+    \[I_{CQ5} = 298{,}57 \, \mu\mathrm{A}\]
+    
+    \[I_{CQ6} = 298{,}75 \, \mu\mathrm{A}\]
+    
+    Se asume que \(V_{CEQ5} \approx -V_{CEQ6} = V_{CE}\), aplicando LVK tenemos:
+    
+    \[2V_{CE} + I_C (R_{13} + R_{14}) - 20 = 0\]
+    
+    Despejando \(V_{CE}\):
+    
+    \[V_{CE} = \frac{20 - I_C (R_{13} + R_{14})}{2}\]
+    
+    \[\therefore V_{CE} = 10\,\mathrm{V}\]
+    
+    \begin{table}[H]
+    \centering
+    \caption{Puntos estáticos de operación del amplificador de potencia}
+    \label{tab:operacion}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Transistor} &       \(\bm{I_C}\)          & \(\bm{V_{CE}}\)         \\ \hline
+    Q4                  & \(302{,}36\,\mu\mathrm{A}\) & \(1{,}24\,\mathrm{V}\)  \\ \hline
+    Q5                  & \(298{,}57\,\mu\mathrm{A}\) & \(9{,}99\,\mathrm{V}\)  \\ \hline
+    Q6                  & \(298{,}75\,\mu\mathrm{A}\) & \(-9{,}99\,\mathrm{V}\) \\ \hline
+    \end{tabular}
+    \end{table}
+        
+    \item Determine el modelo dinámico a pequeña señal y a frecuencias medias de la EP, ganancia e impedancias de entrada y salida.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{IMAGENES - PRE1/Modelo hibrido.png}
+        \caption{Modelo híbrido}
+        \label{fig:enter-label}
+    \end{figure}
+
+    Las ecuaciones a usar para obtener los parámetros serán los siguientes:
+
+    \begin{equation}
+        g_{m} = \frac{I_{C}}{V_{T}} \label{ec_gm}    
+    \end{equation}
+    
+    \begin{equation}
+        r_{\pi} = \frac{\beta}{g_{m}} \label{ec_rpi}   
+    \end{equation}
+    
+    Donde $V_T$ es el voltaje térmico que a temperatura ambiente se tomó de 25,86mV aproximadamente, $\beta$ será la ganancia de corriente DC del transistor y $ R_{o} = \infty$.
+
+    \begin{equation}
+        h_{fe} = \beta \qquad
+    \end{equation}
+
+    \begin{equation}
+        h_{ie} = r_\pi
+    \end{equation}
+
+    Asi se obtuvo que:
+    
+    \begin{table}[H]
+    \centering
+    \caption{Parámetros híbridos de los transistores en la etapa de potencia}
+    \label{tab:hibridos}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Transistor} & \(\bm{h_{fe}}\) &     \(\bm{g_m}\)         & \(\bm{r_\pi}\)               \\ \hline
+            Q4          &       210       & \(11{,}69\,\mathrm{mS}\) & \(17{,}96\,\mathrm{k\Omega}\) \\ \hline
+            Q5          &       210       & \(11{,}54\,\mathrm{mS}\) & \(18{,}19\,\mathrm{k\Omega}\) \\ \hline
+            Q6          &       240       & \(11{,}55\,\mathrm{mS}\) & \(20{,}77\,\mathrm{k\Omega}\) \\ \hline
+    \end{tabular}
+    \end{table}
+
+    \underline{\textbf{Ganancia}}
+
+    \begin{equation}
+        \frac{V_{out}}{V_{in}} = \frac{(R_L + R_{13})(1 + g_{m5}r_{\pi5})}
+                                {r_{\pi5} + (R_L + R_{13})(1 + g_{m5}r_{\pi5})} 
+    \end{equation}
+       
+    Al sustituir los valores se tiene que:
+    
+    $$\frac{V_{out}}{V_{in}} = 0.96 \approx 1 $$
+    
+    \underline{\textbf{Impedancia de entrada}}
+    
+    \begin{equation}
+        Z_{in} = R_{17}|| R_{12}||[r_{\pi} + (1 + g_mr_{\pi})(R_L + R_{13})]   
+    \end{equation}
+    
+    $$ Z_{in} = 10,75 k\Omega \approx 10 k\Omega$$
+    
+    \underline{\textbf{Impedancia de salida}}
+    
+    \begin{equation}
+        Z_o = R_{13} + \frac{r_{\pi} + R_{17}||R_{12}}{(1 + g_mr_{\pi})}
+    \end{equation}
+    
+    $$ Z_o \approx R_{13} \approx 10\Omega $$
+
+    \item Realice la simulación de la etapa con el fin de verificar tanto los puntos de operación, como el modelo circuital a pequeña señal. Explique cualquier diferencia respecto a sus cálculos, si la hay.
+
+    \begin{ilustracion}[H]
+        \centering
+        \includegraphics[width=0.7\linewidth]{IMAGENES - PRE1/S1_Puntos_de_Operacion.PNG}
+        \caption{Caption}
+        \label{fig:enter-label}
+    \end{ilustracion}
+
+    \begin{ilustracion}[H]
+        \centering
+        \includegraphics[width=0.7\linewidth]{IMAGENES - PRE1/S2_A.PNG}
+        \caption{Ganancia en la etapa de potencia}
+        \label{fig:enter-label}
+    \end{ilustracion}
+
+    \begin{ilustracion}[H]
+        \centering
+        \includegraphics[width=0.7\linewidth]{IMAGENES - PRE1/S3_Zin.PNG}
+        \caption{Impedancia de entrada en la etapa de potencia}
+        \label{fig:enter-label}
+    \end{ilustracion}
+
+    \begin{ilustracion}[H]
+        \centering
+        \includegraphics[width=0.7\linewidth]{IMAGENES - PRE1/S4_Zo_EP.PNG}
+        \caption{Impedancia de salida en la etapa de potencia}
+        \label{fig:enter-label}
+    \end{ilustracion}
+    
+\end{enumerate}
